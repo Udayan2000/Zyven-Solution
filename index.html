@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <title>Tanda – IT Solutions</title>
+    <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; }
+ 
+ 
+    .top-bar {
+      /* background: #6366f1; */
+      background-color: #0e2d66;
+      color: #fff;
+      font-size: 13px;
+      padding: 10px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar-left, .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .top-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: #e8edf7;
+      font-size: 15px;
+      line-height: 20px;
+    }
+    .top-bar-item svg { 
+      opacity: .85; 
+      width: 15px;
+       height: 15px; 
+    }
+
+   .top-bar-socials {
+     display: flex;
+      gap: 10px;
+    }
+
+.top-bar-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+
+  
+  border-radius: 50%;
+
+ 
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  box-shadow: 
+    0 10px 25px rgba(99, 102, 241, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  color: #4f46e5;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.top-bar-socials svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.top-bar-socials a:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 
+    0 20px 40px rgba(99, 102, 241, 0.35),
+    0 8px 20px rgba(0, 0, 0, 0.08);
+  color: white;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+}
+
+
+.top-bar-socials a:hover svg {
+  transform: scale(1.2) rotate(5deg);
+}
+
+
+.top-bar-socials a::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  top: 0;
+  left: -120%;
+  transition: all 0.6s ease;
+}
+
+.top-bar-socials a:hover::before {
+  left: 120%;
+}
+    .divider {
+      width: 1px;
+      height: 16px;
+      background: rgba(255,255,255,.25);
+    }
+ 
+
+    .navbar {
+      background: #fff;
+      padding: 0 60px;
+    height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eaecf0;
+      position: relative;
+      z-index: 10;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-icon { width: 44px; height: 44px; }
+    .logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1d2e;
+      letter-spacing: -.3px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 14px;
+      font-size: 14.5px;
+      font-weight: 500;
+      color: #374151;
+      text-decoration: none;
+      border-radius: 7px;
+      transition: background .18s, color .18s;
+      cursor: pointer;
+    }
+    .nav-link:hover { background: #f3f4f8; color: #3b3ef0; }
+    .nav-link svg { opacity: .55; }
+    .nav-contact {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: #374151;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 7px;
+      transition: background .18s, color .18s;
+    }
+    .nav-contact:hover { background: #f3f4f8; color: #3b3ef0; }
+    .nav-cta-info {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+    .cta-icon-wrap {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0e2d66, #5b5ee8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cta-text small {
+     display: block;
+    font-size: 13.5px;
+    color: #6b7280;
+    font-weight: 400;
+    }
+    .cta-text .mail_cta-text {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1d2e;
+      text-decoration: none;
+  
+    }
+
+
+  :root{
+  --font-head:'Sora',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+  --teal:#1aabba;
+  --teal-dark:#0e8a97;
+  --teal-light:#2dcad9;
+  --blue:#0e2d66;
+  --white:#fff;
+  --off:#f4fafc;
+  --diag: 0px;;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body)}
+ 
+/* ── WRAPPER ── */
+.banner-outer{width:100%;border-radius:16px;overflow:hidden;position:relative;padding: 10px;}
+ 
+/* ── SLIDE BASE ── */
+.slide{
+  min-height:clamp(340px,52vw,560px);
+  display:flex !important;
+  align-items:stretch;
+  overflow:hidden;
+  position:relative;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0px !important;
+}
+ 
+/* ── LEFT PANEL ── */
+/* .panel-left{
+  position:relative;
+  z-index:2;
+  width:60%;
+  background: linear-gradient(135deg, #0e2d66, #5b5ee8);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:clamp(28px,5vw,60px) clamp(20px,4vw,52px);
+  padding-right:calc(var(--diag) + clamp(20px,3vw,40px));
+  clip-path:polygon(0 0,100% 0,calc(100% - var(--diag)) 100%,0 100%);
+  overflow:hidden;
+}
+.panel-left::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse at 15% 30%,rgba(14,149,186,0.18),transparent 60%),
+    radial-gradient(ellipse at 80% 80%,rgba(26,171,186,0.12),transparent 50%);
+  pointer-events:none;
+}
+.panel-left::after{
+  content:'';
+  position:absolute;
+  top:0;left:-80%;
+  width:45%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent);
+  animation:shimmer 4s infinite;
+  pointer-events:none;
+} */
+
+.panel-left{
+   position: relative;
+  z-index: 2;
+  width: 60%;
+
+  background: linear-gradient(135deg, #0e2d66 0%, #1a3c8f 40%, #5b5ee8 100%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: clamp(28px,5vw,60px) clamp(50px,8vw,80px);
+  padding-right: calc(var(--diag) + 40px);
+
+  /* PERFECT CUT */
+  clip-path: polygon(0 0, 100% 0, calc(100% - var(--diag)) 100%, 0 100%);
+
+  overflow: hidden;
+}
+.panel-left::before{
+  content:'';
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at 20% 25%, rgba(93, 233, 255, 0.25), transparent 55%),
+    radial-gradient(circle at 80% 75%, rgba(91, 94, 232, 0.25), transparent 60%);
+
+  filter: blur(10px);
+  pointer-events:none;
+}
+.panel-left::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:50%;
+  height:100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.12),
+    transparent
+  );
+
+  animation: shimmer 5s infinite;
+  pointer-events:none;
+}
+.panel-right{
+  position: relative;
+  z-index: 1;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: clamp(28px,5vw,60px) clamp(20px,4vw,52px);
+  padding-left: calc(var(--diag) + 10px);
+
+  /* 🔥 MATCH EXACTLY OPPOSITE CUT */
+  clip-path: polygon(var(--diag) 0, 100% 0, 100% 100%, 0 100%);
+
+  background: linear-gradient(135deg, #050816, #0a0f2c);
+
+  margin-left: -1px; /* 🔥 GAP FIX (very important) */
+
+}
+.panel-right::before{
+  content:'';
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at 25% 30%, rgba(26,171,186,0.18), transparent 55%),
+    radial-gradient(circle at 75% 80%, rgba(91,94,232,0.18), transparent 60%);
+
+  filter: blur(12px);
+  pointer-events:none;
+}
+.panel-right::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-70%;
+  width:50%;
+  height:100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.08),
+    transparent
+  );
+
+  animation: shimmer 6s infinite;
+  pointer-events:none;
+}
+@keyframes shimmer{
+  0%{ left:-70%; }
+  100%{ left:140%; }
+}
+ 
+/* ── RIGHT PANEL ── */
+.panel-right{
+position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px clamp(12px, 3vw, 33px);
+    
+    background: var(--off);
+}
+ 
+/* ── TYPOGRAPHY ── */
+.slide-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.22);
+  color:rgba(255,255,255,0.92);
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  padding:5px 14px;
+  border-radius:30px;
+  width:fit-content;
+  margin-bottom:16px;
+  font-family:var(--font-body);
+}
+.tag-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:#7fffd4;
+  animation:pulse 1.8s infinite;
+  flex-shrink:0;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.7)}}
+ 
+.slide-headline{
+  font-family:var(--font-head);
+  font-size:clamp(20px,3.4vw,62px);
+  font-weight:800;
+  color:#fff;
+  line-height:1.08;
+  letter-spacing:-.025em;
+  margin-bottom:14px;
+}
+.slide-headline span{
+  background:linear-gradient(120deg,#ffffff 0%,#7dd7ff 60%,#ffffff 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+ 
+.slide-sub-bold{
+  font-size:clamp(12px,1.3vw,15px);
+  font-weight:600;
+  color:rgba(255,255,255,0.92);
+  margin-bottom:7px;
+  font-family:var(--font-body);
+}
+.slide-sub{
+  font-size:clamp(11px,1.1vw,13.5px);
+  color:rgba(255,255,255,0.72);
+  line-height:1.7;
+  margin-bottom:clamp(18px,3vw,30px);
+  max-width:450px;
+  font-family:var(--font-body);
+}
+ 
+/* ── BUTTONS ── */
+.slide-actions{display:flex;gap:10px;flex-wrap:wrap}
+ 
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-body);
+
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.25);
+}
+
+/* 🔥 Gradient Shift Effect */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+/* Hover */
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.35);
+}
+
+/* Shine animation */
+.btn-primary:hover::before {
+  transform: translateX(100%);
+}
+
+/* Active click */
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 5px 14px rgba(79, 70, 229, 0.25);
+}
+
+ 
+
+
+ 
+/* ── SLIDE 1 RIGHT: ICON CIRCLE ── */
+.icon-circle{
+  width:clamp(180px,22vw,280px);
+  height:clamp(180px,22vw,280px);
+  border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, #e6fbff, #b8e8f0);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  flex-shrink:0;
+  overflow:visible;
+
+  box-shadow:
+    0 20px 60px rgba(26,171,186,0.25),
+    inset 0 0 30px rgba(255,255,255,0.4);
+
+  transition:all .5s ease;
+}
+
+/* ✨ Hover Premium Effect */
+.icon-circle:hover{
+  transform:scale(1.05) rotate(2deg);
+  box-shadow:
+    0 30px 80px rgba(26,171,186,0.35),
+    0 0 40px rgba(26,171,186,0.4),
+    inset 0 0 40px rgba(255,255,255,0.6);
+}
+
+/* 🔵 Orbits (Glowing + Animated) */
+.orbit{
+  position:absolute;
+  border-radius:50%;
+  animation:spin linear infinite;
+}
+
+.orbit::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  border:2px solid transparent;
+  background:
+    linear-gradient(120deg,#1aabba,#7fffd4,#0e2d66) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+  opacity:.6;
+  filter:blur(.5px);
+}
+
+.orbit-1{width:115%;height:115%;animation-duration:18s}
+.orbit-2{width:140%;height:140%;animation-duration:28s;animation-direction:reverse}
+
+@keyframes spin{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+/* ✨ Floating Badges */
+.o-badge{
+  position:absolute;
+  backdrop-filter: blur(10px);
+  background:rgba(255,255,255,0.7);
+  border:1px solid rgba(255,255,255,0.4);
+  border-radius:14px;
+  padding:7px 14px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:11px;
+  font-weight:600;
+  color:#0e2d66;
+  white-space:nowrap;
+
+  box-shadow:0 8px 25px rgba(0,0,0,0.12);
+
+  animation:float 4s ease-in-out infinite;
+  transition:.3s;
+}
+
+/* Hover badge */
+.o-badge:hover{
+  transform:scale(1.1);
+  box-shadow:0 10px 30px rgba(26,171,186,0.4);
+}
+
+/* ✨ Floating Animation */
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+/* 🎯 Badge Positions */
+.b1{top:-5%; right:5%;}
+.b2{bottom:5%; left:-10%;}
+.b3{top:45%; right:-18%;}
+.b4{top:-8%; left:10%;}
+.b5{bottom:-8%; right:10%;}
+.b6{top:70%; left:-18%;}
+.b7{top:20%; left:-20%;}
+
+/* 🎨 Dot Colors */
+.badge-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#1aabba,#7fffd4);
+}
+
+/* SVG */
+.circle-inner{
+  width:66%;
+  height:66%;
+  position:relative;
+  z-index:2;
+  transition:.5s;
+}
+
+/* SVG hover animation */
+.icon-circle:hover .circle-inner{
+  transform:scale(1.05) rotate(-2deg);
+}
+ 
+/* ── SLIDE 2 RIGHT: SERVICE GRID ── */
+/* GRID */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  max-width: 520px;
+}
+
+/* CARD BASE */
+.svc-card {
+  position: relative;
+  padding: 20px 18px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255,255,255,0.4);
+
+  box-shadow:
+    0 8px 25px rgba(14,45,102,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+/* Glow border animation */
+.svc-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(91,94,232,0.25),
+    transparent
+  );
+
+  opacity: 0;
+  transition: 0.4s;
+}
+
+/* Hover effect */
+.svc-card:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  box-shadow:
+    0 18px 45px rgba(14,45,102,0.18),
+    0 0 0 1px rgba(91,94,232,0.1);
+}
+
+.svc-card:hover::before {
+  opacity: 1;
+}
+
+/* ICON */
+.svc-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  transition: all 0.35s ease;
+}
+
+/* ICON HOVER ANIMATION */
+.svc-card:hover .svc-icon {
+  transform: rotate(8deg) scale(1.15);
+}
+
+/* ICON COLORS */
+.svc-icon--blue { background: #e8f0fc; }
+.svc-icon--teal { background: #e4f9fb; }
+.svc-icon--orange { background: #fef3e8; }
+.svc-icon--purple { background: #f3e8ff; }
+
+/* TEXT */
+.svc-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0e2d66;
+  margin-bottom: 6px;
+}
+
+.svc-sub {
+  font-size: 12px;
+  color: #6b8cbf;
+  line-height: 1.5;
+}
+
+/* FULL WIDTH CARD */
+.svc-card--full {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Shine animation */
+.svc-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+
+  transition: 0.6s;
+}
+
+.svc-card:hover::after {
+  left: 120%;
+}
+ 
+/* ── SLIDE 3 RIGHT: STATS ── */
+.stats-panel{display:flex;flex-direction:column;gap:11px;width:100%;max-width:420px}
+.stat-row{
+  background:#fff;
+  border-radius:14px;
+  padding:15px 18px;
+  display:flex;align-items:center;gap:14px;
+  box-shadow:0 3px 12px rgba(14,45,102,0.08);
+  border:1px solid rgba(14,45,102,0.06);
+}
+.stat-icon{
+  width:42px;height:42px;
+  border-radius:11px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.stat-num{font-family:var(--font-head);font-size:24px;font-weight:800;color:#0e2d66;line-height:1}
+.stat-lbl{font-size:11px;color:#6b8cbf;margin-top:3px;font-family:var(--font-body)}
+.stat-badge{
+  margin-left:auto;
+  font-size:10px;font-weight:700;
+  padding:4px 10px;border-radius:20px;
+  background:#e0f8e0;color:#0a8a2e;
+  font-family:var(--font-body);
+  white-space:nowrap;
+}
+.prog-row{
+  background:#fff;
+  border-radius:14px;
+  padding:15px 18px;
+  box-shadow:0 3px 12px rgba(14,45,102,0.08);
+  border:1px solid rgba(14,45,102,0.06);
+}
+.prog-label{
+  display:flex;justify-content:space-between;
+  font-size:11.5px;font-weight:600;color:#0e2d66;
+  margin-bottom:9px;font-family:var(--font-body);
+}
+.prog-bg{background:#e4eaf5;border-radius:6px;height:7px;overflow:hidden}
+.prog-fill{
+  height:7px;border-radius:6px;
+  background:linear-gradient(90deg,#1aabba,#0e2d66);
+  width:0;transition:width 1.3s ease;
+}
+ 
+/* ── SLIDE 4 RIGHT: PROCESS ── */
+/* CARD */
+.process-card {
+  position: relative;
+  padding: 26px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.5);
+
+  box-shadow:
+    0 10px 30px rgba(14,45,102,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+
+  transition: all 0.35s ease;
+}
+
+/* HEADER */
+.proc-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: #0e2d66;
+
+  margin-bottom: 22px;
+}
+
+/* ICON */
+.proc-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  background: linear-gradient(135deg,#1aabba,#0e2d66);
+
+  color: #fff;
+}
+.proc-icon svg {
+  width: 16px;
+  height: 16px;
+  color: #fff;
+}
+/* ITEM */
+.proc-item {
+  position: relative;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.proc-item:hover {
+  transform: translateX(6px);
+}
+
+/* TIMELINE LINE */
+.proc-line {
+  position: absolute;
+  left: 14px;
+  top: 34px;
+  width: 2px;
+  height: calc(100%);
+
+  background: linear-gradient(
+    to bottom,
+    rgba(26,171,186,0.6),
+    rgba(14,45,102,0.1)
+  );
+
+  border-radius: 2px;
+}
+
+/* STEP NUMBER */
+.proc-num {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0e2d66;
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+
+  transition: all 0.3s ease;
+}
+
+/* ACTIVE STEP */
+.proc-num--active {
+  background: linear-gradient(135deg,#1aabba,#0a9a6e);
+  box-shadow: 0 0 0 6px rgba(26,171,186,0.15);
+}
+
+/* HOVER NUMBER EFFECT */
+.proc-item:hover .proc-num {
+  transform: scale(1.15);
+}
+
+/* CONTENT */
+.proc-content {
+  flex: 1;
+}
+
+/* TITLE */
+.proc-title {
+ font-size: 15px;
+  font-weight: 700;
+  color: #0e2d66;
+}
+
+/* SUBTEXT */
+.proc-sub {
+  font-size: 12px;
+  color: #6b8cbf;
+  margin-top: 3px;
+  line-height: 1.5;
+}
+
+/* SHINE EFFECT */
+.process-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 40%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+
+  transition: 0.7s;
+}
+
+.process-card:hover::after {
+  left: 120%;
+}
+ 
+/* ── SLICK OVERRIDES ── */
+#hero-slider{border-radius:16px;overflow:hidden}
+ 
+.slick-track{display:flex !important}
+.slick-slide{height:inherit !important}
+.slick-slide > div{height:100%}
+ 
+/* Arrows */
+.slick-prev,
+.slick-next{
+  z-index:20;
+  width:36px;height:36px;
+  border-radius:50%;
+  background:#fff !important;
+  border:1px solid rgba(14,45,102,0.12) !important;
+  box-shadow:0 4px 16px rgba(14,45,102,0.12);
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  transition:transform .2s,box-shadow .2s,background .2s !important;
+}
+.slick-prev:hover,
+.slick-next:hover{
+  background:#0e2d66 !important;
+  box-shadow:0 8px 24px rgba(14,45,102,0.18);
+  transform:translateY(-50%) scale(1.08);
+}
+.slick-prev{left:14px}
+.slick-next{right:14px}
+ 
+/* Hide default slick arrow icons, use custom SVG */
+.slick-prev:before,
+.slick-next:before{display:none}
+ 
+.slick-prev .arr-icon,
+.slick-next .arr-icon{
+  display:flex;align-items:center;justify-content:center;
+}
+.slick-prev .arr-icon svg,
+.slick-next .arr-icon svg{
+  stroke:#0e2d66;
+  transition:stroke .2s;
+}
+.slick-prev:hover .arr-icon svg,
+.slick-next:hover .arr-icon svg{stroke:#fff}
+ 
+
+ 
+/* ── RESPONSIVE ── */
+@media(max-width:680px){
+  .panel-left{width:100%;clip-path:none;padding:30px 22px 26px;border-radius:0}
+  .panel-right{display:none}
+  .slide{flex-direction:column}
+}
+@media(max-width:420px){
+  .slide-headline{font-size:22px}
+  .slide-actions{flex-direction:column;align-items:flex-start}
+}
+
+
+  </style>
+  </head>
+  <body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2"><path
+              d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle
+              cx="12" cy="10" r="3" /></svg>
+          California, TX 70240
+        </span>
+        <span class="divider"></span>
+        <span class="top-bar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20"
+              height="16" rx="2" /><path
+              d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+          Info@gmail.com
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2"><circle cx="12" cy="12"
+              r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+          Office Hours: 8:00 AM – 7:45 PM
+        </span>
+        <span class="divider"></span>
+        <div class="top-bar-socials">
+          <a href="#">
+            <svg width="14" height="14" viewBox="0 0 24 24"
+              fill="currentColor"><path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+          </a>
+          <a href="#">
+            <svg width="14" height="14" viewBox="0 0 24 24"
+              fill="currentColor"><path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></svg>
+          </a>
+          <a href="#">
+            <svg width="14" height="14" viewBox="0 0 24 24"
+              fill="currentColor"><path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect
+                x="2" y="9" width="4" height="12" /><circle cx="4" cy="4"
+                r="2" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <svg class="logo-icon" viewBox="0 0 44 44" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 3L38.5 13V31L22 41L5.5 31V13L22 3Z" fill="#3b3ef0"
+            opacity=".12" stroke="#3b3ef0" stroke-width="2" />
+          <circle cx="22" cy="22" r="8" fill="none" stroke="#3b3ef0"
+            stroke-width="2" />
+          <path d="M18 22h8M22 18v8" stroke="#3b3ef0" stroke-width="2"
+            stroke-linecap="round" />
+          <circle cx="15" cy="17" r="2" fill="#6366f1" />
+          <circle cx="29" cy="17" r="2" fill="#6366f1" />
+          <circle cx="15" cy="27" r="2" fill="#6366f1" />
+          <circle cx="29" cy="27" r="2" fill="#6366f1" />
+        </svg>
+        <span class="logo-text">Tanda</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#" class="nav-link">HOME </a>
+        <a href="#" class="nav-link">ABOUT </a>
+        <a href="#" class="nav-link">SERVICES </a>
+
+        <a href="#" class="nav-contact">CONTACT</a>
+      </div>
+
+      <div class="nav-cta-info">
+        <div class="cta-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="#fff" stroke-width="2">
+            <path
+              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            <circle cx="9" cy="10" r="1" fill="#fff" />
+            <circle cx="12" cy="10" r="1" fill="#fff" />
+            <circle cx="15" cy="10" r="1" fill="#fff" />
+          </svg>
+        </div>
+        <div class="cta-text">
+          <small>Have any Questions?</small>
+          <a href="mailto:info@bestup.com" class="mail_cta-text">info@bestup.com</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="banner-outer">
+  <div id="hero-slider">
+ 
+    <!-- ═══ SLIDE 1: Hero ═══ -->
+    <div class="slide">
+      <div class="panel-left">
+        <span class="slide-tag"><span class="tag-dot"></span>Expert Web Development</span>
+        <h1 class="slide-headline">Build Software<br><span>Faster &amp; Smarter</span></h1>
+        <p class="slide-sub-bold">We design &amp; develop scalable, high-performance apps.</p>
+        <p class="slide-sub">Helping modern businesses launch with confidence and grow without limits — from concept to production, every step of the way.</p>
+        <div class="slide-actions">
+
+           <button class="btn-primary">See All Services  </button>
+                 </div>
+      </div>
+      <div class="panel-right">
+        <!-- <div class="icon-circle">
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="o-badge"><span class="badge-dot" style="background:#1aabba"></span>UI/UX Design</div>
+          <div class="o-badge"><span class="badge-dot" style="background:#0e2d66"></span>Full-Stack Dev</div>
+          <div class="o-badge"><span class="badge-dot" style="background:#7fffd4"></span>SEO Ready</div>
+          <svg class="circle-inner" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="28" y="112" width="144" height="8" rx="4" fill="#1aabba" opacity=".3"/>
+            <rect x="42" y="52" width="116" height="76" rx="7" fill="#fff" stroke="#1aabba" stroke-width="2.5"/>
+            <rect x="48" y="58" width="104" height="62" rx="3" fill="#eaf8fa"/>
+            <circle cx="55" cy="64" r="3" fill="#ff5f56"/>
+            <circle cx="63" cy="64" r="3" fill="#ffbd2e"/>
+            <circle cx="71" cy="64" r="3" fill="#27c93f"/>
+            <rect x="52" y="73" width="52" height="4" rx="2" fill="#0e2d66" opacity=".45"/>
+            <rect x="52" y="81" width="36" height="4" rx="2" fill="#1aabba" opacity=".4"/>
+            <rect x="58" y="89" width="46" height="4" rx="2" fill="#0e2d66" opacity=".3"/>
+            <rect x="58" y="97" width="30" height="4" rx="2" fill="#1aabba" opacity=".35"/>
+            <rect x="52" y="105" width="56" height="4" rx="2" fill="#0e2d66" opacity=".22"/>
+            <circle cx="148" cy="78" r="11" fill="#fca5a5"/>
+            <path d="M137 108 Q148 95 159 108" fill="#1aabba"/>
+            <rect x="108" y="36" width="54" height="32" rx="6" fill="#fff" stroke="#1aabba" stroke-width="1.5" opacity=".9"/>
+            <rect x="114" y="42" width="24" height="3" rx="1.5" fill="#0e2d66" opacity=".6"/>
+            <rect x="114" y="49" width="34" height="3" rx="1.5" fill="#1aabba" opacity=".4"/>
+            <rect x="114" y="56" width="18" height="3" rx="1.5" fill="#0e2d66" opacity=".3"/>
+            <circle cx="40" cy="150" r="13" fill="none" stroke="#1aabba" stroke-width="2" stroke-dasharray="4 2" opacity=".45"/>
+            <circle cx="40" cy="150" r="5" fill="#1aabba" opacity=".4"/>
+            <ellipse cx="162" cy="40" rx="19" ry="12" fill="#c8eef5"/>
+            <ellipse cx="149" cy="43" rx="12" ry="10" fill="#c8eef5"/>
+          </svg>
+        </div> -->
+
+        <div class="icon-circle">
+  <div class="orbit orbit-1"></div>
+  <div class="orbit orbit-2"></div>
+
+  <!-- Badges -->
+  <div class="o-badge b1"><span class="badge-dot"></span>UI/UX Design</div>
+  <div class="o-badge b2"><span class="badge-dot"></span>Full-Stack</div>
+  <div class="o-badge b3"><span class="badge-dot"></span>SEO Ready</div>
+  <div class="o-badge b4"><span class="badge-dot"></span>Mobile Apps</div>
+  <div class="o-badge b5"><span class="badge-dot"></span>Cloud</div>
+  <div class="o-badge b6"><span class="badge-dot"></span>Cybersecurity</div>
+  <div class="o-badge b7"><span class="badge-dot"></span>Data Analytics</div>
+
+  <!-- Your SVG stays same -->
+ <svg class="circle-inner" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="28" y="112" width="144" height="8" rx="4" fill="#1aabba" opacity=".3"/>
+            <rect x="42" y="52" width="116" height="76" rx="7" fill="#fff" stroke="#1aabba" stroke-width="2.5"/>
+            <rect x="48" y="58" width="104" height="62" rx="3" fill="#eaf8fa"/>
+            <circle cx="55" cy="64" r="3" fill="#ff5f56"/>
+            <circle cx="63" cy="64" r="3" fill="#ffbd2e"/>
+            <circle cx="71" cy="64" r="3" fill="#27c93f"/>
+            <rect x="52" y="73" width="52" height="4" rx="2" fill="#0e2d66" opacity=".45"/>
+            <rect x="52" y="81" width="36" height="4" rx="2" fill="#1aabba" opacity=".4"/>
+            <rect x="58" y="89" width="46" height="4" rx="2" fill="#0e2d66" opacity=".3"/>
+            <rect x="58" y="97" width="30" height="4" rx="2" fill="#1aabba" opacity=".35"/>
+            <rect x="52" y="105" width="56" height="4" rx="2" fill="#0e2d66" opacity=".22"/>
+            <circle cx="148" cy="78" r="11" fill="#fca5a5"/>
+            <path d="M137 108 Q148 95 159 108" fill="#1aabba"/>
+            <rect x="108" y="36" width="54" height="32" rx="6" fill="#fff" stroke="#1aabba" stroke-width="1.5" opacity=".9"/>
+            <rect x="114" y="42" width="24" height="3" rx="1.5" fill="#0e2d66" opacity=".6"/>
+            <rect x="114" y="49" width="34" height="3" rx="1.5" fill="#1aabba" opacity=".4"/>
+            <rect x="114" y="56" width="18" height="3" rx="1.5" fill="#0e2d66" opacity=".3"/>
+            <circle cx="40" cy="150" r="13" fill="none" stroke="#1aabba" stroke-width="2" stroke-dasharray="4 2" opacity=".45"/>
+            <circle cx="40" cy="150" r="5" fill="#1aabba" opacity=".4"/>
+            <ellipse cx="162" cy="40" rx="19" ry="12" fill="#c8eef5"/>
+            <ellipse cx="149" cy="43" rx="12" ry="10" fill="#c8eef5"/>
+          </svg>
+</div>
+      </div>
+    </div>
+ 
+    <!-- ═══ SLIDE 2: Services ═══ -->
+    <div class="slide">
+      <div class="panel-left">
+        <span class="slide-tag"><span class="tag-dot"></span>What We Offer</span>
+        <h1 class="slide-headline">Tailored Digital Solutions For <span>Every Business</span></h1>
+        <p class="slide-sub-bold">From concept to launch — we do it all.</p>
+        <p class="slide-sub">We craft high-performance websites, e-commerce platforms, and custom web applications built to grow with your brand.</p>
+        <div class="slide-actions">
+          <button class="btn-primary">See All Services <span class="btn-arrow">→</span></button>
+         
+        </div>
+      </div>
+      <div class="panel-right">
+      <div class="service-grid">
+
+  <div class="svc-card">
+    <div class="svc-icon svc-icon--blue">
+   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e2d66" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+    </div>
+    <div class="svc-title">Web Design</div>
+    <div class="svc-sub">Pixel-perfect layouts that convert visitors</div>
+  </div>
+
+  <div class="svc-card">
+    <div class="svc-icon svc-icon--teal">
+   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1aabba" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+    </div>
+    <div class="svc-title">Development</div>
+    <div class="svc-sub">Clean, scalable & lightning-fast code</div>
+  </div>
+
+  <div class="svc-card">
+    <div class="svc-icon svc-icon--orange">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c06a10" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z"></path></svg>
+    </div>
+    <div class="svc-title">SEO & Growth</div>
+    <div class="svc-sub">Rank higher, grow faster</div>
+  </div>
+
+  <div class="svc-card">
+    <div class="svc-icon svc-icon--purple">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+    </div>
+    <div class="svc-title">Mobile First</div>
+    <div class="svc-sub">Responsive on every screen size</div>
+  </div>
+
+  <div class="svc-card svc-card--full">
+    <div class="svc-icon svc-icon--teal">
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1aabba" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+    </div>
+    <div>
+      <div class="svc-title">Hosting & Maintenance</div>
+      <div class="svc-sub">99.9% uptime · 24/7 monitoring & support</div>
+    </div>
+  </div>
+
+</div>
+      </div>
+    </div>
+ 
+    <!-- ═══ SLIDE 3: Results ═══ -->
+    <div class="slide">
+      <div class="panel-left">
+        <span class="slide-tag"><span class="tag-dot"></span>Proven Results</span>
+        <h1 class="slide-headline">Numbers That Speak <br> For <span>Themselves</span></h1>
+        <p class="slide-sub-bold">Real outcomes for real businesses.</p>
+        <p class="slide-sub">Our data-driven approach has helped 200+ clients reach their goals ahead of schedule with measurable, lasting results.</p>
+        <div class="slide-actions">
+           
+          
+        </div>
+      </div>
+      <div class="panel-right">
+        <div class="stats-panel">
+          <div class="stat-row">
+            <div class="stat-icon" style="background:#e8f0fc">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0e2d66" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div class="stat-num">200+</div>
+              <div class="stat-lbl">Happy clients worldwide</div>
+            </div>
+            <div class="stat-badge">↑ 18% YoY</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-icon" style="background:#e4f9fb">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1aabba" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+            <div>
+              <div class="stat-num">340%</div>
+              <div class="stat-lbl">Average traffic growth</div>
+            </div>
+            <div class="stat-badge">Proven</div>
+          </div>
+          <div class="prog-row">
+            <div class="prog-label"><span>Client satisfaction</span><span>98%</span></div>
+            <div class="prog-bg"><div class="prog-fill" data-w="98"></div></div>
+          </div>
+          <div class="prog-row">
+            <div class="prog-label"><span>On-time delivery</span><span>94%</span></div>
+            <div class="prog-bg"><div class="prog-fill" data-w="94"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- ═══ SLIDE 4: Process ═══ -->
+    <div class="slide">
+      <div class="panel-left">
+        <span class="slide-tag"><span class="tag-dot"></span>Our Process</span>
+        <h1 class="slide-headline">From Idea To Launch <br> In <span> 4 Simple Steps</span></h1>
+        <p class="slide-sub-bold">Transparent. Efficient. Results-focused.</p>
+        <p class="slide-sub">We keep you in the loop at every stage — no surprises, just steady progress toward a product you'll be proud of.</p>
+        <div class="slide-actions">
+           
+        
+        </div>
+      </div>
+      <div class="panel-right">
+       <div class="process-card">
+
+  <div class="proc-head">
+    <span class="proc-icon">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+    </span>
+    How it works
+  </div>
+
+  <div class="proc-item">
+    <div class="proc-line"></div>
+    <div class="proc-num">1</div>
+    <div class="proc-content">
+      <div class="proc-title">Discovery & Strategy</div>
+      <div class="proc-sub">We learn your goals, audience, and competitors to map out the perfect plan.</div>
+    </div>
+  </div>
+
+  <div class="proc-item">
+    <div class="proc-line"></div>
+    <div class="proc-num">2</div>
+    <div class="proc-content">
+      <div class="proc-title">Design & Prototype</div>
+      <div class="proc-sub">High-fidelity wireframes and mockups — you see it before we build it.</div>
+    </div>
+  </div>
+
+  <div class="proc-item">
+    <div class="proc-line"></div>
+    <div class="proc-num">3</div>
+    <div class="proc-content">
+      <div class="proc-title">Development & QA</div>
+      <div class="proc-sub">Clean, tested code with cross-browser checks at every sprint.</div>
+    </div>
+  </div>
+
+  <div class="proc-item">
+    <div class="proc-num proc-num--active">4</div>
+    <div class="proc-content">
+      <div class="proc-title">Launch & Growth</div>
+      <div class="proc-sub">Go live and keep growing with ongoing support and performance tracking.</div>
+    </div>
+  </div>
+
+</div>
+      </div>
+    </div>
+ 
+  </div><!-- /hero-slider -->
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+$(document).ready(function(){
+ 
+  $('#hero-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 5000,
+    speed: 650,
+    cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+    dots: false,
+    arrows: true,
+    infinite: true,
+    pauseOnHover: true,
+    swipe: true,
+    touchThreshold: 10,
+    prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous"><span class="arr-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></span></button>',
+    nextArrow: '<button class="slick-next slick-arrow" aria-label="Next"><span class="arr-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span></button>',
+    appendDots: $('.banner-outer'),
+    customPaging: function(slider, i){
+      return '<button></button>';
+    }
+  });
+ 
+  /* Animate progress bars when slide 3 (index 2) becomes active */
+  function animateBars(){
+    $('.prog-fill').each(function(){
+      var $f = $(this);
+      $f.css({transition:'none', width:'0%'});
+      setTimeout(function(){
+        $f.css({transition:'width 1.3s ease', width: $f.data('w') + '%'});
+      }, 50);
+    });
+  }
+ 
+  /* Check on init if slide 3 is first */
+  if($('#hero-slider').slick('slickCurrentSlide') === 2){
+    animateBars();
+  }
+ 
+  /* After every slide change */
+  $('#hero-slider').on('afterChange', function(event, slick, currentSlide){
+    if(currentSlide === 2){
+      animateBars();
+    }
+  });
+ 
+});
+</script>
+
+  </body>
+</html>
