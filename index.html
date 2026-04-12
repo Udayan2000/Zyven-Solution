@@ -1,1438 +1,1912 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="stylesheet" href="./css/style.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-    <title>Tanda – IT Solutions</title>
-    <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; }
- 
- 
-    .top-bar {
-      /* background: #6366f1; */
-      background-color: #0e2d66;
-      color: #fff;
-      font-size: 13px;
-      padding: 10px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .top-bar-left, .top-bar-right {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    .top-bar-item {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      color: #e8edf7;
-      font-size: 15px;
-      line-height: 20px;
-    }
-    .top-bar-item svg { 
-      opacity: .85; 
-      width: 15px;
-       height: 15px; 
-    }
 
-   .top-bar-socials {
-     display: flex;
-      gap: 10px;
-    }
-
-.top-bar-socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-
-  
-  border-radius: 50%;
-
- 
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-  box-shadow: 
-    0 10px 25px rgba(99, 102, 241, 0.25),
-    0 4px 10px rgba(0, 0, 0, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
-
-  color: #4f46e5;
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-
-.top-bar-socials svg {
-  width: 16px;
-  height: 16px;
-  transition: transform 0.3s ease;
-}
-
-.top-bar-socials a:hover {
-  transform: translateY(-5px) scale(1.08);
-  box-shadow: 
-    0 20px 40px rgba(99, 102, 241, 0.35),
-    0 8px 20px rgba(0, 0, 0, 0.08);
-  color: white;
-  background: linear-gradient(135deg, #6366f1, #3b82f6);
-}
-
-
-.top-bar-socials a:hover svg {
-  transform: scale(1.2) rotate(5deg);
-}
-
-
-.top-bar-socials a::before {
-  content: "";
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.6),
-    transparent
-  );
-  top: 0;
-  left: -120%;
-  transition: all 0.6s ease;
-}
-
-.top-bar-socials a:hover::before {
-  left: 120%;
-}
-    .divider {
-      width: 1px;
-      height: 16px;
-      background: rgba(255,255,255,.25);
-    }
- 
-
-    .navbar {
-      background: #fff;
-      padding: 0 60px;
-    height: 65px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #eaecf0;
-      position: relative;
-      z-index: 10;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-    .logo-icon { width: 44px; height: 44px; }
-    .logo-text {
-      font-size: 22px;
-      font-weight: 700;
-      color: #1a1d2e;
-      letter-spacing: -.3px;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .nav-link {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      padding: 8px 14px;
-      font-size: 14.5px;
-      font-weight: 500;
-      color: #374151;
-      text-decoration: none;
-      border-radius: 7px;
-      transition: background .18s, color .18s;
-      cursor: pointer;
-    }
-    .nav-link:hover { background: #f3f4f8; color: #3b3ef0; }
-    .nav-link svg { opacity: .55; }
-    .nav-contact {
-      font-size: 14.5px;
-      font-weight: 500;
-      color: #374151;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 7px;
-      transition: background .18s, color .18s;
-    }
-    .nav-contact:hover { background: #f3f4f8; color: #3b3ef0; }
-    .nav-cta-info {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-    }
-    .cta-icon-wrap {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #0e2d66, #5b5ee8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .cta-text small {
-     display: block;
-    font-size: 13.5px;
-    color: #6b7280;
-    font-weight: 400;
-    }
-    .cta-text .mail_cta-text {
-      display: block;
-      font-size: 16px;
-      font-weight: 600;
-      color: #1a1d2e;
-      text-decoration: none;
-  
-    }
-
-
-  :root{
-  --font-head:'Sora',sans-serif;
-  --font-body:'DM Sans',sans-serif;
-  --teal:#1aabba;
-  --teal-dark:#0e8a97;
-  --teal-light:#2dcad9;
-  --blue:#0e2d66;
-  --white:#fff;
-  --off:#f4fafc;
-  --diag: 0px;;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--font-body)}
- 
-/* ── WRAPPER ── */
-.banner-outer{width:100%;border-radius:16px;overflow:hidden;position:relative;padding: 10px;}
- 
-/* ── SLIDE BASE ── */
-.slide{
-  min-height:clamp(340px,52vw,560px);
-  display:flex !important;
-  align-items:stretch;
-  overflow:hidden;
-  position:relative;
-}
-.slick-dotted.slick-slider {
-    margin-bottom: 0px !important;
-}
- 
-/* ── LEFT PANEL ── */
-/* .panel-left{
-  position:relative;
-  z-index:2;
-  width:60%;
-  background: linear-gradient(135deg, #0e2d66, #5b5ee8);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:clamp(28px,5vw,60px) clamp(20px,4vw,52px);
-  padding-right:calc(var(--diag) + clamp(20px,3vw,40px));
-  clip-path:polygon(0 0,100% 0,calc(100% - var(--diag)) 100%,0 100%);
-  overflow:hidden;
-}
-.panel-left::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(ellipse at 15% 30%,rgba(14,149,186,0.18),transparent 60%),
-    radial-gradient(ellipse at 80% 80%,rgba(26,171,186,0.12),transparent 50%);
-  pointer-events:none;
-}
-.panel-left::after{
-  content:'';
-  position:absolute;
-  top:0;left:-80%;
-  width:45%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent);
-  animation:shimmer 4s infinite;
-  pointer-events:none;
-} */
-
-.panel-left{
-   position: relative;
-  z-index: 2;
-  width: 60%;
-
-  background: linear-gradient(135deg, #0e2d66 0%, #1a3c8f 40%, #5b5ee8 100%);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: clamp(28px,5vw,60px) clamp(50px,8vw,80px);
-  padding-right: calc(var(--diag) + 40px);
-
-  /* PERFECT CUT */
-  clip-path: polygon(0 0, 100% 0, calc(100% - var(--diag)) 100%, 0 100%);
-
-  overflow: hidden;
-}
-.panel-left::before{
-  content:'';
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(circle at 20% 25%, rgba(93, 233, 255, 0.25), transparent 55%),
-    radial-gradient(circle at 80% 75%, rgba(91, 94, 232, 0.25), transparent 60%);
-
-  filter: blur(10px);
-  pointer-events:none;
-}
-.panel-left::after{
-  content:'';
-  position:absolute;
-  top:0;
-  left:-70%;
-  width:50%;
-  height:100%;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,0.12),
-    transparent
-  );
-
-  animation: shimmer 5s infinite;
-  pointer-events:none;
-}
-.panel-right{
-  position: relative;
-  z-index: 1;
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: clamp(28px,5vw,60px) clamp(20px,4vw,52px);
-  padding-left: calc(var(--diag) + 10px);
-
-  /* 🔥 MATCH EXACTLY OPPOSITE CUT */
-  clip-path: polygon(var(--diag) 0, 100% 0, 100% 100%, 0 100%);
-
-  background: linear-gradient(135deg, #050816, #0a0f2c);
-
-  margin-left: -1px; /* 🔥 GAP FIX (very important) */
-
-}
-.panel-right::before{
-  content:'';
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(circle at 25% 30%, rgba(26,171,186,0.18), transparent 55%),
-    radial-gradient(circle at 75% 80%, rgba(91,94,232,0.18), transparent 60%);
-
-  filter: blur(12px);
-  pointer-events:none;
-}
-.panel-right::after{
-  content:'';
-  position:absolute;
-  top:0;
-  left:-70%;
-  width:50%;
-  height:100%;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,0.08),
-    transparent
-  );
-
-  animation: shimmer 6s infinite;
-  pointer-events:none;
-}
-@keyframes shimmer{
-  0%{ left:-70%; }
-  100%{ left:140%; }
-}
- 
-/* ── RIGHT PANEL ── */
-.panel-right{
-position: relative;
-    z-index: 1;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px clamp(12px, 3vw, 33px);
-    
-    background: var(--off);
-}
- 
-/* ── TYPOGRAPHY ── */
-.slide-tag{
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  background:rgba(255,255,255,0.12);
-  border:1px solid rgba(255,255,255,0.22);
-  color:rgba(255,255,255,0.92);
-  font-size:10.5px;
-  font-weight:600;
-  letter-spacing:.13em;
-  text-transform:uppercase;
-  padding:5px 14px;
-  border-radius:30px;
-  width:fit-content;
-  margin-bottom:16px;
-  font-family:var(--font-body);
-}
-.tag-dot{
-  width:6px;height:6px;border-radius:50%;
-  background:#7fffd4;
-  animation:pulse 1.8s infinite;
-  flex-shrink:0;
-}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.7)}}
- 
-.slide-headline{
-  font-family:var(--font-head);
-  font-size:clamp(20px,3.4vw,62px);
-  font-weight:800;
-  color:#fff;
-  line-height:1.08;
-  letter-spacing:-.025em;
-  margin-bottom:14px;
-}
-.slide-headline span{
-  background:linear-gradient(120deg,#ffffff 0%,#7dd7ff 60%,#ffffff 100%);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-}
- 
-.slide-sub-bold{
-  font-size:clamp(12px,1.3vw,15px);
-  font-weight:600;
-  color:rgba(255,255,255,0.92);
-  margin-bottom:7px;
-  font-family:var(--font-body);
-}
-.slide-sub{
-  font-size:clamp(11px,1.1vw,13.5px);
-  color:rgba(255,255,255,0.72);
-  line-height:1.7;
-  margin-bottom:clamp(18px,3vw,30px);
-  max-width:450px;
-  font-family:var(--font-body);
-}
- 
-/* ── BUTTONS ── */
-.slide-actions{display:flex;gap:10px;flex-wrap:wrap}
- 
-.btn-primary {
-  position: relative;
-  overflow: hidden;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-
-  padding: 12px 24px;
-  border-radius: 10px;
-  border: none;
-
-  font-size: 14px;
-  font-weight: 600;
-  font-family: var(--font-body);
-
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
-  color: #fff;
-
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.25);
-}
-
-/* 🔥 Gradient Shift Effect */
-.btn-primary::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
-  transform: translateX(-100%);
-  transition: transform 0.6s ease;
-}
-
-/* Hover */
-.btn-primary:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.35);
-}
-
-/* Shine animation */
-.btn-primary:hover::before {
-  transform: translateX(100%);
-}
-
-/* Active click */
-.btn-primary:active {
-  transform: translateY(0) scale(0.98);
-  box-shadow: 0 5px 14px rgba(79, 70, 229, 0.25);
-}
-
- 
-
-
- 
-/* ── SLIDE 1 RIGHT: ICON CIRCLE ── */
-.icon-circle{
-  width:clamp(180px,22vw,280px);
-  height:clamp(180px,22vw,280px);
-  border-radius:50%;
-  background: radial-gradient(circle at 30% 30%, #e6fbff, #b8e8f0);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  flex-shrink:0;
-  overflow:visible;
-
-  box-shadow:
-    0 20px 60px rgba(26,171,186,0.25),
-    inset 0 0 30px rgba(255,255,255,0.4);
-
-  transition:all .5s ease;
-}
-
-/* ✨ Hover Premium Effect */
-.icon-circle:hover{
-  transform:scale(1.05) rotate(2deg);
-  box-shadow:
-    0 30px 80px rgba(26,171,186,0.35),
-    0 0 40px rgba(26,171,186,0.4),
-    inset 0 0 40px rgba(255,255,255,0.6);
-}
-
-/* 🔵 Orbits (Glowing + Animated) */
-.orbit{
-  position:absolute;
-  border-radius:50%;
-  animation:spin linear infinite;
-}
-
-.orbit::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:50%;
-  border:2px solid transparent;
-  background:
-    linear-gradient(120deg,#1aabba,#7fffd4,#0e2d66) border-box;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) padding-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor;
-          mask-composite:exclude;
-  opacity:.6;
-  filter:blur(.5px);
-}
-
-.orbit-1{width:115%;height:115%;animation-duration:18s}
-.orbit-2{width:140%;height:140%;animation-duration:28s;animation-direction:reverse}
-
-@keyframes spin{
-  from{transform:rotate(0deg)}
-  to{transform:rotate(360deg)}
-}
-
-/* ✨ Floating Badges */
-.o-badge{
-  position:absolute;
-  backdrop-filter: blur(10px);
-  background:rgba(255,255,255,0.7);
-  border:1px solid rgba(255,255,255,0.4);
-  border-radius:14px;
-  padding:7px 14px;
-  display:flex;
-  align-items:center;
-  gap:6px;
-  font-size:11px;
-  font-weight:600;
-  color:#0e2d66;
-  white-space:nowrap;
-
-  box-shadow:0 8px 25px rgba(0,0,0,0.12);
-
-  animation:float 4s ease-in-out infinite;
-  transition:.3s;
-}
-
-/* Hover badge */
-.o-badge:hover{
-  transform:scale(1.1);
-  box-shadow:0 10px 30px rgba(26,171,186,0.4);
-}
-
-/* ✨ Floating Animation */
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-10px)}
-}
-
-/* 🎯 Badge Positions */
-.b1{top:-5%; right:5%;}
-.b2{bottom:5%; left:-10%;}
-.b3{top:45%; right:-18%;}
-.b4{top:-8%; left:10%;}
-.b5{bottom:-8%; right:10%;}
-.b6{top:70%; left:-18%;}
-.b7{top:20%; left:-20%;}
-
-/* 🎨 Dot Colors */
-.badge-dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:linear-gradient(135deg,#1aabba,#7fffd4);
-}
-
-/* SVG */
-.circle-inner{
-  width:66%;
-  height:66%;
-  position:relative;
-  z-index:2;
-  transition:.5s;
-}
-
-/* SVG hover animation */
-.icon-circle:hover .circle-inner{
-  transform:scale(1.05) rotate(-2deg);
-}
- 
-/* ── SLIDE 2 RIGHT: SERVICE GRID ── */
-/* GRID */
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  max-width: 520px;
-}
-
-/* CARD BASE */
-.svc-card {
-  position: relative;
-  padding: 20px 18px;
-  border-radius: 16px;
-
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(16px);
-
-  border: 1px solid rgba(255,255,255,0.4);
-
-  box-shadow:
-    0 8px 25px rgba(14,45,102,0.08),
-    inset 0 1px 0 rgba(255,255,255,0.6);
-
-  transition: all 0.35s ease;
-  overflow: hidden;
-}
-
-/* Glow border animation */
-.svc-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(91,94,232,0.25),
-    transparent
-  );
-
-  opacity: 0;
-  transition: 0.4s;
-}
-
-/* Hover effect */
-.svc-card:hover {
-  transform: translateY(-8px) scale(1.02);
-
-  box-shadow:
-    0 18px 45px rgba(14,45,102,0.18),
-    0 0 0 1px rgba(91,94,232,0.1);
-}
-
-.svc-card:hover::before {
-  opacity: 1;
-}
-
-/* ICON */
-.svc-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 14px;
-
-  transition: all 0.35s ease;
-}
-
-/* ICON HOVER ANIMATION */
-.svc-card:hover .svc-icon {
-  transform: rotate(8deg) scale(1.15);
-}
-
-/* ICON COLORS */
-.svc-icon--blue { background: #e8f0fc; }
-.svc-icon--teal { background: #e4f9fb; }
-.svc-icon--orange { background: #fef3e8; }
-.svc-icon--purple { background: #f3e8ff; }
-
-/* TEXT */
-.svc-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: #0e2d66;
-  margin-bottom: 6px;
-}
-
-.svc-sub {
-  font-size: 12px;
-  color: #6b8cbf;
-  line-height: 1.5;
-}
-
-/* FULL WIDTH CARD */
-.svc-card--full {
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-/* Shine animation */
-.svc-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,0.5),
-    transparent
-  );
-
-  transition: 0.6s;
-}
-
-.svc-card:hover::after {
-  left: 120%;
-}
- 
-/* ── SLIDE 3 RIGHT: STATS ── */
-.stats-panel{display:flex;flex-direction:column;gap:11px;width:100%;max-width:420px}
-.stat-row{
-  background:#fff;
-  border-radius:14px;
-  padding:15px 18px;
-  display:flex;align-items:center;gap:14px;
-  box-shadow:0 3px 12px rgba(14,45,102,0.08);
-  border:1px solid rgba(14,45,102,0.06);
-}
-.stat-icon{
-  width:42px;height:42px;
-  border-radius:11px;
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;
-}
-.stat-num{font-family:var(--font-head);font-size:24px;font-weight:800;color:#0e2d66;line-height:1}
-.stat-lbl{font-size:11px;color:#6b8cbf;margin-top:3px;font-family:var(--font-body)}
-.stat-badge{
-  margin-left:auto;
-  font-size:10px;font-weight:700;
-  padding:4px 10px;border-radius:20px;
-  background:#e0f8e0;color:#0a8a2e;
-  font-family:var(--font-body);
-  white-space:nowrap;
-}
-.prog-row{
-  background:#fff;
-  border-radius:14px;
-  padding:15px 18px;
-  box-shadow:0 3px 12px rgba(14,45,102,0.08);
-  border:1px solid rgba(14,45,102,0.06);
-}
-.prog-label{
-  display:flex;justify-content:space-between;
-  font-size:11.5px;font-weight:600;color:#0e2d66;
-  margin-bottom:9px;font-family:var(--font-body);
-}
-.prog-bg{background:#e4eaf5;border-radius:6px;height:7px;overflow:hidden}
-.prog-fill{
-  height:7px;border-radius:6px;
-  background:linear-gradient(90deg,#1aabba,#0e2d66);
-  width:0;transition:width 1.3s ease;
-}
- 
-/* ── SLIDE 4 RIGHT: PROCESS ── */
-/* CARD */
-.process-card {
-  position: relative;
-  padding: 26px;
-  border-radius: 18px;
-
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(18px);
-
-  border: 1px solid rgba(255,255,255,0.5);
-
-  box-shadow:
-    0 10px 30px rgba(14,45,102,0.12),
-    inset 0 1px 0 rgba(255,255,255,0.7);
-
-  transition: all 0.35s ease;
-}
-
-/* HEADER */
-.proc-head {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  font-size: 14px;
-  font-weight: 700;
-  color: #0e2d66;
-
-  margin-bottom: 22px;
-}
-
-/* ICON */
-.proc-icon {
-  width: 30px;
-  height: 30px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 10px;
-  background: linear-gradient(135deg,#1aabba,#0e2d66);
-
-  color: #fff;
-}
-.proc-icon svg {
-  width: 16px;
-  height: 16px;
-  color: #fff;
-}
-/* ITEM */
-.proc-item {
-  position: relative;
-  display: flex;
-  gap: 14px;
-  margin-bottom: 18px;
-
-  transition: all 0.3s ease;
-}
-
-/* HOVER EFFECT */
-.proc-item:hover {
-  transform: translateX(6px);
-}
-
-/* TIMELINE LINE */
-.proc-line {
-  position: absolute;
-  left: 14px;
-  top: 34px;
-  width: 2px;
-  height: calc(100%);
-
-  background: linear-gradient(
-    to bottom,
-    rgba(26,171,186,0.6),
-    rgba(14,45,102,0.1)
-  );
-
-  border-radius: 2px;
-}
-
-/* STEP NUMBER */
-.proc-num {
-  width: 30px;
-  height: 30px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: #0e2d66;
-  color: #fff;
-
-  font-size: 12px;
-  font-weight: 700;
-
-  flex-shrink: 0;
-  position: relative;
-  z-index: 2;
-
-  transition: all 0.3s ease;
-}
-
-/* ACTIVE STEP */
-.proc-num--active {
-  background: linear-gradient(135deg,#1aabba,#0a9a6e);
-  box-shadow: 0 0 0 6px rgba(26,171,186,0.15);
-}
-
-/* HOVER NUMBER EFFECT */
-.proc-item:hover .proc-num {
-  transform: scale(1.15);
-}
-
-/* CONTENT */
-.proc-content {
-  flex: 1;
-}
-
-/* TITLE */
-.proc-title {
- font-size: 15px;
-  font-weight: 700;
-  color: #0e2d66;
-}
-
-/* SUBTEXT */
-.proc-sub {
-  font-size: 12px;
-  color: #6b8cbf;
-  margin-top: 3px;
-  line-height: 1.5;
-}
-
-/* SHINE EFFECT */
-.process-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 40%;
-  height: 100%;
-
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.5),
-    transparent
-  );
-
-  transition: 0.7s;
-}
-
-.process-card:hover::after {
-  left: 120%;
-}
- 
-/* ── SLICK OVERRIDES ── */
-#hero-slider{border-radius:16px;overflow:hidden}
- 
-.slick-track{display:flex !important}
-.slick-slide{height:inherit !important}
-.slick-slide > div{height:100%}
- 
-/* Arrows */
-.slick-prev,
-.slick-next{
-  z-index:20;
-  width:36px;height:36px;
-  border-radius:50%;
-  background:#fff !important;
-  border:1px solid rgba(14,45,102,0.12) !important;
-  box-shadow:0 4px 16px rgba(14,45,102,0.12);
-  display:flex !important;
-  align-items:center;
-  justify-content:center;
-  transition:transform .2s,box-shadow .2s,background .2s !important;
-}
-.slick-prev:hover,
-.slick-next:hover{
-  background:#0e2d66 !important;
-  box-shadow:0 8px 24px rgba(14,45,102,0.18);
-  transform:translateY(-50%) scale(1.08);
-}
-.slick-prev{left:14px}
-.slick-next{right:14px}
- 
-/* Hide default slick arrow icons, use custom SVG */
-.slick-prev:before,
-.slick-next:before{display:none}
- 
-.slick-prev .arr-icon,
-.slick-next .arr-icon{
-  display:flex;align-items:center;justify-content:center;
-}
-.slick-prev .arr-icon svg,
-.slick-next .arr-icon svg{
-  stroke:#0e2d66;
-  transition:stroke .2s;
-}
-.slick-prev:hover .arr-icon svg,
-.slick-next:hover .arr-icon svg{stroke:#fff}
- 
-
- 
-/* ── RESPONSIVE ── */
-@media(max-width:680px){
-  .panel-left{width:100%;clip-path:none;padding:30px 22px 26px;border-radius:0}
-  .panel-right{display:none}
-  .slide{flex-direction:column}
-}
-@media(max-width:420px){
-  .slide-headline{font-size:22px}
-  .slide-actions{flex-direction:column;align-items:flex-start}
-}
-
-
-  </style>
-  </head>
-  <body>
-
-    <!-- TOP BAR -->
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <span class="top-bar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2"><path
-              d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle
-              cx="12" cy="10" r="3" /></svg>
-          California, TX 70240
-        </span>
-        <span class="divider"></span>
-        <span class="top-bar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20"
-              height="16" rx="2" /><path
-              d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
-          Info@gmail.com
-        </span>
-      </div>
-      <div class="top-bar-right">
-        <span class="top-bar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2"><circle cx="12" cy="12"
-              r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-          Office Hours: 8:00 AM – 7:45 PM
-        </span>
-        <span class="divider"></span>
-        <div class="top-bar-socials">
-          <a href="#">
-            <svg width="14" height="14" viewBox="0 0 24 24"
-              fill="currentColor"><path
-                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
-          </a>
-          <a href="#">
-            <svg width="14" height="14" viewBox="0 0 24 24"
-              fill="currentColor"><path
-                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></svg>
-          </a>
-          <a href="#">
-            <svg width="14" height="14" viewBox="0 0 24 24"
-              fill="currentColor"><path
-                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect
-                x="2" y="9" width="4" height="12" /><circle cx="4" cy="4"
-                r="2" /></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <a href="#" class="logo">
-        <svg class="logo-icon" viewBox="0 0 44 44" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M22 3L38.5 13V31L22 41L5.5 31V13L22 3Z" fill="#3b3ef0"
-            opacity=".12" stroke="#3b3ef0" stroke-width="2" />
-          <circle cx="22" cy="22" r="8" fill="none" stroke="#3b3ef0"
-            stroke-width="2" />
-          <path d="M18 22h8M22 18v8" stroke="#3b3ef0" stroke-width="2"
-            stroke-linecap="round" />
-          <circle cx="15" cy="17" r="2" fill="#6366f1" />
-          <circle cx="29" cy="17" r="2" fill="#6366f1" />
-          <circle cx="15" cy="27" r="2" fill="#6366f1" />
-          <circle cx="29" cy="27" r="2" fill="#6366f1" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanda – IT Solutions</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Slick Carousel CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       TOP BAR
+       ============================================================ -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+
+      <!-- Address -->
+      <span class="top-bar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
         </svg>
-        <span class="logo-text">Tanda</span>
-      </a>
+        California, TX 70240
+      </span>
 
-      <div class="nav-links">
-        <a href="#" class="nav-link">HOME </a>
-        <a href="#" class="nav-link">ABOUT </a>
-        <a href="#" class="nav-link">SERVICES </a>
+      <span class="divider" aria-hidden="true"></span>
 
-        <a href="#" class="nav-contact">CONTACT</a>
-      </div>
+      <!-- Email -->
+      <span class="top-bar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </svg>
+        Info@gmail.com
+      </span>
 
-      <div class="nav-cta-info">
-        <div class="cta-icon-wrap">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="#fff" stroke-width="2">
-            <path
-              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-            <circle cx="9" cy="10" r="1" fill="#fff" />
-            <circle cx="12" cy="10" r="1" fill="#fff" />
-            <circle cx="15" cy="10" r="1" fill="#fff" />
+    </div>
+
+    <div class="top-bar-right">
+
+      <!-- Office Hours -->
+      <span class="top-bar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg>
+        Office Hours: 8:00 AM – 7:45 PM
+      </span>
+
+      <span class="divider" aria-hidden="true"></span>
+
+      <!-- Social Links -->
+      <div class="top-bar-socials" aria-label="Social Media Links">
+
+        <a href="#" aria-label="Facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
           </svg>
-        </div>
-        <div class="cta-text">
-          <small>Have any Questions?</small>
-          <a href="mailto:info@bestup.com" class="mail_cta-text">info@bestup.com</a>
-        </div>
-      </div>
-    </nav>
+        </a>
 
-    <div class="banner-outer">
-  <div id="hero-slider">
- 
-    <!-- ═══ SLIDE 1: Hero ═══ -->
-    <div class="slide">
-      <div class="panel-left">
-        <span class="slide-tag"><span class="tag-dot"></span>Expert Web Development</span>
-        <h1 class="slide-headline">Build Software<br><span>Faster &amp; Smarter</span></h1>
-        <p class="slide-sub-bold">We design &amp; develop scalable, high-performance apps.</p>
-        <p class="slide-sub">Helping modern businesses launch with confidence and grow without limits — from concept to production, every step of the way.</p>
-        <div class="slide-actions">
-
-           <button class="btn-primary">See All Services  </button>
-                 </div>
-      </div>
-      <div class="panel-right">
-        <!-- <div class="icon-circle">
-          <div class="orbit orbit-1"></div>
-          <div class="orbit orbit-2"></div>
-          <div class="o-badge"><span class="badge-dot" style="background:#1aabba"></span>UI/UX Design</div>
-          <div class="o-badge"><span class="badge-dot" style="background:#0e2d66"></span>Full-Stack Dev</div>
-          <div class="o-badge"><span class="badge-dot" style="background:#7fffd4"></span>SEO Ready</div>
-          <svg class="circle-inner" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="28" y="112" width="144" height="8" rx="4" fill="#1aabba" opacity=".3"/>
-            <rect x="42" y="52" width="116" height="76" rx="7" fill="#fff" stroke="#1aabba" stroke-width="2.5"/>
-            <rect x="48" y="58" width="104" height="62" rx="3" fill="#eaf8fa"/>
-            <circle cx="55" cy="64" r="3" fill="#ff5f56"/>
-            <circle cx="63" cy="64" r="3" fill="#ffbd2e"/>
-            <circle cx="71" cy="64" r="3" fill="#27c93f"/>
-            <rect x="52" y="73" width="52" height="4" rx="2" fill="#0e2d66" opacity=".45"/>
-            <rect x="52" y="81" width="36" height="4" rx="2" fill="#1aabba" opacity=".4"/>
-            <rect x="58" y="89" width="46" height="4" rx="2" fill="#0e2d66" opacity=".3"/>
-            <rect x="58" y="97" width="30" height="4" rx="2" fill="#1aabba" opacity=".35"/>
-            <rect x="52" y="105" width="56" height="4" rx="2" fill="#0e2d66" opacity=".22"/>
-            <circle cx="148" cy="78" r="11" fill="#fca5a5"/>
-            <path d="M137 108 Q148 95 159 108" fill="#1aabba"/>
-            <rect x="108" y="36" width="54" height="32" rx="6" fill="#fff" stroke="#1aabba" stroke-width="1.5" opacity=".9"/>
-            <rect x="114" y="42" width="24" height="3" rx="1.5" fill="#0e2d66" opacity=".6"/>
-            <rect x="114" y="49" width="34" height="3" rx="1.5" fill="#1aabba" opacity=".4"/>
-            <rect x="114" y="56" width="18" height="3" rx="1.5" fill="#0e2d66" opacity=".3"/>
-            <circle cx="40" cy="150" r="13" fill="none" stroke="#1aabba" stroke-width="2" stroke-dasharray="4 2" opacity=".45"/>
-            <circle cx="40" cy="150" r="5" fill="#1aabba" opacity=".4"/>
-            <ellipse cx="162" cy="40" rx="19" ry="12" fill="#c8eef5"/>
-            <ellipse cx="149" cy="43" rx="12" ry="10" fill="#c8eef5"/>
+        <a href="#" aria-label="Twitter / X">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
           </svg>
-        </div> -->
+        </a>
 
-        <div class="icon-circle">
-  <div class="orbit orbit-1"></div>
-  <div class="orbit orbit-2"></div>
-
-  <!-- Badges -->
-  <div class="o-badge b1"><span class="badge-dot"></span>UI/UX Design</div>
-  <div class="o-badge b2"><span class="badge-dot"></span>Full-Stack</div>
-  <div class="o-badge b3"><span class="badge-dot"></span>SEO Ready</div>
-  <div class="o-badge b4"><span class="badge-dot"></span>Mobile Apps</div>
-  <div class="o-badge b5"><span class="badge-dot"></span>Cloud</div>
-  <div class="o-badge b6"><span class="badge-dot"></span>Cybersecurity</div>
-  <div class="o-badge b7"><span class="badge-dot"></span>Data Analytics</div>
-
-  <!-- Your SVG stays same -->
- <svg class="circle-inner" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="28" y="112" width="144" height="8" rx="4" fill="#1aabba" opacity=".3"/>
-            <rect x="42" y="52" width="116" height="76" rx="7" fill="#fff" stroke="#1aabba" stroke-width="2.5"/>
-            <rect x="48" y="58" width="104" height="62" rx="3" fill="#eaf8fa"/>
-            <circle cx="55" cy="64" r="3" fill="#ff5f56"/>
-            <circle cx="63" cy="64" r="3" fill="#ffbd2e"/>
-            <circle cx="71" cy="64" r="3" fill="#27c93f"/>
-            <rect x="52" y="73" width="52" height="4" rx="2" fill="#0e2d66" opacity=".45"/>
-            <rect x="52" y="81" width="36" height="4" rx="2" fill="#1aabba" opacity=".4"/>
-            <rect x="58" y="89" width="46" height="4" rx="2" fill="#0e2d66" opacity=".3"/>
-            <rect x="58" y="97" width="30" height="4" rx="2" fill="#1aabba" opacity=".35"/>
-            <rect x="52" y="105" width="56" height="4" rx="2" fill="#0e2d66" opacity=".22"/>
-            <circle cx="148" cy="78" r="11" fill="#fca5a5"/>
-            <path d="M137 108 Q148 95 159 108" fill="#1aabba"/>
-            <rect x="108" y="36" width="54" height="32" rx="6" fill="#fff" stroke="#1aabba" stroke-width="1.5" opacity=".9"/>
-            <rect x="114" y="42" width="24" height="3" rx="1.5" fill="#0e2d66" opacity=".6"/>
-            <rect x="114" y="49" width="34" height="3" rx="1.5" fill="#1aabba" opacity=".4"/>
-            <rect x="114" y="56" width="18" height="3" rx="1.5" fill="#0e2d66" opacity=".3"/>
-            <circle cx="40" cy="150" r="13" fill="none" stroke="#1aabba" stroke-width="2" stroke-dasharray="4 2" opacity=".45"/>
-            <circle cx="40" cy="150" r="5" fill="#1aabba" opacity=".4"/>
-            <ellipse cx="162" cy="40" rx="19" ry="12" fill="#c8eef5"/>
-            <ellipse cx="149" cy="43" rx="12" ry="10" fill="#c8eef5"/>
+        <a href="#" aria-label="LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
           </svg>
-</div>
+        </a>
+
       </div>
     </div>
- 
-    <!-- ═══ SLIDE 2: Services ═══ -->
-    <div class="slide">
-      <div class="panel-left">
-        <span class="slide-tag"><span class="tag-dot"></span>What We Offer</span>
-        <h1 class="slide-headline">Tailored Digital Solutions For <span>Every Business</span></h1>
-        <p class="slide-sub-bold">From concept to launch — we do it all.</p>
-        <p class="slide-sub">We craft high-performance websites, e-commerce platforms, and custom web applications built to grow with your brand.</p>
-        <div class="slide-actions">
-          <button class="btn-primary">See All Services <span class="btn-arrow">→</span></button>
-         
-        </div>
+  </div>
+  <!-- /top-bar -->
+
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+
+    <!-- Logo -->
+    <a href="#" class="logo" aria-label="Tanda Home">
+      <img src="./images/logo.webp" alt="" loading="lazy" width="150" height="50" />
+    </a>
+
+    <!-- Nav Links -->
+    <ul class="nav-links" role="list">
+      <li><a href="#" class="nav-link">HOME</a></li>
+      <li><a href="#" class="nav-link">ABOUT</a></li>
+      <li><a href="#" class="nav-link">SERVICES</a></li>
+      <li><a href="#" class="nav-link">INDUSTRY</a></li>
+      <li><a href="#" class="nav-link">CAREER</a></li>
+      <li><a href="#" class="nav-contact">CONTACT</a></li>
+    </ul>
+
+    <!-- CTA Info -->
+    <div class="nav-cta-info">
+      <div class="cta-icon-wrap" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="#fff" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          <circle cx="9" cy="10" r="1" fill="#fff" />
+          <circle cx="12" cy="10" r="1" fill="#fff" />
+          <circle cx="15" cy="10" r="1" fill="#fff" />
+        </svg>
       </div>
-      <div class="panel-right">
-      <div class="service-grid">
-
-  <div class="svc-card">
-    <div class="svc-icon svc-icon--blue">
-   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e2d66" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
-    </div>
-    <div class="svc-title">Web Design</div>
-    <div class="svc-sub">Pixel-perfect layouts that convert visitors</div>
-  </div>
-
-  <div class="svc-card">
-    <div class="svc-icon svc-icon--teal">
-   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1aabba" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-    </div>
-    <div class="svc-title">Development</div>
-    <div class="svc-sub">Clean, scalable & lightning-fast code</div>
-  </div>
-
-  <div class="svc-card">
-    <div class="svc-icon svc-icon--orange">
-     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c06a10" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z"></path></svg>
-    </div>
-    <div class="svc-title">SEO & Growth</div>
-    <div class="svc-sub">Rank higher, grow faster</div>
-  </div>
-
-  <div class="svc-card">
-    <div class="svc-icon svc-icon--purple">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-    </div>
-    <div class="svc-title">Mobile First</div>
-    <div class="svc-sub">Responsive on every screen size</div>
-  </div>
-
-  <div class="svc-card svc-card--full">
-    <div class="svc-icon svc-icon--teal">
-     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1aabba" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-    </div>
-    <div>
-      <div class="svc-title">Hosting & Maintenance</div>
-      <div class="svc-sub">99.9% uptime · 24/7 monitoring & support</div>
-    </div>
-  </div>
-
-</div>
+      <div class="cta-text">
+        <small>Have any Questions?</small>
+        <a href="mailto:info@bestup.com" class="mail_cta-text">info@bestup.com</a>
       </div>
     </div>
- 
-    <!-- ═══ SLIDE 3: Results ═══ -->
-    <div class="slide">
-      <div class="panel-left">
-        <span class="slide-tag"><span class="tag-dot"></span>Proven Results</span>
-        <h1 class="slide-headline">Numbers That Speak <br> For <span>Themselves</span></h1>
-        <p class="slide-sub-bold">Real outcomes for real businesses.</p>
-        <p class="slide-sub">Our data-driven approach has helped 200+ clients reach their goals ahead of schedule with measurable, lasting results.</p>
-        <div class="slide-actions">
+
+  </nav>
+  <!-- /navbar -->
+
+
+  <!-- ============================================================
+       HERO SLIDER BANNER
+       ============================================================ -->
+  <div class="banner-outer">
+    <div id="hero-slider">
+
+
+        <!-- ═══════════════════════════════════════════
+           SLIDE 1 – Hero
+           ═══════════════════════════════════════════ -->
+
+
            
-          
+      <div class="slide">
+
+        <!-- Left Panel -->
+        <div class="panel-left">
+          <span class="slide-tag">
+            <span class="tag-dot" aria-hidden="true"></span>
+          Talent Acquisition Excellence
+          </span>
+
+          <h1 class="slide-headline">
+            Talent Solutions<br>
+            <span>Experts</span>
+          </h1>
+
+          <p class="slide-sub-bold">
+           Connecting the right talent with the right opportunities to drive growth and success.
+          </p>
+
+          <p class="slide-sub">
+      We help businesses find the right talent while enabling individuals to unlock meaningful career opportunities.
+          </p>
+
+          <div class="slide-actions">
+            <button class="btn-primary">See All Services</button>
+          </div>
         </div>
+
+        <!-- Right Panel -->
+      <div class="panel-right" aria-hidden="true">
+   <div class="talent-visual">
+ 
+    <!-- Glow -->
+    <div class="tv-glow g1"></div>
+    <div class="tv-glow g2"></div>
+ 
+    <!-- Floating badge — top right -->
+    <div class="floating-badge">
+      <div class="fb-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <polyline points="22 4 12 14.01 9 11.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
-      <div class="panel-right">
-        <div class="stats-panel">
-          <div class="stat-row">
-            <div class="stat-icon" style="background:#e8f0fc">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0e2d66" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div>
-              <div class="stat-num">200+</div>
-              <div class="stat-lbl">Happy clients worldwide</div>
-            </div>
-            <div class="stat-badge">↑ 18% YoY</div>
-          </div>
-          <div class="stat-row">
-            <div class="stat-icon" style="background:#e4f9fb">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1aabba" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-            </div>
-            <div>
-              <div class="stat-num">340%</div>
-              <div class="stat-lbl">Average traffic growth</div>
-            </div>
-            <div class="stat-badge">Proven</div>
-          </div>
-          <div class="prog-row">
-            <div class="prog-label"><span>Client satisfaction</span><span>98%</span></div>
-            <div class="prog-bg"><div class="prog-fill" data-w="98"></div></div>
-          </div>
-          <div class="prog-row">
-            <div class="prog-label"><span>On-time delivery</span><span>94%</span></div>
-            <div class="prog-bg"><div class="prog-fill" data-w="94"></div></div>
-          </div>
-        </div>
+      <div class="fb-text">
+        <strong>New Match Found</strong>
+        <span>3 mins ago · 97% fit</span>
       </div>
     </div>
  
-    <!-- ═══ SLIDE 4: Process ═══ -->
-    <div class="slide">
-      <div class="panel-left">
-        <span class="slide-tag"><span class="tag-dot"></span>Our Process</span>
-        <h1 class="slide-headline">From Idea To Launch <br> In <span> 4 Simple Steps</span></h1>
-        <p class="slide-sub-bold">Transparent. Efficient. Results-focused.</p>
-        <p class="slide-sub">We keep you in the loop at every stage — no surprises, just steady progress toward a product you'll be proud of.</p>
-        <div class="slide-actions">
-           
+    <!-- Floating pill — bottom left -->
+    <div class="floating-pill">
+      <div class="fp-dot"></div>
+      <span class="fp-text">12 interviews today</span>
+    </div>
+ 
+    <!-- Main Card -->
+    <div class="talent-card">
+ 
+      <!-- Header -->
+      <div class="tc-header">
+        <div class="tc-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="tc-header-center">
+          <div class="tc-title">Hiring Dashboard</div>
+        </div>
+        <div class="tc-header-action">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          Add Role
+        </div>
+      </div>
+ 
+      <!-- Stats -->
+      <div class="tc-stats">
+        <div class="stat-box">
+          <h4>120+</h4>
+          <p>Candidates</p>
+        </div>
+        <div class="stat-box">
+          <h4>45+</h4>
+          <p>Open Roles</p>
+        </div>
+        <div class="stat-box highlight">
+          <h4>98%</h4>
+          <p>Success Rate</p>
+        </div>
+      </div>
+ 
+      <!-- Pipeline progress bars -->
+      <div class="tc-progress-row">
+        <div class="progress-item">
+          <span class="progress-label">Sourcing</span>
+          <div class="progress-track"><div class="progress-fill" style="width:82%"></div></div>
+          <span class="progress-pct">82%</span>
+        </div>
+        <div class="progress-item">
+          <span class="progress-label">Screening</span>
+          <div class="progress-track"><div class="progress-fill" style="width:65%"></div></div>
+          <span class="progress-pct">65%</span>
+        </div>
+        <div class="progress-item">
+          <span class="progress-label">Offer</span>
+          <div class="progress-track"><div class="progress-fill" style="width:41%"></div></div>
+          <span class="progress-pct">41%</span>
+        </div>
+      </div>
+ 
+      <!-- Candidate list header -->
+      <div class="tc-list-header">
+        <span class="tc-list-label">Recent Candidates</span>
+        <span class="tc-list-count">4 of 120</span>
+      </div>
+ 
+      <!-- Candidate List -->
+      <div class="tc-list">
+ 
+        <div class="candidate">
+          <div class="avatar av1">
+            <span class="avatar-initials">AN</span>
+          </div>
+          <div class="info">
+            <span class="cand-name">Ananya Sharma</span>
+            <span class="cand-role">Senior Product Designer</span>
+          </div>
+          <span class="status hired">Hired</span>
+        </div>
+ 
+        <div class="candidate">
+          <div class="avatar av2">
+            <span class="avatar-initials">RK</span>
+          </div>
+          <div class="info">
+            <span class="cand-name">Rahul Kapoor</span>
+            <span class="cand-role">Full Stack Engineer</span>
+          </div>
+          <span class="status interview">Interview</span>
+        </div>
+ 
+      
+ 
+      </div>
+ 
+      <!-- Footer -->
+      <div class="tc-footer">
+        <span class="tc-footer-text">
+          <strong>8 offers</strong> sent this week
+        </span>
+        <div class="tc-footer-avatars">
+          <div class="footer-av fa1">AN</div>
+          <div class="footer-av fa2">RK</div>
+          <div class="footer-av fa3">MS</div>
+          <div class="footer-av fa4">+5</div>
+        </div>
+      </div>
+ 
+    </div><!-- /.talent-card -->
+  </div>
+</div>
+
+      </div>
+      <!-- /slide-1 -->
+
+
+      <!-- ═══════════════════════════════════════════
+           SLIDE 2 – Hero
+           ═══════════════════════════════════════════ -->
+      <div class="slide">
+
+        <!-- Left Panel -->
+        <div class="panel-left">
+          <span class="slide-tag">
+            <span class="tag-dot" aria-hidden="true"></span>
+            Expert Web Development
+          </span>
+
+          <h1 class="slide-headline">
+            Build Software<br>
+            <span>Faster &amp; Smarter</span>
+          </h1>
+
+          <p class="slide-sub-bold">
+            We design &amp; develop scalable, high-performance apps.
+          </p>
+
+          <p class="slide-sub">
+            Helping modern businesses launch with confidence and grow without
+            limits — from concept to production, every step of the way.
+          </p>
+
+          <div class="slide-actions">
+            <button class="btn-primary">See All Services</button>
+          </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="panel-right" aria-hidden="true">
+          <div class="icon-circle">
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+
+            <!-- Floating Badges -->
+            <div class="o-badge b1"><span class="badge-dot"></span>UI/UX Design</div>
+            <div class="o-badge b2"><span class="badge-dot"></span>Full-Stack</div>
+            <div class="o-badge b3"><span class="badge-dot"></span>SEO Ready</div>
+            <div class="o-badge b4"><span class="badge-dot"></span>Mobile Apps</div>
+            <div class="o-badge b5"><span class="badge-dot"></span>Cloud</div>
+            <div class="o-badge b6"><span class="badge-dot"></span>Cybersecurity</div>
+            <div class="o-badge b7"><span class="badge-dot"></span>Data Analytics</div>
+
+            <!-- Center SVG Illustration -->
+            <svg class="circle-inner" viewBox="0 0 200 200" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect x="28" y="112" width="144" height="8" rx="4" fill="#1aabba" opacity=".3" />
+              <rect x="42" y="52" width="116" height="76" rx="7" fill="#fff"
+                stroke="#1aabba" stroke-width="2.5" />
+              <rect x="48" y="58" width="104" height="62" rx="3" fill="#eaf8fa" />
+              <circle cx="55" cy="64" r="3" fill="#ff5f56" />
+              <circle cx="63" cy="64" r="3" fill="#ffbd2e" />
+              <circle cx="71" cy="64" r="3" fill="#27c93f" />
+              <rect x="52" y="73" width="52" height="4" rx="2" fill="#0e2d66" opacity=".45" />
+              <rect x="52" y="81" width="36" height="4" rx="2" fill="#1aabba" opacity=".4" />
+              <rect x="58" y="89" width="46" height="4" rx="2" fill="#0e2d66" opacity=".3" />
+              <rect x="58" y="97" width="30" height="4" rx="2" fill="#1aabba" opacity=".35" />
+              <rect x="52" y="105" width="56" height="4" rx="2" fill="#0e2d66" opacity=".22" />
+              <circle cx="148" cy="78" r="11" fill="#fca5a5" />
+              <path d="M137 108 Q148 95 159 108" fill="#1aabba" />
+              <rect x="108" y="36" width="54" height="32" rx="6" fill="#fff"
+                stroke="#1aabba" stroke-width="1.5" opacity=".9" />
+              <rect x="114" y="42" width="24" height="3" rx="1.5" fill="#0e2d66" opacity=".6" />
+              <rect x="114" y="49" width="34" height="3" rx="1.5" fill="#1aabba" opacity=".4" />
+              <rect x="114" y="56" width="18" height="3" rx="1.5" fill="#0e2d66" opacity=".3" />
+              <circle cx="40" cy="150" r="13" fill="none" stroke="#1aabba"
+                stroke-width="2" stroke-dasharray="4 2" opacity=".45" />
+              <circle cx="40" cy="150" r="5" fill="#1aabba" opacity=".4" />
+              <ellipse cx="162" cy="40" rx="19" ry="12" fill="#c8eef5" />
+              <ellipse cx="149" cy="43" rx="12" ry="10" fill="#c8eef5" />
+            </svg>
+          </div>
+        </div>
+
+      </div>
+      <!-- /slide-2 -->
+
+
+      <!-- ═══════════════════════════════════════════
+           SLIDE 3 – Services
+           ═══════════════════════════════════════════ -->
+      <div class="slide">
+
+        <!-- Left Panel -->
+        <div class="panel-left">
+          <span class="slide-tag">
+            <span class="tag-dot" aria-hidden="true"></span>
+            What We Offer
+          </span>
+
+          <h1 class="slide-headline">
+            Tailored Digital Solutions For
+            <span>Every Business</span>
+          </h1>
+
+          <p class="slide-sub-bold">From concept to launch — we do it all.</p>
+
+          <p class="slide-sub">
+            We craft high-performance websites, e-commerce platforms, and
+            custom web applications built to grow with your brand.
+          </p>
+
+          <div class="slide-actions">
+            <button class="btn-primary">
+              See All Services <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="panel-right">
+          <div class="service-grid">
+
+            <!-- Web Design -->
+            <div class="svc-card">
+              <div class="svc-icon svc-icon--blue" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="#0e2d66" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                  <path d="M3 9h18"></path>
+                  <path d="M9 21V9"></path>
+                </svg>
+              </div>
+              <div class="svc-title">Web Design</div>
+              <div class="svc-sub">Pixel-perfect layouts that convert visitors</div>
+            </div>
+
+            <!-- Development -->
+            <div class="svc-card">
+              <div class="svc-icon svc-icon--teal" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="#1aabba" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div class="svc-title">Development</div>
+              <div class="svc-sub">Clean, scalable &amp; lightning-fast code</div>
+            </div>
+
+            <!-- SEO & Growth -->
+            <div class="svc-card">
+              <div class="svc-icon svc-icon--orange" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="#c06a10" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z"></path>
+                </svg>
+              </div>
+              <div class="svc-title">SEO &amp; Growth</div>
+              <div class="svc-sub">Rank higher, grow faster</div>
+            </div>
+
+            <!-- Mobile First -->
+            <div class="svc-card">
+              <div class="svc-icon svc-icon--purple" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="#7c3aed" stroke-width="2">
+                  <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <div class="svc-title">Mobile First</div>
+              <div class="svc-sub">Responsive on every screen size</div>
+            </div>
+
+            <!-- Hosting & Maintenance (full width) -->
+            <div class="svc-card svc-card--full">
+              <div class="svc-icon svc-icon--teal" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="#1aabba" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="svc-title">Hosting &amp; Maintenance</div>
+                <div class="svc-sub">99.9% uptime · 24/7 monitoring &amp; support</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- /slide-3 -->
+
+
+      <!-- ═══════════════════════════════════════════
+           SLIDE 4 – Results / Stats
+           ═══════════════════════════════════════════ -->
+      <div class="slide">
+
+        <!-- Left Panel -->
+        <div class="panel-left">
+          <span class="slide-tag">
+            <span class="tag-dot" aria-hidden="true"></span>
+            Proven Results
+          </span>
+
+          <h1 class="slide-headline">
+            Numbers That Speak <br> For
+            <span>Themselves</span>
+          </h1>
+
+          <p class="slide-sub-bold">Real outcomes for real businesses.</p>
+
+          <p class="slide-sub">
+            Our data-driven approach has helped 200+ clients reach their goals
+            ahead of schedule with measurable, lasting results.
+          </p>
+
+          <div class="slide-actions"></div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="panel-right">
+          <div class="stats-panel">
+
+            <!-- Stat: Clients -->
+            <div class="stat-row">
+              <div class="stat-icon" style="background: #e8f0fc;" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#0e2d66" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div>
+                <div class="stat-num">200+</div>
+                <div class="stat-lbl">Happy clients worldwide</div>
+              </div>
+              <div class="stat-badge">↑ 18% YoY</div>
+            </div>
+
+            <!-- Stat: Traffic Growth -->
+            <div class="stat-row">
+              <div class="stat-icon" style="background: #e4f9fb;" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#1aabba" stroke-width="2">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                  <polyline points="16 7 22 7 22 13" />
+                </svg>
+              </div>
+              <div>
+                <div class="stat-num">340%</div>
+                <div class="stat-lbl">Average traffic growth</div>
+              </div>
+              <div class="stat-badge">Proven</div>
+            </div>
+
+            <!-- Progress: Client Satisfaction -->
+            <div class="prog-row">
+              <div class="prog-label">
+                <span>Client satisfaction</span>
+                <span>98%</span>
+              </div>
+              <div class="prog-bg">
+                <div class="prog-fill" data-w="98"></div>
+              </div>
+            </div>
+
+            <!-- Progress: On-Time Delivery -->
+            <div class="prog-row">
+              <div class="prog-label">
+                <span>On-time delivery</span>
+                <span>94%</span>
+              </div>
+              <div class="prog-bg">
+                <div class="prog-fill" data-w="94"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- /slide-4 -->
+
+
+      <!-- ═══════════════════════════════════════════
+           SLIDE 5 – Process
+           ═══════════════════════════════════════════ -->
+      <div class="slide">
+
+        <!-- Left Panel -->
+        <div class="panel-left">
+          <span class="slide-tag">
+            <span class="tag-dot" aria-hidden="true"></span>
+            Our Process
+          </span>
+
+          <h1 class="slide-headline">
+            From Idea To Launch <br> In
+            <span>4 Simple Steps</span>
+          </h1>
+
+          <p class="slide-sub-bold">Transparent. Efficient. Results-focused.</p>
+
+          <p class="slide-sub">
+            We keep you in the loop at every stage — no surprises, just steady
+            progress toward a product you'll be proud of.
+          </p>
+
+          <div class="slide-actions"></div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="panel-right">
+          <div class="process-card">
+
+            <div class="proc-head">
+              <span class="proc-icon" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="#fff" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </span>
+              How it works
+            </div>
+
+            <!-- Step 1 -->
+            <div class="proc-item">
+              <div class="proc-line" aria-hidden="true"></div>
+              <div class="proc-num" aria-label="Step 1">1</div>
+              <div class="proc-content">
+                <div class="proc-title">Discovery &amp; Strategy</div>
+                <div class="proc-sub">
+                  We learn your goals, audience, and competitors to map out the perfect plan.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="proc-item">
+              <div class="proc-line" aria-hidden="true"></div>
+              <div class="proc-num" aria-label="Step 2">2</div>
+              <div class="proc-content">
+                <div class="proc-title">Design &amp; Prototype</div>
+                <div class="proc-sub">
+                  High-fidelity wireframes and mockups — you see it before we build it.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="proc-item">
+              <div class="proc-line" aria-hidden="true"></div>
+              <div class="proc-num" aria-label="Step 3">3</div>
+              <div class="proc-content">
+                <div class="proc-title">Development &amp; QA</div>
+                <div class="proc-sub">
+                  Clean, tested code with cross-browser checks at every sprint.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 (active) -->
+            <div class="proc-item">
+              <div class="proc-num proc-num--active" aria-label="Step 4">4</div>
+              <div class="proc-content">
+                <div class="proc-title">Launch &amp; Growth</div>
+                <div class="proc-sub">
+                  Go live and keep growing with ongoing support and performance tracking.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- /slide-5 -->
+
+
+
+
+    </div>
+    <!-- /hero-slider -->
+  </div>
+  <!-- /banner-outer -->
+
+ <!-- ============================================================
+      ABOUT US
+     ============================================================ -->
+
+<section class="ab-wrap">
+  <div class="grid-bg"></div>
+<div class="ab-orb orb1"></div>
+<div class="ab-orb orb2"></div>
+<div class="ab-orb orb3"></div>
+
+  <div class="ab-inner">
+
+    <!-- ── HEADING ── -->
+    <div class="ab-heading-block">
+      <div class="ab-eyebrow">
+        <span class="ab-eyebrow-dot"></span>
+        Who We Are
+      </div>
+
+      <h2 class="ab-main-title">
+        About <span class="ab-title-gradient">Us</span>
+      </h2>
+
+      <div class="ab-title-line">
+        <div class="ab-title-underline" style="background: linear-gradient(90deg, #5b5ee8, #1aabba);"></div>
+
+        <svg width="30" height="14" viewBox="0 0 30 14" fill="none" aria-hidden="true">
+          <circle cx="7"  cy="7" r="3" fill="#5b5ee8" opacity="0.6"/>
+          <circle cx="15" cy="7" r="5" fill="#5b5ee8"/>
+          <circle cx="23" cy="7" r="3" fill="#1aabba" opacity="0.7"/>
+        </svg>
+
+        <div class="ab-title-underline right" style="background: linear-gradient(90deg, #1aabba, #2dcad9);"></div>
+      </div>
+    </div>
+
+    <!-- ── MAIN GRID ── -->
+    <div class="ab-grid">
+
+      <!-- LEFT CONTENT -->
+      <div class="ab-left">
+
+        <!-- Animated Chart SVG -->
+        <div class="ab-svg-visual">
+          <svg width="100%" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="gA" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%"   stop-color="#5b5ee8" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#5b5ee8" stop-opacity="0.3"/>
+              </linearGradient>
+              <linearGradient id="gB" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%"   stop-color="#1aabba" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#1aabba" stop-opacity="0.3"/>
+              </linearGradient>
+              <linearGradient id="gC" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%"   stop-color="#0e2d66" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#0e2d66" stop-opacity="0.25"/>
+              </linearGradient>
+              <linearGradient id="areaG" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%"   stop-color="#5b5ee8" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#5b5ee8" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+
+            <rect width="520" height="200" fill="#f4fafc"/>
+            <rect width="520" height="200" fill="url(#areaG)"/>
+
+            <!-- Grid lines -->
+            <g stroke="#eaecf0" stroke-width="0.8">
+              <line x1="0" y1="40"  x2="520" y2="40"/>
+              <line x1="0" y1="80"  x2="520" y2="80"/>
+              <line x1="0" y1="120" x2="520" y2="120"/>
+              <line x1="0" y1="160" x2="520" y2="160"/>
+            </g>
+
+            <!-- Bars (animated) -->
+            <rect x="28"  y="110" width="36" height="70"  rx="6" fill="url(#gA)">
+              <animate attributeName="height" from="0" to="70"  dur="0.9s"              fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+              <animate attributeName="y"      from="180" to="110" dur="0.9s"            fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+            </rect>
+            <rect x="84"  y="75"  width="36" height="105" rx="6" fill="url(#gA)">
+              <animate attributeName="height" from="0" to="105" dur="0.9s" begin="0.1s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+              <animate attributeName="y"      from="180" to="75"  dur="0.9s" begin="0.1s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+            </rect>
+            <rect x="140" y="52"  width="36" height="128" rx="6" fill="url(#gB)">
+              <animate attributeName="height" from="0" to="128" dur="0.9s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+              <animate attributeName="y"      from="180" to="52"  dur="0.9s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+            </rect>
+            <rect x="196" y="80"  width="36" height="100" rx="6" fill="url(#gB)">
+              <animate attributeName="height" from="0" to="100" dur="0.9s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+              <animate attributeName="y"      from="180" to="80"  dur="0.9s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+            </rect>
+            <rect x="252" y="55"  width="36" height="125" rx="6" fill="url(#gB)">
+              <animate attributeName="height" from="0" to="125" dur="0.9s" begin="0.4s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+              <animate attributeName="y"      from="180" to="55"  dur="0.9s" begin="0.4s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+            </rect>
+            <rect x="308" y="35"  width="36" height="145" rx="6" fill="url(#gC)">
+              <animate attributeName="height" from="0" to="145" dur="0.9s" begin="0.5s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+              <animate attributeName="y"      from="180" to="35"  dur="0.9s" begin="0.5s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+            </rect>
+            <rect x="364" y="22"  width="36" height="158" rx="6" fill="url(#gC)">
+              <animate attributeName="height" from="0" to="158" dur="0.9s" begin="0.6s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+              <animate attributeName="y"      from="180" to="22"  dur="0.9s" begin="0.6s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+            </rect>
+            <rect x="420" y="10"  width="36" height="170" rx="6" fill="url(#gC)">
+              <animate attributeName="height" from="0" to="170" dur="0.9s" begin="0.7s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+              <animate attributeName="y"      from="180" to="10"  dur="0.9s" begin="0.7s" fill="freeze" calcMode="spline" keySplines="0.23 1 0.32 1"/>
+            </rect>
+
+            <!-- Trend line -->
+            <polyline points="46,110 102,75 158,52 214,80 270,55 326,35 382,22 438,10"
+                      fill="none" stroke="#5b5ee8" stroke-width="2" stroke-dasharray="5 3" opacity="0.4"/>
+
+            <!-- Animated dots -->
+            <circle cx="46"  cy="110" r="4.5" fill="#5b5ee8">
+              <animate attributeName="cy" values="110;105;110" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="158" cy="52"  r="4.5" fill="#1aabba">
+              <animate attributeName="cy" values="52;47;52" dur="3s" begin="0.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="326" cy="35"  r="4.5" fill="#0e8a97">
+              <animate attributeName="cy" values="35;30;35" dur="3s" begin="0.4s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="438" cy="10"  r="4.5" fill="#0e2d66">
+              <animate attributeName="cy" values="10;5;10" dur="3s" begin="1.2s" repeatCount="indefinite"/>
+            </circle>
+
+            <text x="16" y="196" font-family="DM Sans,sans-serif" font-size="10" fill="#6b7280" style="text-align: center;">
+              Growth trajectory 
+            </text>
+          </svg>
+        </div>
+
+        <p class="ab-desc">
+          We specialize in delivering tailored digital solutions and world-class talent
+          acquisition services that empower businesses to scale faster. From startups
+          to enterprises, we combine technology, strategy, and innovation to build
+          high-performance ecosystems.
+        </p>
+        <p class="ab-desc">
+          Our seasoned team of engineers, designers, and recruiters ensures every
+          project is executed with precision, speed, and excellence. We don't just
+          build software — we build long-term success.
+        </p>
+
         
+
+        <div class="ab-features">
+          <div class="ab-feature">
+            <div class="ab-feature-icon" style="background: linear-gradient(135deg,#5b5ee8,#7b7ef0);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            Tailored digital solutions for every business
+          </div>
+
+          <div class="ab-feature">
+            <div class="ab-feature-icon" style="background: linear-gradient(135deg,#1aabba,#2dcad9);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            Smart talent acquisition &amp; workforce scaling
+          </div>
+
+          <div class="ab-feature">
+            <div class="ab-feature-icon" style="background: linear-gradient(135deg,#0e2d66,#5b5ee8);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            Agile development &amp; lightning-fast delivery
+          </div>
         </div>
+
+       
       </div>
-      <div class="panel-right">
-       <div class="process-card">
 
-  <div class="proc-head">
-    <span class="proc-icon">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-    </span>
-    How it works
+      <!-- RIGHT STATS -->
+      <div class="ab-right">
+        <div class="ab-ring ab-ring-1"></div>
+        <div class="ab-ring ab-ring-2"></div>
+
+        <div class="ab-stats-grid">
+
+          <!-- Card 1 -->
+          <div class="ab-stat-card">
+            <div class="ab-stat-icon-ring">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5b5ee8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+                 <div>
+            <div class="ab-stat-num"><span class="counter" data-target="5000">0</span><span class="accent">+</span></div>
+            <div class="ab-stat-label">Happy Clients</div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="ab-stat-card">
+            <div class="ab-stat-icon-ring">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1aabba" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <div>
+            <div class="ab-stat-num"><span class="counter" data-target="500">0</span><span class="accent">+</span></div>
+            <div class="ab-stat-label">Projects Delivered</div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="ab-stat-card">
+            <div class="ab-stat-icon-ring">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e8a97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <div>
+            <div class="ab-stat-num"><span class="counter" data-target="98">0</span><span class="accent">%</span></div>
+            <div class="ab-stat-label">Client Satisfaction</div>
+            </div>
+
+          </div>
+
+          <!-- Card 4 -->
+          <div class="ab-stat-card">
+            <div class="ab-stat-icon-ring">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e2d66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <div>
+            <div class="ab-stat-num"><span class="counter" data-target="40">0</span><span class="accent">+</span></div>
+            <div class="ab-stat-label">Expert Engineers</div>
+            </div>
+          </div>
+
+          <!-- Card 5 – full width -->
+          <div class="ab-stat-card">
+            <div class="ab-stat-wide-inner">
+              <div class="ab-stat-icon-ring">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5b5ee8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8"  y1="2" x2="8"  y2="6"/>
+                  <line x1="3"  y1="10" x2="21" y2="10"/>
+                </svg>
+              </div>
+              <div>
+                <div class="ab-stat-num"><span class="counter" data-target="12">0</span><span class="accent"> yrs</span></div>
+                <div class="ab-stat-label">Industry Experience</div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.ab-stats-grid -->
+
+    <div class="ab-extra-cards">
+
+  <!-- Card 1 -->
+  <div class="ab-extra-card">
+    <h4>Talent Acquisition Excellence</h4>
+    <p>
+      We connect businesses with top-tier engineers, designers, and innovators,
+      ensuring the right talent for every project.
+    </p>
   </div>
 
-  <div class="proc-item">
-    <div class="proc-line"></div>
-    <div class="proc-num">1</div>
-    <div class="proc-content">
-      <div class="proc-title">Discovery & Strategy</div>
-      <div class="proc-sub">We learn your goals, audience, and competitors to map out the perfect plan.</div>
-    </div>
+  <!-- Card 2 -->
+  <div class="ab-extra-card">
+    <h4>Faster Software Delivery</h4>
+    <p>
+      Our agile workflows and modern tech stack help you launch products faster,
+      reduce costs, and stay ahead of competitors.
+    </p>
   </div>
 
-  <div class="proc-item">
-    <div class="proc-line"></div>
-    <div class="proc-num">2</div>
-    <div class="proc-content">
-      <div class="proc-title">Design & Prototype</div>
-      <div class="proc-sub">High-fidelity wireframes and mockups — you see it before we build it.</div>
-    </div>
-  </div>
-
-  <div class="proc-item">
-    <div class="proc-line"></div>
-    <div class="proc-num">3</div>
-    <div class="proc-content">
-      <div class="proc-title">Development & QA</div>
-      <div class="proc-sub">Clean, tested code with cross-browser checks at every sprint.</div>
-    </div>
-  </div>
-
-  <div class="proc-item">
-    <div class="proc-num proc-num--active">4</div>
-    <div class="proc-content">
-      <div class="proc-title">Launch & Growth</div>
-      <div class="proc-sub">Go live and keep growing with ongoing support and performance tracking.</div>
-    </div>
+  <!-- Card 3 -->
+  <div class="ab-extra-card">
+    <h4>Scalable Digital Solutions</h4>
+    <p>
+      From startups to enterprises, we build scalable and future-ready digital
+      systems tailored to your business needs.
+    </p>
   </div>
 
 </div>
+       
+
+      </div><!-- /.ab-right -->
+    </div><!-- /.ab-grid -->
+  </div><!-- /.ab-inner -->
+</section>
+<!-- /ABOUT US -->
+
+
+
+<!--  ============================================================
+      SERVICES
+     ============================================================   -->
+<section class="service-wrap">
+
+   <div class="grid-bg"></div>
+<div class="ab-orb orb1"></div>
+<div class="ab-orb orb2"></div>
+<div class="ab-orb orb3"></div>
+
+  <div class="service-inner">
+
+    <!-- ── HEADING ── -->
+    
+
+
+      <div class="ab-heading-block">
+      <div class="ab-eyebrow">
+        <span class="ab-eyebrow-dot"></span>
+      What We Offer
+      </div>
+
+      <h2 class="ab-main-title">
+        Our <span class="ab-title-gradient">Services</span>
+      </h2>
+
+      
+
+      <div class="ab-title-line">
+        <div class="ab-title-underline" style="background: linear-gradient(90deg, #5b5ee8, #1aabba);"></div>
+
+        <svg width="30" height="14" viewBox="0 0 30 14" fill="none" aria-hidden="true">
+          <circle cx="7"  cy="7" r="3" fill="#5b5ee8" opacity="0.6"/>
+          <circle cx="15" cy="7" r="5" fill="#5b5ee8"/>
+          <circle cx="23" cy="7" r="3" fill="#1aabba" opacity="0.7"/>
+        </svg>
+
+        <div class="ab-title-underline right" style="background: linear-gradient(90deg, #1aabba, #2dcad9);"></div>
+      </div>
+
+       <p class="section-desc">
+        From design to deployment, we deliver end-to-end digital solutions
+        that help businesses scale, innovate, and lead in their industries.
+      </p>
+    </div>
+
+     <svg class="hero-illustration" viewBox="0 0 780 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#5b5ee8" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#1aabba" stop-opacity="0.07"/>
+        </linearGradient>
+        <linearGradient id="bar-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#5b5ee8"/>
+          <stop offset="100%" stop-color="#1aabba"/>
+        </linearGradient>
+        <linearGradient id="card-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#0e2d66" stop-opacity="0.92"/>
+          <stop offset="100%" stop-color="#5b5ee8" stop-opacity="0.88"/>
+        </linearGradient>
+        <linearGradient id="pipe-hot" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#5b5ee8" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#5b5ee8" stop-opacity="0.08"/>
+        </linearGradient>
+        <linearGradient id="pipe-cool" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1aabba" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#1aabba" stop-opacity="0.08"/>
+        </linearGradient>
+        <clipPath id="pill-clip">
+          <rect x="0" y="24" width="780" height="152" rx="26"/>
+        </clipPath>
+      </defs>
+ 
+      <!-- Background pill -->
+      <rect x="0" y="24" width="780" height="152" rx="26" fill="url(#bg-grad)" stroke="#eaecf0" stroke-width="1"/>
+ 
+      <!-- LEFT — Phone mockup -->
+      <rect x="44" y="6" width="72" height="118" rx="13" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+      <rect x="51" y="18" width="58" height="96" rx="8" fill="#f4fafc"/>
+      <!-- Screen header bar -->
+      <rect x="56" y="24" width="48" height="7" rx="3.5" fill="url(#bar-grad)" opacity="0.7"/>
+      <!-- Screen subtext lines -->
+      <rect x="56" y="35" width="36" height="4" rx="2" fill="#d1d5db"/>
+      <rect x="56" y="43" width="28" height="4" rx="2" fill="#e2e8f0"/>
+      <!-- Chart area -->
+      <rect x="56" y="51" width="48" height="36" rx="5" fill="#e0f2fe"/>
+      <!-- Chart bars -->
+      <rect x="60"  y="72" width="7" height="13" rx="2.5" fill="#5b5ee8" opacity="0.6"/>
+      <rect x="70"  y="65" width="7" height="20" rx="2.5" fill="#1aabba" opacity="0.7"/>
+      <rect x="80"  y="68" width="7" height="17" rx="2.5" fill="#5b5ee8" opacity="0.5"/>
+      <rect x="90"  y="60" width="7" height="25" rx="2.5" fill="#1aabba" opacity="0.85"/>
+      <!-- Bottom lines -->
+      <rect x="56" y="92" width="32" height="4" rx="2" fill="#d1d5db"/>
+      <rect x="56" y="100" width="24" height="4" rx="2" fill="#e2e8f0"/>
+      <!-- Notch -->
+      <rect x="66" y="6" width="20" height="6" rx="3" fill="#e2e8f0"/>
+ 
+      <!-- CENTER — Dashboard cluster -->
+      <rect x="163" y="44" width="430" height="112" rx="18" fill="#fff" stroke="#eaecf0" stroke-width="1"/>
+      <!-- Top label row -->
+      <rect x="181" y="61" width="64" height="5" rx="2.5" fill="url(#bar-grad)" opacity="0.8"/>
+      <rect x="253" y="61" width="44" height="5" rx="2.5" fill="#e2e8f0"/>
+      <rect x="305" y="61" width="54" height="5" rx="2.5" fill="#e2e8f0"/>
+      <!-- Metric card 1 -->
+      <rect x="181" y="75" width="88" height="62" rx="11" fill="#f4fafc" stroke="#eaecf0" stroke-width="1"/>
+      <rect x="191" y="85"  width="32" height="5" rx="2.5" fill="#d1d5db"/>
+      <rect x="191" y="95"  width="56" height="11" rx="3.5" fill="#5b5ee8" opacity="0.55"/>
+      <rect x="191" y="111" width="22" height="4"  rx="2"   fill="#1aabba" opacity="0.45"/>
+      <!-- Metric card 2 -->
+      <rect x="279" y="75" width="88" height="62" rx="11" fill="#f4fafc" stroke="#eaecf0" stroke-width="1"/>
+      <rect x="289" y="85"  width="32" height="5" rx="2.5" fill="#d1d5db"/>
+      <rect x="289" y="95"  width="50" height="11" rx="3.5" fill="#1aabba" opacity="0.65"/>
+      <rect x="289" y="111" width="22" height="4"  rx="2"   fill="#5b5ee8" opacity="0.4"/>
+      <!-- Metric card 3 -->
+      <rect x="377" y="75" width="88" height="62" rx="11" fill="#f4fafc" stroke="#eaecf0" stroke-width="1"/>
+      <rect x="387" y="85"  width="32" height="5" rx="2.5" fill="#d1d5db"/>
+      <rect x="387" y="95"  width="44" height="11" rx="3.5" fill="#5b5ee8" opacity="0.45"/>
+      <rect x="387" y="111" width="22" height="4"  rx="2"   fill="#1aabba" opacity="0.4"/>
+      <!-- Dark metric card -->
+      <rect x="475" y="75" width="100" height="62" rx="11" fill="url(#card-dark)"/>
+      <rect x="485" y="85"  width="34" height="5" rx="2.5" fill="rgba(255,255,255,0.3)"/>
+      <rect x="485" y="95"  width="58" height="11" rx="3.5" fill="rgba(255,255,255,0.82)"/>
+      <rect x="485" y="111" width="30" height="4"  rx="2"   fill="rgba(45,202,217,0.65)"/>
+ 
+      <!-- Connector: phone → dashboard -->
+      <line x1="116" y1="65" x2="163" y2="100" stroke="#5b5ee8" stroke-width="1" stroke-dasharray="4 3" opacity="0.35"/>
+ 
+      <!-- RIGHT — Cloud node -->
+      <circle cx="668" cy="78" r="36" fill="#fff" stroke="#eaecf0" stroke-width="1.5"/>
+      <ellipse cx="661" cy="80" rx="15" ry="11" fill="#e0f2fe" stroke="#1aabba" stroke-width="1"/>
+      <ellipse cx="676" cy="83" rx="11" ry="9"  fill="#e0f2fe" stroke="#1aabba" stroke-width="1"/>
+      <ellipse cx="669" cy="88" rx="18" ry="8"  fill="#e0f2fe" stroke="#1aabba" stroke-width="1"/>
+      <line x1="669" y1="69" x2="669" y2="58" stroke="#1aabba" stroke-width="1.5" stroke-linecap="round"/>
+      <polyline points="664,64 669,58 674,64" fill="none" stroke="#1aabba" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+ 
+      <!-- Shield node -->
+      <circle cx="726" cy="143" r="28" fill="#fff" stroke="#eaecf0" stroke-width="1.5"/>
+      <path d="M726 130 L717 133.5 L717 141.5 C717 148.5 721.5 154 726 156.5 C730.5 154 735 148.5 735 141.5 L735 133.5 Z"
+            fill="rgba(91,94,232,0.1)" stroke="#5b5ee8" stroke-width="1.2" stroke-linejoin="round"/>
+      <polyline points="722,143 724.5,146 730,139" fill="none" stroke="#5b5ee8" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round"/>
+ 
+      <!-- Connector: dashboard → cloud & shield -->
+      <line x1="593" y1="104" x2="636" y2="88"  stroke="#1aabba" stroke-width="1" stroke-dasharray="4 3" opacity="0.35"/>
+      <line x1="593" y1="124" x2="700" y2="143" stroke="#5b5ee8" stroke-width="1" stroke-dasharray="4 3" opacity="0.35"/>
+ 
+      <!-- Floating accent dots -->
+      <circle cx="148" cy="158" r="3.5" fill="#5b5ee8" opacity="0.22"/>
+      <circle cx="160" cy="150" r="2.5" fill="#1aabba" opacity="0.18"/>
+      <circle cx="140" cy="148" r="2"   fill="#5b5ee8" opacity="0.15"/>
+      <circle cx="638" cy="52"  r="3"   fill="#5b5ee8" opacity="0.2"/>
+      <circle cx="626" cy="60"  r="2"   fill="#1aabba" opacity="0.15"/>
+    </svg>
+
+    <!-- ── SERVICE CARDS GRID ── -->
+    
+
+     
+   
+     <div class="service-grid_main">
+
+      
+ 
+    
+      <div class="service-card_main">
+
+        <svg class="dot-grid" width="90" height="90" viewBox="0 0 90 90" aria-hidden="true">
+          <g fill="white">
+            <circle cx="9"  cy="9"  r="1.5"/><circle cx="25" cy="9"  r="1.5"/><circle cx="41" cy="9"  r="1.5"/><circle cx="57" cy="9"  r="1.5"/><circle cx="73" cy="9"  r="1.5"/>
+            <circle cx="9"  cy="25" r="1.5"/><circle cx="25" cy="25" r="1.5"/><circle cx="41" cy="25" r="1.5"/><circle cx="57" cy="25" r="1.5"/><circle cx="73" cy="25" r="1.5"/>
+            <circle cx="9"  cy="41" r="1.5"/><circle cx="25" cy="41" r="1.5"/><circle cx="41" cy="41" r="1.5"/><circle cx="57" cy="41" r="1.5"/><circle cx="73" cy="41" r="1.5"/>
+            <circle cx="9"  cy="57" r="1.5"/><circle cx="25" cy="57" r="1.5"/><circle cx="41" cy="57" r="1.5"/><circle cx="57" cy="57" r="1.5"/><circle cx="73" cy="57" r="1.5"/>
+            <circle cx="9"  cy="73" r="1.5"/><circle cx="25" cy="73" r="1.5"/><circle cx="41" cy="73" r="1.5"/><circle cx="57" cy="73" r="1.5"/><circle cx="73" cy="73" r="1.5"/>
+          </g>
+        </svg>
+ 
+        <span class="highlight-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Featured Service
+        </span>
+        <div class="card-icon-wrap">
+          <span class="card-number">01</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="2" width="14" height="20" rx="3" stroke="#5b5ee8" stroke-width="1.6"/>
+            <circle cx="12" cy="18.5" r="1.2" fill="#1aabba"/>
+            <rect x="8.5" y="6" width="7" height="1.5" rx="0.75" fill="#5b5ee8" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Mobile App Development</h3>
+        <p class="card-desc">High-performance Android &amp; iOS apps with seamless UI and scalable architecture for millions of users.</p>
+        <span class="card-arrow">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </div>
+
+      <div class="service-card_main ">
+        <!-- Decorative dot grid -->
+        <svg class="dot-grid" width="90" height="90" viewBox="0 0 90 90" aria-hidden="true">
+          <g fill="white">
+            <circle cx="9"  cy="9"  r="1.5"/><circle cx="25" cy="9"  r="1.5"/><circle cx="41" cy="9"  r="1.5"/><circle cx="57" cy="9"  r="1.5"/><circle cx="73" cy="9"  r="1.5"/>
+            <circle cx="9"  cy="25" r="1.5"/><circle cx="25" cy="25" r="1.5"/><circle cx="41" cy="25" r="1.5"/><circle cx="57" cy="25" r="1.5"/><circle cx="73" cy="25" r="1.5"/>
+            <circle cx="9"  cy="41" r="1.5"/><circle cx="25" cy="41" r="1.5"/><circle cx="41" cy="41" r="1.5"/><circle cx="57" cy="41" r="1.5"/><circle cx="73" cy="41" r="1.5"/>
+            <circle cx="9"  cy="57" r="1.5"/><circle cx="25" cy="57" r="1.5"/><circle cx="41" cy="57" r="1.5"/><circle cx="57" cy="57" r="1.5"/><circle cx="73" cy="57" r="1.5"/>
+            <circle cx="9"  cy="73" r="1.5"/><circle cx="25" cy="73" r="1.5"/><circle cx="41" cy="73" r="1.5"/><circle cx="57" cy="73" r="1.5"/><circle cx="73" cy="73" r="1.5"/>
+          </g>
+        </svg>
+ 
+        <span class="highlight-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Featured Service
+        </span>
+ 
+        <div class="card-icon-wrap">
+          <span class="card-number">08</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="7" r="4" stroke="white" stroke-width="1.5"/>
+            <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.87"
+                  stroke="rgba(255,255,255,0.6)" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+ 
+        <h3 class="card-title">Talent Acquisition Excellence</h3>
+        <p class="card-desc">Strategic hiring solutions designed to build high-performing, diverse teams with top-tier talent — faster and smarter than traditional recruiting methods.</p>
+        <span class="card-arrow">
+          Explore this service
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </div>
+
+      <div class="service-card_main">
+         <svg class="dot-grid" width="90" height="90" viewBox="0 0 90 90" aria-hidden="true">
+          <g fill="white">
+            <circle cx="9"  cy="9"  r="1.5"/><circle cx="25" cy="9"  r="1.5"/><circle cx="41" cy="9"  r="1.5"/><circle cx="57" cy="9"  r="1.5"/><circle cx="73" cy="9"  r="1.5"/>
+            <circle cx="9"  cy="25" r="1.5"/><circle cx="25" cy="25" r="1.5"/><circle cx="41" cy="25" r="1.5"/><circle cx="57" cy="25" r="1.5"/><circle cx="73" cy="25" r="1.5"/>
+            <circle cx="9"  cy="41" r="1.5"/><circle cx="25" cy="41" r="1.5"/><circle cx="41" cy="41" r="1.5"/><circle cx="57" cy="41" r="1.5"/><circle cx="73" cy="41" r="1.5"/>
+            <circle cx="9"  cy="57" r="1.5"/><circle cx="25" cy="57" r="1.5"/><circle cx="41" cy="57" r="1.5"/><circle cx="57" cy="57" r="1.5"/><circle cx="73" cy="57" r="1.5"/>
+            <circle cx="9"  cy="73" r="1.5"/><circle cx="25" cy="73" r="1.5"/><circle cx="41" cy="73" r="1.5"/><circle cx="57" cy="73" r="1.5"/><circle cx="73" cy="73" r="1.5"/>
+          </g>
+        </svg>
+ 
+        <span class="highlight-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Featured Service
+        </span>
+        <div class="card-icon-wrap">
+          <span class="card-number">02</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="9" r="2.5" stroke="#5b5ee8" stroke-width="1.5"/>
+            <circle cx="16" cy="15" r="2.5" stroke="#1aabba" stroke-width="1.5"/>
+            <path d="M11 9h9M4 15h9" stroke="#d1d5db" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M9 11.5v3" stroke="#5b5ee8" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/>
+            <path d="M16 12v-1.5" stroke="#1aabba" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/>
+          </svg>
+        </div>
+        <h3 class="card-title">UI/UX Design</h3>
+        <p class="card-desc">Modern, user-focused interfaces with intuitive experiences and premium visuals that convert and delight.</p>
+        <span class="card-arrow">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </div>
+ 
+   
+      <div class="service-card_main">
+         <svg class="dot-grid" width="90" height="90" viewBox="0 0 90 90" aria-hidden="true">
+          <g fill="white">
+            <circle cx="9"  cy="9"  r="1.5"/><circle cx="25" cy="9"  r="1.5"/><circle cx="41" cy="9"  r="1.5"/><circle cx="57" cy="9"  r="1.5"/><circle cx="73" cy="9"  r="1.5"/>
+            <circle cx="9"  cy="25" r="1.5"/><circle cx="25" cy="25" r="1.5"/><circle cx="41" cy="25" r="1.5"/><circle cx="57" cy="25" r="1.5"/><circle cx="73" cy="25" r="1.5"/>
+            <circle cx="9"  cy="41" r="1.5"/><circle cx="25" cy="41" r="1.5"/><circle cx="41" cy="41" r="1.5"/><circle cx="57" cy="41" r="1.5"/><circle cx="73" cy="41" r="1.5"/>
+            <circle cx="9"  cy="57" r="1.5"/><circle cx="25" cy="57" r="1.5"/><circle cx="41" cy="57" r="1.5"/><circle cx="57" cy="57" r="1.5"/><circle cx="73" cy="57" r="1.5"/>
+            <circle cx="9"  cy="73" r="1.5"/><circle cx="25" cy="73" r="1.5"/><circle cx="41" cy="73" r="1.5"/><circle cx="57" cy="73" r="1.5"/><circle cx="73" cy="73" r="1.5"/>
+          </g>
+        </svg>
+ 
+        <span class="highlight-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Featured Service
+        </span>
+        <div class="card-icon-wrap">
+          <span class="card-number">03</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3"  y="14" width="4" height="7" rx="1.2" fill="#5b5ee8" opacity="0.55"/>
+            <rect x="10" y="9"  width="4" height="12" rx="1.2" fill="#1aabba" opacity="0.7"/>
+            <rect x="17" y="4"  width="4" height="17" rx="1.2" fill="#5b5ee8" opacity="0.9"/>
+            <path d="M4.5 12.5L11 7l4 4 5.5-7" stroke="#1aabba" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Data Analytics</h3>
+        <p class="card-desc">Transform raw data into actionable insights with intelligent dashboards and AI-driven analysis pipelines.</p>
+        <span class="card-arrow">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </div>
+ 
+  
+      <div class="service-card_main">
+         <svg class="dot-grid" width="90" height="90" viewBox="0 0 90 90" aria-hidden="true">
+          <g fill="white">
+            <circle cx="9"  cy="9"  r="1.5"/><circle cx="25" cy="9"  r="1.5"/><circle cx="41" cy="9"  r="1.5"/><circle cx="57" cy="9"  r="1.5"/><circle cx="73" cy="9"  r="1.5"/>
+            <circle cx="9"  cy="25" r="1.5"/><circle cx="25" cy="25" r="1.5"/><circle cx="41" cy="25" r="1.5"/><circle cx="57" cy="25" r="1.5"/><circle cx="73" cy="25" r="1.5"/>
+            <circle cx="9"  cy="41" r="1.5"/><circle cx="25" cy="41" r="1.5"/><circle cx="41" cy="41" r="1.5"/><circle cx="57" cy="41" r="1.5"/><circle cx="73" cy="41" r="1.5"/>
+            <circle cx="9"  cy="57" r="1.5"/><circle cx="25" cy="57" r="1.5"/><circle cx="41" cy="57" r="1.5"/><circle cx="57" cy="57" r="1.5"/><circle cx="73" cy="57" r="1.5"/>
+            <circle cx="9"  cy="73" r="1.5"/><circle cx="25" cy="73" r="1.5"/><circle cx="41" cy="73" r="1.5"/><circle cx="57" cy="73" r="1.5"/><circle cx="73" cy="73" r="1.5"/>
+          </g>
+        </svg>
+ 
+        <span class="highlight-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Featured Service
+        </span>
+        <div class="card-icon-wrap">
+          <span class="card-number">04</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9"   stroke="#5b5ee8" stroke-width="1.5"/>
+            <ellipse cx="12" cy="12" rx="4" ry="9" stroke="#1aabba" stroke-width="1.2"/>
+            <line x1="3"  y1="12" x2="21" y2="12" stroke="#5b5ee8" stroke-width="1.2" opacity="0.45"/>
+            <line x1="4.5" y1="7.5" x2="19.5" y2="7.5" stroke="#1aabba" stroke-width="1" opacity="0.35"/>
+            <line x1="4.5" y1="16.5" x2="19.5" y2="16.5" stroke="#1aabba" stroke-width="1" opacity="0.35"/>
+          </svg>
+        </div>
+        <h3 class="card-title">SEO Optimization</h3>
+        <p class="card-desc">Boost visibility and rankings with advanced SEO strategies, technical audits, and long-term performance tuning.</p>
+        <span class="card-arrow">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </div>
+ 
+      <div class="service-card_main">
+         <svg class="dot-grid" width="90" height="90" viewBox="0 0 90 90" aria-hidden="true">
+          <g fill="white">
+            <circle cx="9"  cy="9"  r="1.5"/><circle cx="25" cy="9"  r="1.5"/><circle cx="41" cy="9"  r="1.5"/><circle cx="57" cy="9"  r="1.5"/><circle cx="73" cy="9"  r="1.5"/>
+            <circle cx="9"  cy="25" r="1.5"/><circle cx="25" cy="25" r="1.5"/><circle cx="41" cy="25" r="1.5"/><circle cx="57" cy="25" r="1.5"/><circle cx="73" cy="25" r="1.5"/>
+            <circle cx="9"  cy="41" r="1.5"/><circle cx="25" cy="41" r="1.5"/><circle cx="41" cy="41" r="1.5"/><circle cx="57" cy="41" r="1.5"/><circle cx="73" cy="41" r="1.5"/>
+            <circle cx="9"  cy="57" r="1.5"/><circle cx="25" cy="57" r="1.5"/><circle cx="41" cy="57" r="1.5"/><circle cx="57" cy="57" r="1.5"/><circle cx="73" cy="57" r="1.5"/>
+            <circle cx="9"  cy="73" r="1.5"/><circle cx="25" cy="73" r="1.5"/><circle cx="41" cy="73" r="1.5"/><circle cx="57" cy="73" r="1.5"/><circle cx="73" cy="73" r="1.5"/>
+          </g>
+        </svg>
+ 
+        <span class="highlight-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Featured Service
+        </span>
+        <div class="card-icon-wrap">
+          <span class="card-number">05</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3L4 7v5c0 5.25 3.5 10.15 8 11.35C16.5 22.15 20 17.25 20 12V7L12 3z"
+                  stroke="#5b5ee8" stroke-width="1.5" stroke-linejoin="round" fill="rgba(91,94,232,0.09)"/>
+            <polyline points="9,12 11,14 15,10" stroke="#1aabba" stroke-width="1.7"
+                      stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Cyber Security</h3>
+        <p class="card-desc">Protect systems with enterprise-grade security architecture, real-time monitoring, and proactive risk management.</p>
+        <span class="card-arrow">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </div>
+ 
+ 
+      <div class="service-card_main">
+         <svg class="dot-grid" width="90" height="90" viewBox="0 0 90 90" aria-hidden="true">
+          <g fill="white">
+            <circle cx="9"  cy="9"  r="1.5"/><circle cx="25" cy="9"  r="1.5"/><circle cx="41" cy="9"  r="1.5"/><circle cx="57" cy="9"  r="1.5"/><circle cx="73" cy="9"  r="1.5"/>
+            <circle cx="9"  cy="25" r="1.5"/><circle cx="25" cy="25" r="1.5"/><circle cx="41" cy="25" r="1.5"/><circle cx="57" cy="25" r="1.5"/><circle cx="73" cy="25" r="1.5"/>
+            <circle cx="9"  cy="41" r="1.5"/><circle cx="25" cy="41" r="1.5"/><circle cx="41" cy="41" r="1.5"/><circle cx="57" cy="41" r="1.5"/><circle cx="73" cy="41" r="1.5"/>
+            <circle cx="9"  cy="57" r="1.5"/><circle cx="25" cy="57" r="1.5"/><circle cx="41" cy="57" r="1.5"/><circle cx="57" cy="57" r="1.5"/><circle cx="73" cy="57" r="1.5"/>
+            <circle cx="9"  cy="73" r="1.5"/><circle cx="25" cy="73" r="1.5"/><circle cx="41" cy="73" r="1.5"/><circle cx="57" cy="73" r="1.5"/><circle cx="73" cy="73" r="1.5"/>
+          </g>
+        </svg>
+ 
+        <span class="highlight-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Featured Service
+        </span>
+        <div class="card-icon-wrap">
+          <span class="card-number">06</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="3" width="20" height="14" rx="3" stroke="#5b5ee8" stroke-width="1.5"/>
+            <path d="M8 7L5 11l3 4M16 7l3 4-3 4" stroke="#1aabba" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="12" y1="7" x2="12" y2="15" stroke="#5b5ee8" stroke-width="1.3" stroke-dasharray="2 2" opacity="0.5"/>
+            <path d="M8 21h8M12 17v4" stroke="#5b5ee8" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Full Stack Development</h3>
+        <p class="card-desc">End-to-end web solutions combining scalable backend infrastructure with modern, responsive frontend frameworks.</p>
+        <span class="card-arrow">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </div>
+ 
+ 
+      <div class="service-card_main">
+         <svg class="dot-grid" width="90" height="90" viewBox="0 0 90 90" aria-hidden="true">
+          <g fill="white">
+            <circle cx="9"  cy="9"  r="1.5"/><circle cx="25" cy="9"  r="1.5"/><circle cx="41" cy="9"  r="1.5"/><circle cx="57" cy="9"  r="1.5"/><circle cx="73" cy="9"  r="1.5"/>
+            <circle cx="9"  cy="25" r="1.5"/><circle cx="25" cy="25" r="1.5"/><circle cx="41" cy="25" r="1.5"/><circle cx="57" cy="25" r="1.5"/><circle cx="73" cy="25" r="1.5"/>
+            <circle cx="9"  cy="41" r="1.5"/><circle cx="25" cy="41" r="1.5"/><circle cx="41" cy="41" r="1.5"/><circle cx="57" cy="41" r="1.5"/><circle cx="73" cy="41" r="1.5"/>
+            <circle cx="9"  cy="57" r="1.5"/><circle cx="25" cy="57" r="1.5"/><circle cx="41" cy="57" r="1.5"/><circle cx="57" cy="57" r="1.5"/><circle cx="73" cy="57" r="1.5"/>
+            <circle cx="9"  cy="73" r="1.5"/><circle cx="25" cy="73" r="1.5"/><circle cx="41" cy="73" r="1.5"/><circle cx="57" cy="73" r="1.5"/><circle cx="73" cy="73" r="1.5"/>
+          </g>
+        </svg>
+ 
+        <span class="highlight-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          Featured Service
+        </span>
+        <div class="card-icon-wrap">
+          <span class="card-number">07</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 10a9 9 0 1 0 18 0" stroke="#5b5ee8" stroke-width="1.5" stroke-linecap="round"/>
+            <ellipse cx="12" cy="10" rx="5" ry="9" stroke="#1aabba" stroke-width="1.2"/>
+            <line x1="3" y1="10" x2="21" y2="10" stroke="#5b5ee8" stroke-width="1.2" opacity="0.45"/>
+            <path d="M6 20l1.8-3.5h8.4L18 20" stroke="#5b5ee8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Cloud Solutions</h3>
+        <p class="card-desc">Secure cloud architecture, seamless deployment pipelines, and infrastructure optimized for cost and performance.</p>
+        <span class="card-arrow">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </div>
+
+   <div class="service-card_main">
+  
+  <svg class="dot-grid" width="90" height="90" viewBox="0 0 90 90" aria-hidden="true">
+    <g fill="white">
+      <circle cx="9" cy="9" r="1.5"/><circle cx="25" cy="9" r="1.5"/><circle cx="41" cy="9" r="1.5"/><circle cx="57" cy="9" r="1.5"/><circle cx="73" cy="9" r="1.5"/>
+      <circle cx="9" cy="25" r="1.5"/><circle cx="25" cy="25" r="1.5"/><circle cx="41" cy="25" r="1.5"/><circle cx="57" cy="25" r="1.5"/><circle cx="73" cy="25" r="1.5"/>
+      <circle cx="9" cy="41" r="1.5"/><circle cx="25" cy="41" r="1.5"/><circle cx="41" cy="41" r="1.5"/><circle cx="57" cy="41" r="1.5"/><circle cx="73" cy="41" r="1.5"/>
+      <circle cx="9" cy="57" r="1.5"/><circle cx="25" cy="57" r="1.5"/><circle cx="41" cy="57" r="1.5"/><circle cx="57" cy="57" r="1.5"/><circle cx="73" cy="57" r="1.5"/>
+      <circle cx="9" cy="73" r="1.5"/><circle cx="25" cy="73" r="1.5"/><circle cx="41" cy="73" r="1.5"/><circle cx="57" cy="73" r="1.5"/><circle cx="73" cy="73" r="1.5"/>
+    </g>
+  </svg>
+
+  <!-- Featured Badge -->
+  <span class="highlight-badge">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </svg>
+    Featured Service
+  </span>
+
+  <!-- Icon -->
+  <div class="card-icon-wrap">
+    <span class="card-number">07</span>
+
+    <!-- NEW WEB DESIGN SVG -->
+    <svg viewBox="0 0 24 24" fill="none">
+      <!-- Browser Window -->
+      <rect x="3" y="4" width="18" height="14" rx="3" stroke="#5b5ee8" stroke-width="1.6"/>
+      
+      <!-- Top bar dots -->
+      <circle cx="7" cy="7" r="1" fill="#ff5f56"/>
+      <circle cx="10" cy="7" r="1" fill="#ffbd2e"/>
+      <circle cx="13" cy="7" r="1" fill="#27c93f"/>
+
+      <!-- Layout blocks -->
+      <rect x="6" y="10" width="5" height="4" rx="1" fill="#1aabba" opacity="0.7"/>
+      <rect x="12" y="10" width="5" height="2" rx="1" fill="#5b5ee8" opacity="0.6"/>
+      <rect x="12" y="13" width="5" height="1.5" rx="1" fill="#1aabba" opacity="0.5"/>
+
+      <!-- Code brackets -->
+      <path d="M9 20l-2-2 2-2M15 16l2 2-2 2" stroke="#5b5ee8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Title -->
+  <h3 class="card-title">Web Design</h3>
+
+  <!-- UPDATED DESCRIPTION -->
+  <p class="card-desc">
+    Modern, responsive, and user-centric web designs that deliver seamless experiences, strong branding, and high conversion performance across all devices.
+  </p>
+
+  <!-- CTA -->
+  <span class="card-arrow">
+    Learn more
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14M12 5l7 7-7 7"/>
+    </svg>
+  </span>
+
+</div>
+ 
+   
+ 
+ 
+    </div>
+    
+     
+    
+    
+  </div>
+
+  </div>
+</section>
+<!-- / SERVICES -->
+
+
+
+
+<!-- Footer -->
+
+<footer class="site-footer">
+ 
+  <!-- Decorative -->
+  <div class="footer-blob blob-1"></div>
+  <div class="footer-blob blob-2"></div>
+  <div class="footer-blob blob-3"></div>
+  <div class="footer-dots"></div>
+ 
+  <!-- ── CTA BAND ── -->
+  <div class="footer-cta">
+    <div class="cta-left">
+      <div class="cta-eyebrow">
+        <span class="cta-eyebrow-dot"></span>
+        Let's Work Together
+      </div>
+      <h2 class="cta-headline">
+        Ready to Build Something<br><em>Extraordinary?</em>
+      </h2>
+      <p class="cta-sub">
+        Join 500+ companies that trust us to hire smarter, ship faster, and grow stronger. Let's start the conversation today.
+      </p>
+    </div>
+ 
+    <div class="cta-right">
+      <div class="subscribe-form">
+        <input class="subscribe-input" type="email" placeholder="Enter your work email…" aria-label="Work email"/>
+        <button class="subscribe-btn">Get Started →</button>
+      </div>
+      <div class="subscribe-note">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round">
+          <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        No spam, ever. Unsubscribe at any time.
+      </div>
+      <div class="cta-btns">
+        <a href="#" class="btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Talk to Sales
+        </a>
+        <a href="#" class="btn-secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          Watch Demo
+        </a>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ── MAIN GRID ── -->
+  <div class="footer-main">
+ 
+    <!-- Brand -->
+    <div class="footer-brand">
+      <a href="#" class="footer-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L4 6v6c0 5.5 3.5 10.7 8 12 4.5-1.3 8-6.5 8-12V6L12 2z" stroke="white" stroke-width="1.8" stroke-linejoin="round" fill="rgba(255,255,255,0.15)"/>
+            <polyline points="9,12 11,14 15,10" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="logo-name">Talent<span>Pro</span></span>
+      </a>
+ 
+      <p class="brand-desc">
+        Empowering businesses with cutting-edge technology solutions — from mobile apps and cloud architecture to elite talent acquisition and data analytics.
+      </p>
+ 
+      <div class="trust-badges">
+        <span class="trust-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          ISO 27001
+        </span>
+        <span class="trust-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          SOC 2 Certified
+        </span>
+        <span class="trust-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          GDPR Ready
+        </span>
+      </div>
+ 
+      <div class="social-row">
+        <!-- LinkedIn -->
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <!-- Twitter / X -->
+        <a href="#" class="social-link" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4l16 16M4 20L20 4" stroke="rgba(255,255,255,0.7)" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </a>
+    
+      
+        <!-- YouTube -->
+        <a href="#" class="social-link" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="rgba(255,255,255,0.7)" stroke-width="1.8"/>
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="rgba(255,255,255,0.7)"/>
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="#" class="social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="rgba(255,255,255,0.7)" stroke="none"/>
+          </svg>
+        </a>
       </div>
     </div>
  
-  </div><!-- /hero-slider -->
-</div>
+    <!-- Services -->
+    <div class="footer-col">
+      <p class="col-title">Services</p>
+      <ul class="col-links">
+        <li><a href="#">Mobile App Development <span class="link-arrow">›</span></a></li>
+        <li><a href="#">UI / UX Design <span class="link-arrow">›</span></a></li>
+        <li><a href="#">Data Analytics <span class="link-arrow">›</span></a></li>
+        <li><a href="#">SEO Optimization <span class="link-arrow">›</span></a></li>
+        <li><a href="#">Cyber Security <span class="link-arrow">›</span></a></li>
+        <li><a href="#">Full Stack Development <span class="link-arrow">›</span></a></li>
+        <li><a href="#">Cloud Solutions <span class="link-arrow">›</span></a></li>
+        <li>
+          <a href="#">Talent Acquisition <span class="link-badge">New</span></a>
+        </li>
+      </ul>
+    </div>
+ 
+    <!-- Company -->
+    <div class="footer-col">
+      <p class="col-title">Company</p>
+      <ul class="col-links">
+        <li><a href="#">About Us <span class="link-arrow">›</span></a></li>
+        <li><a href="#">Our Team <span class="link-arrow">›</span></a></li>
+        <li><a href="#">Careers <span class="link-badge">Hiring</span></a></li>
+     <li><a href="#">Services </li>
+       <li><a href="#">Industry </a></li>
+        <li><a href="#">Blog <span class="link-arrow">›</span></a></li>
 
+        <li><a href="#">Contact <span class="link-arrow">›</span></a></li>
+      </ul>
+    </div>
+ 
+    <!-- Resources -->
+    <div class="footer-col">
+      <p class="col-title">Resources</p>
+      <ul class="col-links">
+        <li><a href="#">Privacy Policy <span class="link-arrow"></span></a></li>
+        <li><a href="#">Terms of Service </a></li>
+       
+        <li><a href="#">Security </a></li>
+        <li><a href="#">Roadmap <span class="link-badge">Beta</span></a></li>
+      </ul>
+    </div>
+
+     <div class="footer-col">
+  <p class="col-title">Address</p>
+
+  <ul class="col-links address-list">
+    <li>
+      <span class="addr-icon">📍</span>
+      123 Business Avenue, Tech Park,<br>
+      Sector 5, Kolkata, West Bengal, India
+    </li>
+
+    <li>
+      <span class="addr-icon">📞</span>
+      +91 98765 43210
+    </li>
+
+    <li>
+      <span class="addr-icon">✉️</span>
+      info@yourcompany.com
+    </li>
+
+    <li>
+      <span class="addr-icon">🕒</span>
+      Mon - Fri: 9:00 AM - 6:00 PM
+    </li>
+  </ul>
+     </div>
+ 
+  </div>
+ 
+  <!-- ── STATS STRIP ── -->
+  <div class="footer-stats">
+    <div class="footer-stat">
+      <span class="fs-number">100+</span>
+      <span class="fs-label">Happy Clients</span>
+    </div>
+    <div class="footer-stat">
+      <span class="fs-number">500
++</span>
+      </span>
+      <span class="fs-label">Projects Delivered</span>
+    </div>
+    <div class="footer-stat">
+      <span class="fs-number">98%+</span>
+      <span class="fs-label">Client Satisfaction</span>
+    </div>
+    <div class="footer-stat">
+      <span class="fs-number">40+</span>
+      <span class="fs-label">Expert Engineers</span>
+    </div>
+  </div>
+ 
+  <!-- ── BOTTOM BAR ── -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <span>© 2026 ZYVEN SOLUTIONS PRIVATE LIMITED. All rights reserved.</span>
+      <span class="dot-sep"></span>
+      <a href="#">Privacy Policy</a>
+      <span class="dot-sep"></span>
+      <a href="#">Terms of Service</a>
+      <span class="dot-sep"></span>
+      <a href="#">Cookie Settings</a>
+      <span class="dot-sep"></span>
+      <a href="#">Sitemap</a>
+    </div>
+    <div class="footer-bottom-right">
+      <span class="made-with">
+        Made with <span class="heart">♥</span> for great teams
+      </span>
+      <a href="#top" class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        Top
+      </a>
+    </div>
+  </div>
+ 
+</footer>
+
+
+<!-- /Footer -->
+
+
+
+
+  <!-- ============================================================
+       VENDOR SCRIPTS
+       ============================================================ -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>
-$(document).ready(function(){
- 
-  $('#hero-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 5000,
-    speed: 650,
-    cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
-    dots: false,
-    arrows: true,
-    infinite: true,
-    pauseOnHover: true,
-    swipe: true,
-    touchThreshold: 10,
-    prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous"><span class="arr-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></span></button>',
-    nextArrow: '<button class="slick-next slick-arrow" aria-label="Next"><span class="arr-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span></button>',
-    appendDots: $('.banner-outer'),
-    customPaging: function(slider, i){
-      return '<button></button>';
-    }
-  });
- 
-  /* Animate progress bars when slide 3 (index 2) becomes active */
-  function animateBars(){
-    $('.prog-fill').each(function(){
-      var $f = $(this);
-      $f.css({transition:'none', width:'0%'});
-      setTimeout(function(){
-        $f.css({transition:'width 1.3s ease', width: $f.data('w') + '%'});
-      }, 50);
-    });
-  }
- 
-  /* Check on init if slide 3 is first */
-  if($('#hero-slider').slick('slickCurrentSlide') === 2){
-    animateBars();
-  }
- 
-  /* After every slide change */
-  $('#hero-slider').on('afterChange', function(event, slick, currentSlide){
-    if(currentSlide === 2){
-      animateBars();
-    }
-  });
- 
-});
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-  </body>
+  <!-- ============================================================
+       MAIN SCRIPT
+       ============================================================ -->
+  <script>
+    $(document).ready(function () {
+
+      /* ── Init Slick ── */
+      $('#hero-slider').slick({
+        slidesToShow   : 1,
+        slidesToScroll : 1,
+        autoplay       : false,
+        autoplaySpeed  : 5000,
+        speed          : 650,
+        cssEase        : 'cubic-bezier(0.77, 0, 0.18, 1)',
+        dots           : false,
+        arrows         : true,
+        infinite       : true,
+        pauseOnHover   : true,
+        swipe          : true,
+        touchThreshold : 10,
+
+        prevArrow: `<button class="slick-prev slick-arrow" aria-label="Previous">
+                      <span class="arr-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="15 18 9 12 15 6"/>
+                        </svg>
+                      </span>
+                    </button>`,
+
+        nextArrow: `<button class="slick-next slick-arrow" aria-label="Next">
+                      <span class="arr-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="9 6 15 12 9 18"/>
+                        </svg>
+                      </span>
+                    </button>`,
+
+        appendDots : $('.banner-outer'),
+        customPaging: function (slider, i) {
+          return '<button></button>';
+        }
+      });
+
+      /* ── Progress Bar Animation ── */
+      function animateBars () {
+        $('.prog-fill').each(function () {
+          var $fill = $(this);
+          $fill.css({ transition: 'none', width: '0%' });
+          setTimeout(function () {
+            $fill.css({
+              transition : 'width 1.3s ease',
+              width      : $fill.data('w') + '%'
+            });
+          }, 50);
+        });
+      }
+
+      /* Trigger on init if slide 3 is first */
+      if ($('#hero-slider').slick('slickCurrentSlide') === 2) {
+        animateBars();
+      }
+
+      /* Trigger after every slide change */
+      $('#hero-slider').on('afterChange', function (event, slick, currentSlide) {
+        if (currentSlide === 2) {
+          animateBars();
+        }
+      });
+
+    });
+  </script>
+
+  <script>
+   const counters = document.querySelectorAll('.counter');
+
+const runCounter = (counter) => {
+  const target = +counter.dataset.target;
+  let current = 0;
+
+  const step = target / 120;
+
+  const update = () => {
+    current += step;
+
+    if (current < target) {
+      counter.innerText = Math.floor(current);
+      requestAnimationFrame(update);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  update();
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      counters.forEach(counter => runCounter(counter));
+      observer.disconnect(); // run only once
+    }
+  });
+}, { threshold: 0.4 });
+
+observer.observe(document.querySelector('.ab-stats-grid'));
+  </script>
+
+
+</body>
 </html>
