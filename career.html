@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tanda – IT Solutions</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet" />
+
+        <!-- Slick Carousel CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="innerstyle.css" />
+    </head>
+
+    <style>
+
+
+
+</style>
+
+    <body>
+
+        <!-- ============================================================
+       TOP BAR
+       ============================================================ -->
+        <div class="top-bar">
+            <div class="top-bar-left">
+
+                <!-- Address -->
+                <span class="top-bar-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <path
+                            d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    California, TX 70240
+                </span>
+
+                <span class="divider" aria-hidden="true"></span>
+
+                <!-- Email -->
+                <span class="top-bar-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    Info@gmail.com
+                </span>
+
+            </div>
+
+            <div class="top-bar-right">
+
+                <!-- Office Hours -->
+                <span class="top-bar-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    Office Hours: 8:00 AM – 7:45 PM
+                </span>
+
+                <span class="divider" aria-hidden="true"></span>
+
+                <!-- Social Links -->
+                <div class="top-bar-socials" aria-label="Social Media Links">
+
+                    <a href="#" aria-label="Facebook">
+                        <svg width="14" height="14" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+
+                    <a href="#" aria-label="Twitter / X">
+                        <svg width="14" height="14" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                        </svg>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="14" height="14" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <!-- /top-bar -->
+
+        <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+
+            <!-- Logo -->
+            <a href="#" class="logo" aria-label="Tanda Home">
+                <img src="./images/logo.webp" alt loading="lazy" width="150"
+                    height="50" />
+            </a>
+
+            <!-- Nav Links -->
+            <ul class="nav-links" role="list">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="service.html" class="nav-link">SERVICES</a></li>
+                <li><a href="industry.html" class="nav-link">INDUSTRY</a></li>
+                <li><a href="career.html" class="nav-link">CAREER</a></li>
+                <li><a href="contactus.html"
+                        class="nav-contact">CONTACT</a></li>
+            </ul>
+
+            <!-- CTA Info -->
+            <div class="nav-cta-info">
+                <div class="cta-icon-wrap" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="#fff" stroke-width="2">
+                        <path
+                            d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        <circle cx="9" cy="10" r="1" fill="#fff" />
+                        <circle cx="12" cy="10" r="1" fill="#fff" />
+                        <circle cx="15" cy="10" r="1" fill="#fff" />
+                    </svg>
+                </div>
+                <div class="cta-text">
+                    <small>Have any Questions?</small>
+                    <a href="mailto:info@bestup.com"
+                        class="mail_cta-text">info@bestup.com</a>
+                </div>
+            </div>
+
+        </nav>
+        <!-- /navbar -->
+
+        <!-- ================================================================
+     HERO — SERVICES HEADER
+     ================================================================ -->
+
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="hero-bg-grid"></div>
+
+            </div>
+
+            <div class="hero-inner">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-headline">Build Your <span
+                                class="accent">Future</span> with Zyven</h1>
+                        <p class="hero-desc">Join a team of innovators,
+                            creators, and problem-solvers. We're building the
+                            future of IT solutions and talent acquisition, and
+                            we want you to be part of it.</p>
+
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary"
+                                onclick="scrollToRoles()">Explore Open
+                                Roles</button>
+                            <a href="about.html" class="btn btn-secondary">Learn
+                                More About Us</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="floating-card card-1">
+                            <div class="floating-card-icon">🚀</div>
+                            <h3>Fast Growing</h3>
+                            <p>Join a rapidly expanding company in the IT and
+                                recruitment sector</p>
+                        </div>
+
+                        <div class="floating-card card-2">
+                            <div class="floating-card-icon">🌟</div>
+                            <h3>Career Growth</h3>
+                            <p>Unlimited opportunities for learning and
+                                professional development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /SERVICES HEADER -->
+
+        <section class="roles-section" id="rolesSection">
+            <div class="grid-bg"></div>
+            <div class="ab-orb orb1"></div>
+            <div class="ab-orb orb2"></div>
+            <div class="ab-orb orb3"></div>
+            <div class="ab-inner">
+                <div class="section-header">
+                    <span class="section-tag">OPEN OPPORTUNITIES</span>
+                    <h2 class="section-title">Open <span> Positions</span></h2>
+                    <p class="section-sub">Discover exciting career
+                        opportunities across our organization</p>
+                </div>
+
+                <div class="roles-grid">
+                    <div class="role-card" onclick="openJobModal(this)">
+                        <div class="role-icon">👨‍💻</div>
+                        <div class="role-title">Senior Full Stack
+                            Developer</div>
+                        <div class="role-dept">Engineering</div>
+                        <span class="role-badge">Hiring</span>
+                        <p class="role-desc">We're looking for an experienced
+                            full stack developer to lead our web platform
+                            development with React, Node.js, and cloud
+                            technologies.</p>
+                        <div class="role-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                        <a href="#" class="role-btn"
+                            onclick="event.stopPropagation()">View Details →</a>
+                    </div>
+
+                    <div class="role-card" onclick="openJobModal(this)">
+                        <div class="role-icon">🔒</div>
+                        <div class="role-title">Cybersecurity Engineer</div>
+                        <div class="role-dept">Security</div>
+                        <span class="role-badge">Hiring</span>
+                        <p class="role-desc">Join our security team to protect
+                            our infrastructure and client data. Experience with
+                            threat detection and security protocols
+                            required.</p>
+                        <div class="role-tags">
+                            <span class="tag">Security</span>
+                            <span class="tag">Cloud</span>
+                            <span class="tag">Linux</span>
+                        </div>
+                        <a href="#" class="role-btn"
+                            onclick="event.stopPropagation()">View Details →</a>
+                    </div>
+
+                    <div class="role-card" onclick="openJobModal(this)">
+                        <div class="role-icon">🎯</div>
+                        <div class="role-title">Talent Acquisition Manager</div>
+                        <div class="role-dept">Recruitment</div>
+                        <span class="role-badge">Hiring</span>
+                        <p class="role-desc">Lead our recruitment efforts to
+                            find top tech talent. Build relationships with
+                            candidates and drive our hiring strategy
+                            forward.</p>
+                        <div class="role-tags">
+                            <span class="tag">Recruiting</span>
+                            <span class="tag">HR Tech</span>
+                            <span class="tag">Networking</span>
+                        </div>
+                        <a href="#" class="role-btn"
+                            onclick="event.stopPropagation()">View Details →</a>
+                    </div>
+
+                    <div class="role-card" onclick="openJobModal(this)">
+                        <div class="role-icon">☁️</div>
+                        <div class="role-title">Cloud Infrastructure
+                            Architect</div>
+                        <div class="role-dept">DevOps</div>
+                        <span class="role-badge">Hiring</span>
+                        <p class="role-desc">Design and maintain scalable cloud
+                            infrastructure solutions. Work with AWS, Azure, and
+                            Kubernetes to support our growing platform.</p>
+                        <div class="role-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">DevOps</span>
+                        </div>
+                        <a href="#" class="role-btn"
+                            onclick="event.stopPropagation()">View Details →</a>
+                    </div>
+
+                    <div class="role-card" onclick="openJobModal(this)">
+                        <div class="role-icon">🎨</div>
+                        <div class="role-title">UI/UX Designer</div>
+                        <div class="role-dept">Design</div>
+                        <span class="role-badge">Hiring</span>
+                        <p class="role-desc">Create beautiful and intuitive user
+                            interfaces. Design experiences that delight our
+                            users and solve real problems with innovative
+                            solutions.</p>
+                        <div class="role-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">User Research</span>
+                            <span class="tag">Prototyping</span>
+                        </div>
+                        <a href="#" class="role-btn"
+                            onclick="event.stopPropagation()">View Details →</a>
+                    </div>
+
+                    <div class="role-card" onclick="openJobModal(this)">
+                        <div class="role-icon">📱</div>
+                        <div class="role-title">Mobile App Developer</div>
+                        <div class="role-dept">Engineering</div>
+                        <span class="role-badge">Hiring</span>
+                        <p class="role-desc">Build engaging mobile applications
+                            for iOS and Android. Work with React Native and
+                            native technologies to deliver exceptional user
+                            experiences.</p>
+                        <div class="role-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Swift</span>
+                            <span class="tag">Kotlin</span>
+                        </div>
+                        <a href="#" class="role-btn"
+                            onclick="event.stopPropagation()">View Details →</a>
+                    </div>
+
+                    <div class="role-card" onclick="openJobModal(this)">
+                        <div class="role-icon">🔌</div>
+                        <div class="role-title">Frontend Developer</div>
+                        <div class="role-dept">Engineering</div>
+                        <span class="role-badge">Hiring</span>
+                        <p class="role-desc">Create responsive and performant
+                            web interfaces. Master modern frontend frameworks
+                            and deliver pixel-perfect implementations of design
+                            specifications.</p>
+                        <div class="role-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                        <a href="#" class="role-btn"
+                            onclick="event.stopPropagation()">View Details →</a>
+                    </div>
+
+                    <div class="role-card" onclick="openJobModal(this)">
+                        <div class="role-icon">🗄️</div>
+                        <div class="role-title">Backend Developer</div>
+                        <div class="role-dept">Engineering</div>
+                        <span class="role-badge">Hiring</span>
+                        <p class="role-desc">Build robust and scalable backend
+                            systems. Design APIs, databases, and microservices
+                            that power our applications and handle millions of
+                            requests.</p>
+                        <div class="role-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <a href="#" class="role-btn"
+                            onclick="event.stopPropagation()">View Details →</a>
+                    </div>
+
+                    <div class="role-card" onclick="openJobModal(this)">
+                        <div class="role-icon">📊</div>
+                        <div class="role-title">HR Business Partner</div>
+                        <div class="role-dept">Human Resources</div>
+                        <span class="role-badge">Hiring</span>
+                        <p class="role-desc">Support our team's growth and
+                            development. Create strategies for employee
+                            engagement, performance management, and
+                            organizational culture.</p>
+                        <div class="role-tags">
+                            <span class="tag">HR Strategy</span>
+                            <span class="tag">People Ops</span>
+                            <span class="tag">Training</span>
+                        </div>
+                        <a href="#" class="role-btn"
+                            onclick="event.stopPropagation()">View Details →</a>
+                    </div>
+
+                    <div class="role-card" onclick="openJobModal(this)">
+                        <div class="role-icon">💡</div>
+                        <div class="role-title">Product Manager</div>
+                        <div class="role-dept">Product</div>
+                        <span class="role-badge">Hiring</span>
+                        <p class="role-desc">Shape the future of our platform.
+                            Work with engineering, design, and stakeholders to
+                            deliver products that solve real problems.</p>
+                        <div class="role-tags">
+                            <span class="tag">Product Strategy</span>
+                            <span class="tag">Analytics</span>
+                            <span class="tag">Leadership</span>
+                        </div>
+                        <a href="#" class="role-btn"
+                            onclick="event.stopPropagation()">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Join Section -->
+        <section class="why-join-section">
+            <div class="why-join-container">
+                <div class="why-join-content">
+                    <h2>Why Join Zyven?</h2>
+                    <p>At Zyven Solutions, we believe that great work comes from
+                        great people. We've built a culture where innovation
+                        thrives, collaboration is valued, and every team member
+                        has the opportunity to make a real impact.</p>
+                    <p>We invest in our people because we know that our success
+                        depends on your success.</p>
+                </div>
+
+                <div class="why-join-benefits">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💰</div>
+                        <div class="benefit-title">Competitive
+                            Compensation</div>
+                        <div class="benefit-desc">Industry-leading salaries with
+                            performance bonuses</div>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📚</div>
+                        <div class="benefit-title">Continuous Learning</div>
+                        <div class="benefit-desc">Annual training budgets and
+                            certification programs</div>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🏥</div>
+                        <div class="benefit-title">Health & Wellness</div>
+                        <div class="benefit-desc">Comprehensive health insurance
+                            and wellness programs</div>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🏠</div>
+                        <div class="benefit-title">Flexible Work</div>
+                        <div class="benefit-desc">Remote options and flexible
+                            working hours</div>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🎉</div>
+                        <div class="benefit-title">Work-Life Balance</div>
+                        <div class="benefit-desc">Generous PTO and mental health
+                            days</div>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🚀</div>
+                        <div class="benefit-title">Growth Opportunities</div>
+                        <div class="benefit-desc">Clear career paths and
+                            mentorship programs</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="culture-section">
+            <div class="section-header">
+                <span class="section-tag">OUR VALUES</span>
+                <h2>Our Culture</h2>
+                <p>The values that drive us forward every single day</p>
+            </div>
+
+            <div class="culture-grid">
+                <div class="culture-item">
+                    <div class="culture-icon-box">🎯</div>
+                    <h3 class="culture-title">Innovation</h3>
+                    <p class="culture-desc">We embrace new ideas and challenge
+                        the status quo. Every voice matters when we're solving
+                        problems.</p>
+                </div>
+
+                <div class="culture-item">
+                    <div class="culture-icon-box">🤝</div>
+                    <h3 class="culture-title">Collaboration</h3>
+                    <p class="culture-desc">Great things are built together. We
+                        work across teams, share knowledge, and lift each other
+                        up.</p>
+                </div>
+
+                <div class="culture-item">
+                    <div class="culture-icon-box">⚡</div>
+                    <h3 class="culture-title">Excellence</h3>
+                    <p class="culture-desc">We're committed to delivering our
+                        best work in everything we do, big or small.</p>
+                </div>
+
+                <div class="culture-item">
+                    <div class="culture-icon-box">🌱</div>
+                    <h3 class="culture-title">Growth Mindset</h3>
+                    <p class="culture-desc">We're always learning and improving.
+                        Mistakes are opportunities to grow stronger.</p>
+                </div>
+
+                <div class="culture-item">
+                    <div class="culture-icon-box">🔗</div>
+                    <h3 class="culture-title">Integrity</h3>
+                    <p class="culture-desc">We do what's right, even when it's
+                        difficult. Trust is the foundation of everything we
+                        do.</p>
+                </div>
+
+                <div class="culture-item">
+                    <div class="culture-icon-box">🌍</div>
+                    <h3 class="culture-title">Impact</h3>
+                    <p class="culture-desc">We create solutions that make a real
+                        difference for our clients and communities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="site-footer">
+
+            <!-- Decorative -->
+            <div class="footer-blob blob-1"></div>
+            <div class="footer-blob blob-2"></div>
+            <div class="footer-blob blob-3"></div>
+            <div class="footer-dots"></div>
+
+            <!-- ── CTA BAND ── -->
+            <div class="footer-cta">
+                <div class="cta-left">
+                    <div class="cta-eyebrow">
+                        <span class="cta-eyebrow-dot"></span>
+                        Let's Work Together
+                    </div>
+                    <h2 class="cta-headline">
+                        Ready to Build Something<br><em>Extraordinary?</em>
+                    </h2>
+                    <p class="cta-sub">
+                        Join 500+ companies that trust us to hire smarter, ship
+                        faster, and
+                        grow stronger. Let's start the conversation today.
+                    </p>
+                </div>
+
+                <div class="cta-right">
+                    <div class="subscribe-form">
+                        <input class="subscribe-input" type="email"
+                            placeholder="Enter your work email…"
+                            aria-label="Work email" />
+                        <button class="subscribe-btn">Get Started →</button>
+                    </div>
+                    <div class="subscribe-note">
+                        <svg width="12" height="12" viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="rgba(255,255,255,0.4)" stroke-width="2"
+                            stroke-linecap="round">
+                            <rect x="3" y="11" width="18" height="11"
+                                rx="2" /><path
+                                d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                        No spam, ever. Unsubscribe at any time.
+                    </div>
+                    <div class="cta-btns">
+                        <a href="#" class="btn-primary">
+                            <svg width="14" height="14" viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="white" stroke-width="2.2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"><path
+                                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+                            Talk to Sales
+                        </a>
+                        <a href="#" class="btn-secondary">
+                            <svg width="14" height="14" viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor" stroke-width="2.2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"><circle cx="12" cy="12"
+                                    r="10" /><polygon
+                                    points="10 8 16 12 10 16 10 8" /></svg>
+                            Watch Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── MAIN GRID ── -->
+            <div class="footer-main">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-mark">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2L4 6v6c0 5.5 3.5 10.7 8 12 4.5-1.3 8-6.5 8-12V6L12 2z"
+                                    stroke="white" stroke-width="1.8"
+                                    stroke-linejoin="round"
+                                    fill="rgba(255,255,255,0.15)" />
+                                <polyline points="9,12 11,14 15,10"
+                                    stroke="white"
+                                    stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <span class="logo-name">Talent<span>Pro</span></span>
+                    </a>
+
+                    <p class="brand-desc">
+                        Empowering businesses with cutting-edge technology
+                        solutions — from
+                        mobile apps and cloud architecture to elite talent
+                        acquisition and
+                        data analytics.
+                    </p>
+
+                    <div class="trust-badges">
+                        <span class="trust-badge">
+                            <svg width="11" height="11" viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor" stroke-width="2.2"
+                                stroke-linecap="round"><polyline
+                                    points="20 6 9 17 4 12" /></svg>
+                            ISO 27001
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="11" height="11" viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor" stroke-width="2.2"
+                                stroke-linecap="round"><polyline
+                                    points="20 6 9 17 4 12" /></svg>
+                            SOC 2 Certified
+                        </span>
+                        <span class="trust-badge">
+                            <svg width="11" height="11" viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor" stroke-width="2.2"
+                                stroke-linecap="round"><polyline
+                                    points="20 6 9 17 4 12" /></svg>
+                            GDPR Ready
+                        </span>
+                    </div>
+
+                    <div class="social-row">
+                        <!-- LinkedIn -->
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"
+                                fill="rgba(255,255,255,0.7)"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4"
+                                    height="12" /><circle cx="4" cy="4"
+                                    r="2" />
+                            </svg>
+                        </a>
+                        <!-- Twitter / X -->
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4l16 16M4 20L20 4"
+                                    stroke="rgba(255,255,255,0.7)"
+                                    stroke-width="2.2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"
+                                    stroke="rgba(255,255,255,0.7)"
+                                    stroke-width="1.8" />
+                                <polygon
+                                    points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"
+                                    fill="rgba(255,255,255,0.7)" />
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                stroke="rgba(255,255,255,0.7)"
+                                stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="20" height="20"
+                                    rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.5" cy="6.5" r="1"
+                                    fill="rgba(255,255,255,0.7)"
+                                    stroke="none" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-col">
+                    <p class="col-title">Services</p>
+                    <ul class="col-links">
+                        <li><a href="#">Mobile App Development <span
+                                    class="link-arrow">›</span></a></li>
+                        <li><a href="#">UI / UX Design <span
+                                    class="link-arrow">›</span></a></li>
+                        <li><a href="#">Data Analytics <span
+                                    class="link-arrow">›</span></a></li>
+                        <li><a href="#">SEO Optimization <span
+                                    class="link-arrow">›</span></a></li>
+                        <li><a href="#">Cyber Security <span
+                                    class="link-arrow">›</span></a></li>
+                        <li><a href="#">Full Stack Development <span
+                                    class="link-arrow">›</span></a></li>
+                        <li><a href="#">Cloud Solutions <span
+                                    class="link-arrow">›</span></a></li>
+                        <li>
+                            <a href="#">Talent Acquisition <span
+                                    class="link-badge">New</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-col">
+                    <p class="col-title">Company</p>
+                    <ul class="col-links">
+                        <li><a href="#">About Us <span
+                                    class="link-arrow">›</span></a></li>
+                        <li><a href="#">Our Team <span
+                                    class="link-arrow">›</span></a></li>
+                        <li><a href="#">Careers <span
+                                    class="link-badge">Hiring</span></a></li>
+                        <li><a href="#">Services </li>
+                            <li><a href="#">Industry </a></li>
+                            <li><a href="#">Blog <span
+                                        class="link-arrow">›</span></a></li>
+
+                            <li><a href="#">Contact <span
+                                        class="link-arrow">›</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Resources -->
+                    <div class="footer-col">
+                        <p class="col-title">Resources</p>
+                        <ul class="col-links">
+                            <li><a href="#">Privacy Policy <span
+                                        class="link-arrow"></span></a></li>
+                            <li><a href="#">Terms of Service </a></li>
+
+                            <li><a href="#">Security </a></li>
+                            <li><a href="#">Roadmap <span
+                                        class="link-badge">Beta</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <p class="col-title">Address</p>
+
+                        <ul class="col-links address-list">
+                            <li>
+                                <span class="addr-icon">📍</span>
+                                123 Business Avenue, Tech Park,<br>
+                                Sector 5, Kolkata, West Bengal, India
+                            </li>
+
+                            <li>
+                                <span class="addr-icon">📞</span>
+                                +91 98765 43210
+                            </li>
+
+                            <li>
+                                <span class="addr-icon">✉️</span>
+                                info@yourcompany.com
+                            </li>
+
+                            <li>
+                                <span class="addr-icon">🕒</span>
+                                Mon - Fri: 9:00 AM - 6:00 PM
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- ── STATS STRIP ── -->
+                <div class="footer-stats">
+                    <div class="footer-stat">
+                        <span class="fs-number">100+</span>
+                        <span class="fs-label">Happy Clients</span>
+                    </div>
+                    <div class="footer-stat">
+                        <span class="fs-number">500
+                            +</span>
+                    </span>
+                    <span class="fs-label">Projects Delivered</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="fs-number">98%+</span>
+                    <span class="fs-label">Client Satisfaction</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="fs-number">40+</span>
+                    <span class="fs-label">Expert Engineers</span>
+                </div>
+            </div>
+
+            <!-- ── BOTTOM BAR ── -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <span>© 2026 ZYVEN SOLUTIONS PRIVATE LIMITED. All rights
+                        reserved.</span>
+                    <span class="dot-sep"></span>
+                    <a href="#">Privacy Policy</a>
+                    <span class="dot-sep"></span>
+                    <a href="#">Terms of Service</a>
+                    <span class="dot-sep"></span>
+                    <a href="#">Cookie Settings</a>
+                    <span class="dot-sep"></span>
+                    <a href="#">Sitemap</a>
+                </div>
+                <div class="footer-bottom-right">
+                    <span class="made-with">
+                        Made with <span class="heart">♥</span> for great teams
+                    </span>
+                    <a href="#top" class="back-top"
+                        onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+                        <svg width="12" height="12" viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"><path
+                                d="M12 19V5M5 12l7-7 7 7" /></svg>
+                        Top
+                    </a>
+                </div>
+            </div>
+
+        </footer>
+
+        <!-- /Footer -->
+
+        <!-- ============================================================
+       VENDOR SCRIPTS
+       ============================================================ -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+        <!-- ============================================================
+       MAIN SCRIPT
+       ============================================================ -->
+        <script>
+/* ---- Intersection Observer — Reveal on Scroll ---- */
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+ 
+reveals.forEach(el => observer.observe(el));
+ 
+
+ 
+/* ---- Counter Animation on hero stats ---- */
+function animateCounter(el, end, suffix = '') {
+  let start = 0;
+  const duration = 1800;
+  const step = (timestamp) => {
+    if (!start) start = timestamp;
+    const progress = Math.min((timestamp - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * end) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+ 
+const heroObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      document.querySelectorAll('.stat-val').forEach(statEl => {
+        const raw = statEl.textContent;
+        const num = parseInt(raw.replace(/\D/g, ''), 10);
+        const suffix = raw.replace(/[\d]/g, '');
+        animateCounter(statEl, num, suffix);
+      });
+      heroObserver.disconnect();
+    }
+  });
+}, { threshold: 0.5 });
+ 
+const heroStats = document.querySelector('.hero-stats');
+if (heroStats) heroObserver.observe(heroStats);
+</script>
+
+        <script>
+
+  
+</script>
+
+    </body>
+</html>
