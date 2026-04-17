@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers at Zyven Solutions - Join Our Team</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Brand colours */
+            --color-navy: #0e2d66;
+            --color-indigo: #5b5ee8;
+            --color-teal: #1aabba;
+            --color-teal-dark: #0e8a97;
+            --color-teal-light: #2dcad9;
+            --color-white: #ffffff;
+            --color-off-white: #f4fafc;
+            --color-text-dark: #1a1d2e;
+            --color-text-mid: #374151;
+            --color-text-muted: #6b7280;
+            --color-border: #eaecf0;
+
+            /* Typography */
+            --font-head: 'Sora', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+
+            /* Transitions */
+            --tr-fast: 0.18s ease;
+            --tr-base: 0.30s ease;
+            --tr-slow: 0.55s ease;
+
+            /* Shadows */
+            --shadow-sm: 0 3px 12px rgba(14, 45, 102, 0.08);
+            --shadow-md: 0 8px 25px rgba(14, 45, 102, 0.12);
+            --shadow-lg: 0 18px 45px rgba(14, 45, 102, 0.18);
+
+            /* Legacy support */
+            --primary: #5b5ee8;
+            --primary-dark: #4a4dd4;
+            --accent-teal: #1aabba;
+            --accent-purple: #5b5ee8;
+            --bg-dark: #f4fafc;
+            --bg-darker: #ffffff;
+            --text-primary: #1a1d2e;
+            --text-secondary: #6b7280;
+            --border-color: #eaecf0;
+            --success: #10b981;
+        }
+
+        body {
+            font-family: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--color-off-white);
+            color: var(--color-text-dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .career-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 60px 20px;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(91, 94, 232, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(91, 94, 232, 0.08) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(50px);
+            }
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.3;
+        }
+
+        .glow-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--color-indigo);
+            top: -100px;
+            left: -100px;
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .glow-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--color-teal);
+            bottom: 50px;
+            right: 100px;
+            animation: float 12s ease-in-out infinite 2s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        .hero-content .accent {
+            background: linear-gradient(135deg, var(--color-teal), var(--color-indigo));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--color-text-mid);
+            margin-bottom: 30px;
+            animation: slideInUp 0.8s ease-out 0.1s backwards;
+            max-width: 450px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            animation: slideInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-indigo), var(--color-indigo));
+            color: white;
+            box-shadow: 0 8px 24px rgba(91, 94, 232, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(91, 94, 232, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-teal);
+            border: 2px solid var(--color-teal);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(26, 171, 186, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 500px;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .floating-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(26, 171, 186, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-1 {
+            width: 280px;
+            top: 20px;
+            left: 0;
+            animation-delay: 0s;
+        }
+
+        .card-2 {
+            width: 280px;
+            bottom: 60px;
+            right: 0;
+            animation-delay: 2s;
+        }
+
+        .floating-card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .floating-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--color-teal);
+        }
+
+        .floating-card p {
+            font-size: 0.95rem;
+            color: var(--color-text-mid);
+        }
+
+        /* ========== ROLES SECTION ========== */
+        .roles-section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(26, 171, 186, 0.1);
+            border: 1px solid var(--color-teal);
+            border-radius: 20px;
+            color: var(--color-teal);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--color-text-mid);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .role-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(244, 250, 252, 0.8));
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        .role-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--color-indigo);
+            background: linear-gradient(135deg, rgba(91, 94, 232, 0.08), rgba(91, 94, 232, 0.05));
+            box-shadow: var(--shadow-lg);
+        }
+
+        .role-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(26, 171, 186, 0.2), transparent);
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+
+        .role-card:hover::before {
+            left: 100%;
+        }
+
+        .role-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .role-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .role-dept {
+            font-size: 0.9rem;
+            color: var(--color-teal);
+            margin-bottom: 15px;
+        }
+
+        .role-desc {
+            font-size: 0.95rem;
+            color: var(--color-text-mid);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .role-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(26, 171, 186, 0.1);
+            border: 1px solid rgba(26, 171, 186, 0.3);
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: var(--color-teal);
+        }
+
+        .role-btn {
+            display: inline-block;
+            color: var(--color-indigo);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .role-btn:hover {
+            color: var(--color-teal);
+            transform: translateX(5px);
+        }
+
+        /* ========== WHY JOIN SECTION ========== */
+        .why-join-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, rgba(91, 94, 232, 0.05), rgba(26, 171, 186, 0.05));
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-join-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .why-join-benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(26, 171, 186, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.95);
+            border-color: var(--color-teal);
+            box-shadow: var(--shadow-md);
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .benefit-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .benefit-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .why-join-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .why-join-content p {
+            font-size: 1.05rem;
+            color: var(--color-text-mid);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        /* ========== CULTURE SECTION ========== */
+        .culture-section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .culture-item {
+            text-align: center;
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        .culture-icon-box {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 102, 255, 0.15));
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .culture-item:hover .culture-icon-box {
+            transform: scale(1.1) rotateY(180deg);
+            border-color: var(--accent-teal);
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(0, 102, 255, 0.3));
+        }
+
+        .culture-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .culture-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* ========== ANIMATIONS ========== */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .why-join-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .culture-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="career-hero">
+        <div class="hero-background">
+            <div class="hero-grid"></div>
+            <div class="glow-orb glow-1"></div>
+            <div class="glow-orb glow-2"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Build Your <span class="accent">Future</span> with Zyven</h1>
+                <p>Join a team of innovators, creators, and problem-solvers. We're building the future of IT solutions and talent acquisition, and we want you to be part of it.</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Explore Open Roles</button>
+                    <button class="btn btn-secondary">Learn More About Us</button>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="floating-card-icon">🚀</div>
+                    <h3>Fast Growing</h3>
+                    <p>Join a rapidly expanding company in the IT and recruitment sector</p>
+                </div>
+
+                <div class="floating-card card-2">
+                    <div class="floating-card-icon">🌟</div>
+                    <h3>Career Growth</h3>
+                    <p>Unlimited opportunities for learning and professional development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Roles Section -->
+    <section class="roles-section">
+        <div class="section-header">
+            <span class="section-tag">OPEN OPPORTUNITIES</span>
+            <h2>Open Positions</h2>
+            <p>Discover exciting career opportunities across our organization</p>
+        </div>
+
+        <div class="roles-grid">
+            <div class="role-card">
+                <div class="role-icon">👨‍💻</div>
+                <div class="role-title">Senior Full Stack Developer</div>
+                <div class="role-dept">Engineering</div>
+                <p class="role-desc">We're looking for an experienced full stack developer to lead our web platform development with React, Node.js, and cloud technologies.</p>
+                <div class="role-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">AWS</span>
+                </div>
+                <a href="#" class="role-btn">View Details →</a>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">🔒</div>
+                <div class="role-title">Cybersecurity Engineer</div>
+                <div class="role-dept">Security</div>
+                <p class="role-desc">Join our security team to protect our infrastructure and client data. Experience with threat detection and security protocols required.</p>
+                <div class="role-tags">
+                    <span class="tag">Security</span>
+                    <span class="tag">Cloud</span>
+                    <span class="tag">Linux</span>
+                </div>
+                <a href="#" class="role-btn">View Details →</a>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">🎯</div>
+                <div class="role-title">Talent Acquisition Manager</div>
+                <div class="role-dept">Recruitment</div>
+                <p class="role-desc">Lead our recruitment efforts to find top tech talent. Build relationships with candidates and drive our hiring strategy forward.</p>
+                <div class="role-tags">
+                    <span class="tag">Recruiting</span>
+                    <span class="tag">HR Tech</span>
+                    <span class="tag">Networking</span>
+                </div>
+                <a href="#" class="role-btn">View Details →</a>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">☁️</div>
+                <div class="role-title">Cloud Infrastructure Architect</div>
+                <div class="role-dept">DevOps</div>
+                <p class="role-desc">Design and maintain scalable cloud infrastructure solutions. Work with AWS, Azure, and Kubernetes to support our growing platform.</p>
+                <div class="role-tags">
+                    <span class="tag">AWS</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">DevOps</span>
+                </div>
+                <a href="#" class="role-btn">View Details →</a>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">📊</div>
+                <div class="role-title">HR Business Partner</div>
+                <div class="role-dept">Human Resources</div>
+                <p class="role-desc">Support our team's growth and development. Create strategies for employee engagement, performance management, and organizational culture.</p>
+                <div class="role-tags">
+                    <span class="tag">HR Strategy</span>
+                    <span class="tag">People Ops</span>
+                    <span class="tag">Training</span>
+                </div>
+                <a href="#" class="role-btn">View Details →</a>
+            </div>
+
+            <div class="role-card">
+                <div class="role-icon">💡</div>
+                <div class="role-title">Product Manager</div>
+                <div class="role-dept">Product</div>
+                <p class="role-desc">Shape the future of our platform. Work with engineering, design, and stakeholders to deliver products that solve real problems.</p>
+                <div class="role-tags">
+                    <span class="tag">Product Strategy</span>
+                    <span class="tag">Analytics</span>
+                    <span class="tag">Leadership</span>
+                </div>
+                <a href="#" class="role-btn">View Details →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section class="why-join-section">
+        <div class="why-join-container">
+            <div class="why-join-content">
+                <h2>Why Join Zyven?</h2>
+                <p>At Zyven Solutions, we believe that great work comes from great people. We've built a culture where innovation thrives, collaboration is valued, and every team member has the opportunity to make a real impact.</p>
+                <p>We invest in our people because we know that our success depends on your success.</p>
+            </div>
+
+            <div class="why-join-benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-title">Competitive Compensation</div>
+                    <div class="benefit-desc">Industry-leading salaries with performance bonuses</div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📚</div>
+                    <div class="benefit-title">Continuous Learning</div>
+                    <div class="benefit-desc">Annual training budgets and certification programs</div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏥</div>
+                    <div class="benefit-title">Health & Wellness</div>
+                    <div class="benefit-desc">Comprehensive health insurance and wellness programs</div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏠</div>
+                    <div class="benefit-title">Flexible Work</div>
+                    <div class="benefit-desc">Remote options and flexible working hours</div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎉</div>
+                    <div class="benefit-title">Work-Life Balance</div>
+                    <div class="benefit-desc">Generous PTO and mental health days</div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <div class="benefit-title">Growth Opportunities</div>
+                    <div class="benefit-desc">Clear career paths and mentorship programs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="culture-section">
+        <div class="section-header">
+            <span class="section-tag">OUR VALUES</span>
+            <h2>Our Culture</h2>
+            <p>The values that drive us forward every single day</p>
+        </div>
+
+        <div class="culture-grid">
+            <div class="culture-item">
+                <div class="culture-icon-box">🎯</div>
+                <h3 class="culture-title">Innovation</h3>
+                <p class="culture-desc">We embrace new ideas and challenge the status quo. Every voice matters when we're solving problems.</p>
+            </div>
+
+            <div class="culture-item">
+                <div class="culture-icon-box">🤝</div>
+                <h3 class="culture-title">Collaboration</h3>
+                <p class="culture-desc">Great things are built together. We work across teams, share knowledge, and lift each other up.</p>
+            </div>
+
+            <div class="culture-item">
+                <div class="culture-icon-box">⚡</div>
+                <h3 class="culture-title">Excellence</h3>
+                <p class="culture-desc">We're committed to delivering our best work in everything we do, big or small.</p>
+            </div>
+
+            <div class="culture-item">
+                <div class="culture-icon-box">🌱</div>
+                <h3 class="culture-title">Growth Mindset</h3>
+                <p class="culture-desc">We're always learning and improving. Mistakes are opportunities to grow stronger.</p>
+            </div>
+
+            <div class="culture-item">
+                <div class="culture-icon-box">🔗</div>
+                <h3 class="culture-title">Integrity</h3>
+                <p class="culture-desc">We do what's right, even when it's difficult. Trust is the foundation of everything we do.</p>
+            </div>
+
+            <div class="culture-item">
+                <div class="culture-icon-box">🌍</div>
+                <h3 class="culture-title">Impact</h3>
+                <p class="culture-desc">We create solutions that make a real difference for our clients and communities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Join Our Team?</h2>
+            <p>Don't see the perfect role? We're always looking for talented individuals. Send us your resume and let us know what you're interested in.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary">Browse All Positions</button>
+                <button class="btn btn-secondary">Contact Our Recruiting Team</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Animate elements on scroll
+        document.querySelectorAll('.role-card, .benefit-card, .culture-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Button interactions
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>

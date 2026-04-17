@@ -889,6 +889,13 @@ button {
 }
 /* Footer */
 
+/* ============================================================
+   SCROLL BAR STYLING
+   ============================================================ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-off-white); }
+::-webkit-scrollbar-thumb { background: var(--color-teal); border-radius: 3px; }
+
 
 /* ============================================================
    9. Banner / Slider Wrapper
@@ -2582,7 +2589,9 @@ ABOUT SECTION
 /*** ABOUT SECTION   ***/
 
 
-/*  */
+/*============================================================ 
+SERVICE SECTION 
+   ============================================================   */
 
 .section-desc {
        font-size: 16px;
@@ -2877,7 +2886,7 @@ ABOUT SECTION
     }
 
 
-
+/*** SERVICE SECTION   ***/
 
 
 
