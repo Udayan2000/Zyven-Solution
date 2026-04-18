@@ -1767,20 +1767,14 @@
 
    /* ========== WHY JOIN SECTION ========== */
    .why-join-section {
-     padding: 100px 20px;
-     background: linear-gradient(135deg, rgba(91, 94, 232, 0.05), rgba(26, 171, 186, 0.05));
-     position: relative;
-     z-index: 1;
+       background: linear-gradient(135deg, #f4fafc 0%, #e8f4f8 50%, #eaf0fb 100%);
+    padding: 80px 60px;
+    font-family: var(--font-body);
+    position: relative;
+    overflow: hidden;
    }
 
-   .why-join-container {
-     max-width: 1200px;
-     margin: 0 auto;
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: 80px;
-     align-items: center;
-   }
+  
 
    .why-join-benefits {
      display: grid;
@@ -1838,11 +1832,11 @@
 
    /* ========== CULTURE SECTION ========== */
    .culture-section {
-     padding: 100px 20px;
-     max-width: 1200px;
-     margin: 0 auto;
-     position: relative;
-     z-index: 1;
+       background: linear-gradient(135deg, #f4fafc 0%, #e8f4f8 50%, #eaf0fb 100%);
+    padding: 80px 60px;
+    font-family: var(--font-body);
+    position: relative;
+    overflow: hidden;
    }
 
    .culture-grid {
@@ -1853,13 +1847,20 @@
    }
 
    .culture-item {
-     text-align: center;
-     animation: slideInUp 0.6s ease-out;
+       text-align: center;
+    animation: slideInUp 0.6s ease-out;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    border-radius: 10px;
    }
 
    .culture-icon-box {
-     width: 120px;
-     height: 120px;
+     width: 80px;
+     height: 80px;
      margin: 0 auto 20px;
      background: linear-gradient(135deg, rgba(26, 171, 186, 0.15), rgba(91, 94, 232, 0.15));
      border: 2px solid rgba(26, 171, 186, 0.3);
@@ -1890,7 +1891,180 @@
      line-height: 1.6;
    }
 
-   
+/* SECTION SPACING */
+.job-details-section {
+  padding: 80px 20px;
+  background: var(--color-off-white);
+  position: relative;
+  overflow: hidden;
+}
+#jobDetailsSection {
+  display: none;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+
+#jobDetailsSection.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* GRID */
+
+
+.job-container-wrapper {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* CARD BASE */
+.job-info, 
+.job-form {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255,255,255,0.4);
+  position: relative;
+  transition: all var(--tr-base);
+}
+
+/* HOVER EFFECT */
+.job-info:hover,
+.job-form:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* LEFT SIDE CONTENT */
+.job-info h2 {
+  font-family: var(--font-head);
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: var(--color-text-dark);
+}
+
+.job-info p {
+  font-size: 14px;
+  color: var(--color-text-mid);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* SECTION HEADINGS */
+.job-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: var(--color-indigo);
+  position: relative;
+}
+
+.job-info h4::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: var(--color-teal);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+/* LIST */
+#jobResponsibilities li {
+  font-size: 13px;
+  padding-left: 20px;
+  margin-bottom: 6px;
+  position: relative;
+  color: var(--color-text-mid);
+}
+
+#jobResponsibilities li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--color-teal);
+}
+
+/* SHARE BUTTON */
+.job-info .btn-primary {
+  margin-top: 20px;
+  width: fit-content;
+}
+
+/* RIGHT SIDE FORM */
+.job-form h3 {
+  font-size: 20px;
+  margin-bottom: 18px;
+  font-family: var(--font-head);
+}
+
+/* FORM */
+.job-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* INPUTS */
+.job-form input,
+.job-form textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  font-family: var(--font-body);
+  outline: none;
+  transition: all var(--tr-fast);
+  background: #fff;
+}
+
+/* FOCUS EFFECT */
+.job-form input:focus,
+.job-form textarea:focus {
+  border-color: var(--color-indigo);
+  box-shadow: 0 0 0 3px rgba(91,94,232,0.15);
+}
+
+/* FILE INPUT */
+.job-form input[type="file"] {
+  padding: 8px;
+  background: #fff;
+}
+
+/* SUBMIT BUTTON */
+.job-form .btn-primary {
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* BACKGROUND DECOR (SUBTLE) */
+.job-details-section::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(91,94,232,0.15), transparent 70%);
+  top: -100px;
+  left: -100px;
+}
+
+.job-details-section::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(26,171,186,0.15), transparent 70%);
+  bottom: -100px;
+  right: -100px;
+}
 
 
    /* ============================================================
