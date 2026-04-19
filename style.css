@@ -2344,24 +2344,41 @@ ABOUT SECTION
     }
 
     /* Features */
-    .ab-features { margin-top: 22px; display: flex; flex-direction: column; gap: 11px; }
-
-    .ab-feature {
+    .ab-features {     
+      margin-top: 22px;
+      display: grid;
+grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+   
+     }
+    .ab-feature-wrapper{
       display: flex;
-      align-items: center;
-      gap: 13px;
-      padding: 13px 18px;
-      border-radius: 12px;
-      background: var(--color-white);
-      border: 1.5px solid var(--color-border);
-      color: var(--color-text-dark);
-      font-size: 14px;
-      font-weight: 500;
-      box-shadow: var(--shadow-sm);
-      transition: all var(--tr-base);
-      cursor: default;
+     justify-content: flex-start;
+    gap: 5px; 
     }
 
+    .ab-feature {
+        display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 9px;
+    padding: 12px 12px;
+    border-radius: 12px;
+    background: var(--color-white);
+    border: 1.5px solid var(--color-border);
+    color: var(--color-text-dark);
+    font-size: 12px;
+    font-weight: 400;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--tr-base);
+    cursor: default;
+    }
+.ab-feature span{
+    color: var(--color-indigo);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
     .ab-feature:hover {
       background: rgba(91,94,232,0.04);
       border-color: rgba(91,94,232,0.30);
@@ -2370,13 +2387,17 @@ ABOUT SECTION
     }
 
     .ab-feature-icon {
-      width: 30px; height: 30px;
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
+            width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
     }
 
-    .ab-feature-icon svg { display: block; }
+    .ab-feature-icon svg { display: block; width: 10px; height: 10px; }
 
     /* ════════════════════════════════
        RIGHT STATS
@@ -2537,10 +2558,13 @@ ABOUT SECTION
     }
 
     .ab-extra-cards {
-       margin-top: 16px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+     margin-top: 16px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* gap: 15px; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .ab-extra-card {

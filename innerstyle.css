@@ -1943,10 +1943,10 @@
 
 /* LEFT SIDE CONTENT */
 .job-info h2 {
-  font-family: var(--font-head);
-  font-size: 26px;
-  margin-bottom: 12px;
-  color: var(--color-text-dark);
+      font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-text-dark);
 }
 
 .job-info p {
@@ -1983,6 +1983,7 @@
   margin-bottom: 6px;
   position: relative;
   color: var(--color-text-mid);
+  list-style-type: none;
 }
 
 #jobResponsibilities li::before {
@@ -1995,34 +1996,49 @@
 /* SHARE BUTTON */
 .job-info .btn-primary {
   margin-top: 20px;
-  width: fit-content;
+  width: 100%;
 }
 
 /* RIGHT SIDE FORM */
 .job-form h3 {
-  font-size: 20px;
-  margin-bottom: 18px;
-  font-family: var(--font-head);
+        font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-text-dark);
+    text-align: center;
 }
 
 /* FORM */
-.job-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+
+
+.jobform-mainwrapper{
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 /* INPUTS */
 .job-form input,
 .job-form textarea {
-  padding: 12px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  font-size: 14px;
-  font-family: var(--font-body);
-  outline: none;
-  transition: all var(--tr-fast);
-  background: #fff;
+  width: 100%;
+      padding: 12px 14px;
+    border-radius: 8px;
+    border: 2px solid #c1d2f596;
+    font-size: 14px;
+    font-family: var(--font-body);
+    outline: none;
+    transition: all var(--tr-fast);
+    background: #fff;
+    background: linear-gradient(135deg, rgba(91, 94, 232, 0.08), rgba(91, 94, 232, 0.05));
+}
+.job-form textarea {
+  resize: none;
+  height: 130px;
+}
+.jobform-label{
+  font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-text-dark);
 }
 
 /* FOCUS EFFECT */
