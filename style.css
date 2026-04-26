@@ -224,7 +224,7 @@ button {
 .navbar {
   background: var(--color-white);
   padding: 0 var(--topbar-px);
-  height: 65px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -245,11 +245,14 @@ button {
   text-decoration: none;
   flex-shrink: 0;
 }
-
-.logo-icon {
+.logo img{
+  width: 100%;
+  height: 75px;
+}
+/* .logo-icon {
   width: 44px;
   height: 44px;
-}
+} */
 
 .logo-text {
   font-size: 22px;
@@ -1148,6 +1151,7 @@ button {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 
@@ -2907,16 +2911,13 @@ ABOUT SECTION
 
 .ab-extra-cards {
   margin-top: 16px;
-  /* display: grid; */
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* gap: 15px; */
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .ab-extra-card {
-  padding: 24px;
+    padding: 20px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(14px);
@@ -2926,6 +2927,7 @@ ABOUT SECTION
   position: relative;
   overflow: hidden;
 }
+
 
 .ab-extra-card::before {
   content: "";
@@ -3083,7 +3085,7 @@ SERVICE SECTION
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
   flex-shrink: 0;
   transition: background var(--tr-base);
 }
@@ -3098,7 +3100,30 @@ SERVICE SECTION
   width: 24px;
   height: 24px;
 }
-
+.card-title-ul{
+  list-style: none;
+}
+.card-title-li{
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+  transition: color var(--tr-fast), gap var(--tr-fast);
+  margin-bottom: 5px;
+  padding: 2px 0;
+    padding-left: 24px;
+  position: relative;
+}
+.card-title-li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-teal);
+    font-weight: bold;
+    font-size: 16px;
+}
+.service-card_main:nth-child(odd)  .card-title-li{
+      color: var(--color-text-muted);
+}
 /* Number badge */
 .card-number {
   position: absolute;
@@ -3134,25 +3159,24 @@ SERVICE SECTION
 .card-desc {
   font-size: 13.5px;
   color: var(--color-text-muted);
-  line-height: 1.7;
+  line-height: 1.2;
   flex: 1;
+  margin-bottom: 10px;
 }
 
 /* =====================================================
        CARD ARROW LINK
     ===================================================== */
 .card-arrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 8px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--color-indigo);
-  opacity: 0;
-  transform: translateX(-8px);
-  transition: opacity var(--tr-base), transform var(--tr-base);
-  align-self: flex-start;
+display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-indigo);
+
+    justify-content: center;
 }
 
 .card-arrow svg {
@@ -3161,14 +3185,14 @@ SERVICE SECTION
   transition: transform var(--tr-fast);
 }
 
-.service-card_main:hover .card-arrow {
+/* .service-card_main:hover .card-arrow {
   opacity: 1;
   transform: translateX(0);
 }
 
 .service-card_main:hover .card-arrow svg {
   transform: translateX(3px);
-}
+} */
 
 /* =====================================================
        HIGHLIGHT CARD (span 2 cols)
@@ -3267,6 +3291,267 @@ SERVICE SECTION
 
 
 /*** SERVICE SECTION   ***/
+
+
+
+/*  */
+ /* ============================================================
+       CTA SECTION
+       ============================================================ */
+    .cta-section {
+      background: linear-gradient(135deg, var(--color-off-white) 0%, #e8f4f8 50%, #eaf0fb 100%);
+      padding: 100px 0;
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+    }
+ 
+    .ab-inner {
+      position: relative;
+      z-index: 1;
+    }
+ 
+    
+ 
+    
+ 
+    .ctasection_bg {
+      background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-indigo) 55%, var(--color-teal-dark) 100%);
+      border-radius: 32px;
+      padding: 80px 60px;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 60px rgba(14, 45, 102, 0.25);
+      transition: all var(--tr-slow);
+    }
+ 
+    .ctasection_bg:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 80px rgba(14, 45, 102, 0.35);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+ 
+    .ctasection_bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(26, 171, 186, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(91, 94, 232, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+ 
+    .ctasection_bg::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite;
+      pointer-events: none;
+    }
+ 
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(-30px, 30px);
+      }
+    }
+ 
+    .cta-wrapper {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+ 
+    
+ 
+    .cta-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+ 
+    .cta-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-teal-light);
+      background: rgba(45, 202, 217, 0.15);
+      padding: 8px 16px;
+      border-radius: 20px;
+      width: fit-content;
+      animation: slideInLeft 0.8s var(--tr-slow) forwards;
+      opacity: 0;
+    }
+ 
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+ 
+    .cta-title {
+      font-family: var(--font-head);
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-white);
+      animation: slideInLeft 0.8s var(--tr-slow) 0.1s forwards;
+    
+    }
+ 
+    .cta-title .highlight {
+      background: linear-gradient(135deg, var(--color-teal-light) 0%, var(--color-teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+ 
+    .cta-description {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.8;
+      max-width: 500px;
+      animation: slideInLeft 0.8s var(--tr-slow) 0.2s forwards;
+ 
+    }
+ 
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: slideInLeft 0.8s var(--tr-slow) 0.3s forwards;
+  
+    }
+ 
+   
+ 
+    .cta-button {
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-family: var(--font-head);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all var(--tr-base);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 200px;
+    }
+ 
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      transition: left var(--tr-base);
+      z-index: -1;
+    }
+ 
+    /* Secondary Button */
+    .cta-button.secondary {
+      background: rgba(255, 255, 255, 0);
+      color: var(--color-teal-light);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+    }
+ 
+    .cta-button.secondary::before {
+      background: rgba(255, 255, 255, 0.25);
+    }
+ 
+    .cta-button.secondary:hover {
+      background: rgba(255, 255, 255, 0.053);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(31, 38, 135, 0.3);
+    }
+ 
+    .cta-button.secondary:hover::before {
+      left: 0;
+    }
+ 
+    .cta-button.secondary:active {
+      transform: translateY(-2px);
+    }
+ 
+    .button-icon {
+      font-size: 18px;
+      transition: transform var(--tr-base);
+    }
+ 
+    .cta-button:hover .button-icon {
+      transform: translateX(4px);
+    }
+ 
+    /* Right Side - SVG Illustration */
+    .cta-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      animation: slideInRight 0.8s var(--tr-slow) 0.2s forwards;
+ 
+    }
+ 
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+ 
+    .cta-svg-container {
+      width: 100%;
+      max-width: 400px;
+      height: 400px;
+      position: relative;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+    }
+ 
+    .cta-svg-container svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 10px 20px rgba(14, 45, 102, 0.2));
+    }
+ 
+  
+/*  */
 
 @media(max-width:1300px) {
   .panel-left {
