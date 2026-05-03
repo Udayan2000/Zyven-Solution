@@ -114,41 +114,78 @@
        ============================================================ -->
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
 
-      <!-- Logo -->
-      <a href="index.html" class="logo" aria-label="ZYVEN SOLUTIONS PRIVATE LIMITED">
+    <!-- Logo -->
+     <a href="index.html" class="logo" aria-label="ZYVEN SOLUTIONS PRIVATE LIMITED">
       <img src="logo.webp" alt="" loading="lazy" width="150" height="50" />
     </a>
 
-      <!-- Nav Links -->
-      <ul class="nav-links" role="list">
-        <li><a href="index.html" class="nav-link">HOME</a></li>
-        <li><a href="about.html" class="nav-link">ABOUT</a></li>
-        <li><a href="service.html" class="nav-link">SERVICES</a></li>
-        <li><a href="industry.html" class="nav-link">INDUSTRY</a></li>
-        <li><a href="career.html" class="nav-link">CAREER</a></li>
-        <li><a href="contact.html" class="nav-contact">CONTACT</a></li>
-      </ul>
+    <!-- Nav Links -->
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" class="nav-link">HOME</a></li>
+      <li><a href="about.html" class="nav-link">ABOUT</a></li>
+      <li><a href="service.html" class="nav-link">SERVICES</a></li>
+      <li><a href="industry.html" class="nav-link">INDUSTRY</a></li>
+      <li><a href="career.html" class="nav-link">CAREER</a></li>
+      <li><a href="contactus.html" class="nav-contact">CONTACT</a></li>
+    </ul>
 
-      <!-- CTA Info -->
-      <div class="nav-cta-info">
-        <div class="cta-icon-wrap" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="#fff" stroke-width="2">
-            <path
-              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-            <circle cx="9" cy="10" r="1" fill="#fff" />
-            <circle cx="12" cy="10" r="1" fill="#fff" />
-            <circle cx="15" cy="10" r="1" fill="#fff" />
-          </svg>
-        </div>
-        <div class="cta-text">
-          <small>Have any Questions?</small>
-          <a href="mailto:info@zyven.com"
-            class="mail_cta-text">info@zyven.com</a>
-        </div>
+    <!-- CTA Info -->
+    <div class="nav-cta-info">
+      <div class="cta-icon-wrap" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="#fff" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          <circle cx="9" cy="10" r="1" fill="#fff" />
+          <circle cx="12" cy="10" r="1" fill="#fff" />
+          <circle cx="15" cy="10" r="1" fill="#fff" />
+        </svg>
       </div>
+      <div class="cta-text">
+        <small>Have any Questions?</small>
+        <a href="mailto:info@zyven.com" class="mail_cta-text">info@zyven.com</a>
+      </div>
+    </div>
 
-    </nav>
+    <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  </nav>
+
+  <sidebar class="sidebarlink" id="overlay" aria-hidden="true">
+
+    <!-- Logo -->
+     <div class="logo_cross_main">
+     <a href="index.html" class="logosidebar" aria-label="ZYVEN SOLUTIONS PRIVATE LIMITED">
+      <img src="logo.webp" alt="" loading="lazy" width="150" height="50" />
+    </a>
+
+   
+      <button class="close-btn" id="closeBtn" aria-label="Close Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="#0e2d66" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+   
+
+    </div>
+
+    <!-- Nav Links -->
+    <ul class="sidebarlinkul" role="list">
+      <li><a href="index.html" class="sidebarlinknav-link">HOME</a></li>
+      <li><a href="about.html" class="sidebarlinknav-link">ABOUT</a></li>
+      <li><a href="service.html" class="sidebarlinknav-link">SERVICES</a></li>
+      <li><a href="industry.html" class="sidebarlinknav-link">INDUSTRY</a></li>
+      <li><a href="career.html" class="sidebarlinknav-link">CAREER</a></li>
+      <li><a href="contactus.html" class="sidebarlinknav-link">CONTACT</a></li>
+    </ul>
+
+    <!-- CTA Info -->
+  </sidebar>
     <!-- /navbar -->
 
     <!-- ================================================================
@@ -157,7 +194,7 @@
     <section class="hero">
       <div class="hero-bg">
         <div class="hero-bg-grid"></div>
-     
+
       </div>
 
       <div class="hero-inner">
@@ -291,7 +328,10 @@
               Connecting <span>Excellence</span> with Opportunity
             </h3>
             <p class="mv-body">
-              To be a trusted leader in integrated business solutions by empowering organizations with exceptional talent, innovative technology, and operational excellence, driving sustainable growth and long-term value creation across industries.
+              To be a trusted leader in integrated business solutions by
+              empowering organizations with exceptional talent, innovative
+              technology, and operational excellence, driving sustainable growth
+              and long-term value creation across industries.
             </p>
             <ul class="mv-points">
               <li>Deliver precision-matched talent acquisition across industries
@@ -337,14 +377,21 @@
               A World Where <span>Talent Meets Technology</span>
             </h3>
             <p class="mv-body">
-              To deliver high-quality recruitment, staffing, and manpower solutions that help businesses build high-performing teams.
-To provide innovative software development, IT consulting, and support services that enable digital transformation and business efficiency.
+              To deliver high-quality recruitment, staffing, and manpower
+              solutions that help businesses build high-performing teams.
+              To provide innovative software development, IT consulting, and
+              support services that enable digital transformation and business
+              efficiency.
             </p>
             <ul class="mv-points">
-              <li>To offer reliable BPO and data processing solutions that streamline operations and enhance productivity.</li>
-              <li>To build long-term partnerships through integrity, professionalism, and client-centric service excellence.</li>
-              <li>To continuously innovate and adapt to evolving market needs while maintaining the highest standards of quality and trust.</li>
-             
+              <li>To offer reliable BPO and data processing solutions that
+                streamline operations and enhance productivity.</li>
+              <li>To build long-term partnerships through integrity,
+                professionalism, and client-centric service excellence.</li>
+              <li>To continuously innovate and adapt to evolving market needs
+                while maintaining the highest standards of quality and
+                trust.</li>
+
             </ul>
           </div>
           <div class="mv-visual">
@@ -372,8 +419,7 @@ To provide innovative software development, IT consulting, and support services 
       </div>
     </section>
 
-
-     <section class="founder-message" id="founder-message">
+    <section class="founder-message" id="founder-message">
 
       <div class="ab-inner">
         <div class="foundermessage-wrapper">
@@ -382,30 +428,40 @@ To provide innovative software development, IT consulting, and support services 
           <div class="foundermessage-left">
             <h2 class="section-title">Our <span> Founder’s Message </span></h2>
             <p class="foundermessage-body">
-             At Zyven Solutions Private Limited, our vision has always been to create an organization that goes beyond conventional service delivery—one that truly partners with businesses to drive growth, efficiency, and innovation.
+              At Zyven Solutions Private Limited, our vision has always been to
+              create an organization that goes beyond conventional service
+              delivery—one that truly partners with businesses to drive growth,
+              efficiency, and innovation.
             </p>
             <p class="foundermessage-body">
-              In today’s rapidly evolving business landscape, success depends on the right balance of skilled talent, advanced technology, and streamlined operations. Zyven Solutions was established with this very philosophy at its core—to provide integrated solutions that empower organizations to focus on their strategic priorities while we take care of the rest.
+              In today’s rapidly evolving business landscape, success depends on
+              the right balance of skilled talent, advanced technology, and
+              streamlined operations. Zyven Solutions was established with this
+              very philosophy at its core—to provide integrated solutions that
+              empower organizations to focus on their strategic priorities while
+              we take care of the rest.
             </p>
             <p class="foundermessage-body">
-              From workforce solutions and IT services to business process outsourcing and data management, our goal is to deliver consistent quality, measurable outcomes, and long-term value to every client we serve. We are committed to building lasting relationships based on trust, transparency, and excellence.
+              From workforce solutions and IT services to business process
+              outsourcing and data management, our goal is to deliver consistent
+              quality, measurable outcomes, and long-term value to every client
+              we serve. We are committed to building lasting relationships based
+              on trust, transparency, and excellence.
             </p>
 
             <p class="foundermessage-body">
-              As we continue to grow, our focus remains clear—to evolve with changing industry needs, embrace innovation, and uphold the highest standards of professionalism in everything we do.
+              As we continue to grow, our focus remains clear—to evolve with
+              changing industry needs, embrace innovation, and uphold the
+              highest standards of professionalism in everything we do.
             </p>
 
             <p class="foundermessage-body">
-              We thank our clients and partners for their trust and look forward to building a future of shared success.
+              We thank our clients and partners for their trust and look forward
+              to building a future of shared success.
             </p>
 
-           
-
-           
           </div>
 
-
-         
         </div>
 
       </div>
@@ -420,11 +476,11 @@ To provide innovative software development, IT consulting, and support services 
      ================================================================ -->
     <section class="howwe-section" id="how-we-work">
 
-       <div class="grid-bg"></div>
-<div class="ab-orb orb1"></div>
-<div class="ab-orb orb2"></div>
-<div class="ab-orb orb3"></div>
- <div class="service-inner">
+      <div class="grid-bg"></div>
+      <div class="ab-orb orb1"></div>
+      <div class="ab-orb orb2"></div>
+      <div class="ab-orb orb3"></div>
+      <div class="service-inner">
 
         <div class="howwe-header reveal">
           <div class="tag">Our Process</div>
@@ -446,7 +502,8 @@ To provide innovative software development, IT consulting, and support services 
           <div class="step-card reveal reveal-delay-2">
             <div class="step-num">02</div>
             <div class="step-icon">🧠</div>
-            <div class="step-title">Source and screen candidates or solutions</div>
+            <div class="step-title">Source and screen candidates or
+              solutions</div>
             <p class="step-body">Our experts craft a bespoke roadmap — talent
               pipelines, tech architecture, or both — tailored to your unique
               needs.</p>
@@ -517,19 +574,19 @@ To provide innovative software development, IT consulting, and support services 
           </div>
         </div>
 
-     </div>
+      </div>
     </section>
 
     <!-- ================================================================
      SECTION 3 — OUR WORKS / SHOWCASE
      ================================================================ -->
     <section class="works-section" id="our-works">
-      
-       <div class="grid-bg"></div>
-<div class="ab-orb orb1"></div>
-<div class="ab-orb orb2"></div>
-<div class="ab-orb orb3"></div>
- <div class="service-inner">
+
+      <div class="grid-bg"></div>
+      <div class="ab-orb orb1"></div>
+      <div class="ab-orb orb2"></div>
+      <div class="ab-orb orb3"></div>
+      <div class="service-inner">
         <div class="works-header">
           <div class="works-header-left reveal">
             <div class="tag">Portfolio</div>
@@ -681,12 +738,14 @@ To provide innovative software development, IT consulting, and support services 
             Ready to be our next success story?
           </p>
           <div class="works-cta-btns">
-            <a href="#" class="btn-primary"> <span class="button-icon"> 🤝 </span> Partner With Us</a>
-            <a href="#" class="cta-button secondary"><span class="button-icon">📋</span> View Full Portfolio</a>
+            <a href="#" class="btn-primary"> <span class="button-icon"> 🤝
+              </span> Partner With Us</a>
+            <a href="#" class="cta-button secondary"><span
+                class="button-icon">📋</span> View Full Portfolio</a>
           </div>
         </div>
 
-   </div>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -992,6 +1051,21 @@ To provide innovative software development, IT consulting, and support services 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
+    <script>
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".sidebarlink");
+
+
+
+toggle.addEventListener("click", () => {
+  menu.classList.add("active");
+});
+
+overlay.addEventListener("click", () => {
+  menu.classList.remove("active");
+});
+      </script>
+
     <!-- ============================================================
        MAIN SCRIPT
        ============================================================ -->
@@ -1091,7 +1165,7 @@ const heroObserver = new IntersectionObserver((entries) => {
  
 const heroStats = document.querySelector('.hero-stats');
 if (heroStats) heroObserver.observe(heroStats);
-</script>
+    </script>
 
   </body>
 </html>

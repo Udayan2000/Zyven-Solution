@@ -158,7 +158,52 @@
                 </div>
             </div>
 
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
         </nav>
+
+        <sidebar class="sidebarlink" id="overlay" aria-hidden="true">
+
+            <!-- Logo -->
+            <div class="logo_cross_main">
+                <a href="index.html" class="logosidebar"
+                    aria-label="ZYVEN SOLUTIONS PRIVATE LIMITED">
+                    <img src="logo.webp" alt loading="lazy" width="150"
+                        height="50" />
+                </a>
+
+                <button class="close-btn" id="closeBtn" aria-label="Close Menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="#0e2d66" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Nav Links -->
+            <ul class="sidebarlinkul" role="list">
+                <li><a href="index.html"
+                        class="sidebarlinknav-link">HOME</a></li>
+                <li><a href="about.html"
+                        class="sidebarlinknav-link">ABOUT</a></li>
+                <li><a href="service.html"
+                        class="sidebarlinknav-link">SERVICES</a></li>
+                <li><a href="industry.html"
+                        class="sidebarlinknav-link">INDUSTRY</a></li>
+                <li><a href="career.html"
+                        class="sidebarlinknav-link">CAREER</a></li>
+                <li><a href="contactus.html"
+                        class="sidebarlinknav-link">CONTACT</a></li>
+            </ul>
+
+            <!-- CTA Info -->
+        </sidebar>
         <!-- /navbar -->
 
         <!-- ================================================================
@@ -959,6 +1004,21 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+        <script>
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".sidebarlink");
+
+
+
+toggle.addEventListener("click", () => {
+  menu.classList.add("active");
+});
+
+overlay.addEventListener("click", () => {
+  menu.classList.remove("active");
+});
+      </script>
 
         <!-- ============================================================
        MAIN SCRIPT

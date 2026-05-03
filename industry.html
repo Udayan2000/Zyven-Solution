@@ -127,7 +127,7 @@
         <li><a href="service.html" class="nav-link">SERVICES</a></li>
         <li><a href="industry.html" class="nav-link">INDUSTRY</a></li>
         <li><a href="career.html" class="nav-link">CAREER</a></li>
-        <li><a href="contact.html" class="nav-contact">CONTACT</a></li>
+        <li><a href="contactus.html" class="nav-contact">CONTACT</a></li>
       </ul>
 
       <!-- CTA Info -->
@@ -149,7 +149,47 @@
         </div>
       </div>
 
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </nav>
+
+    <sidebar class="sidebarlink" id="overlay" aria-hidden="true">
+
+      <!-- Logo -->
+      <div class="logo_cross_main">
+        <a href="index.html" class="logosidebar"
+          aria-label="ZYVEN SOLUTIONS PRIVATE LIMITED">
+          <img src="logo.webp" alt loading="lazy" width="150" height="50" />
+        </a>
+
+        <button class="close-btn" id="closeBtn" aria-label="Close Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="#0e2d66" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+      </div>
+
+      <!-- Nav Links -->
+      <ul class="sidebarlinkul" role="list">
+        <li><a href="index.html" class="sidebarlinknav-link">HOME</a></li>
+        <li><a href="about.html" class="sidebarlinknav-link">ABOUT</a></li>
+        <li><a href="service.html" class="sidebarlinknav-link">SERVICES</a></li>
+        <li><a href="industry.html"
+            class="sidebarlinknav-link">INDUSTRY</a></li>
+        <li><a href="career.html" class="sidebarlinknav-link">CAREER</a></li>
+        <li><a href="contactus.html"
+            class="sidebarlinknav-link">CONTACT</a></li>
+      </ul>
+
+      <!-- CTA Info -->
+    </sidebar>
     <!-- /navbar -->
 
     <!-- ================================================================
@@ -609,8 +649,6 @@
           </div>
         </div>
 
-         
-
       </div>
     </section>
 
@@ -621,12 +659,14 @@
           <div class="detail-header">
             <div class="detail-icon-box" id="detailIcon">💻</div>
             <div class="detail-title-section">
-              <h2 class="detail-title" id="detailIndustryName">Industry Name</h2>
+              <h2 class="detail-title" id="detailIndustryName">Industry
+                Name</h2>
               <p class="detail-subtitle">Specialized Recruitment & Solutions</p>
             </div>
-            <button class="detail-close-btn" onclick="closeDetailSection()">✕</button>
+            <button class="detail-close-btn"
+              onclick="closeDetailSection()">✕</button>
           </div>
- 
+
           <!-- Main Content Grid -->
           <div class="detail-grid">
             <!-- Left Side - Details -->
@@ -634,7 +674,7 @@
               <p class="detail-description" id="detailFullDesc">
                 Industry description goes here...
               </p>
- 
+
               <!-- Key Roles -->
               <div class="detail-content-section">
                 <h3 class="detail-section-title">Key Roles We Fill</h3>
@@ -644,7 +684,7 @@
                   <li class="detail-list-item">Sample Role 3</li>
                 </ul>
               </div>
- 
+
               <!-- Our Expertise -->
               <div class="detail-content-section">
                 <h3 class="detail-section-title">Our Expertise</h3>
@@ -654,7 +694,7 @@
                   <li class="detail-list-item">Sample Expertise 3</li>
                 </ul>
               </div>
- 
+
               <!-- Stats -->
               <div class="detail-stats">
                 <div class="detail-stat">
@@ -667,67 +707,64 @@
                 </div>
               </div>
             </div>
- 
+
             <!-- Right Side - Contact Form -->
             <div class="detail-right">
-              <form class="form-container" id="detailForm" onsubmit="submitDetailForm(event)">
+              <form class="form-container" id="detailForm"
+                onsubmit="submitDetailForm(event)">
                 <h3 class="form-title">Get in Touch</h3>
                 <p class="form-subtitle">Tell us about your needs</p>
- 
+
                 <div class="success-message" id="successMessage">
                   ✓ Thank you! We'll contact you soon.
                 </div>
- 
+
                 <div class="form-group">
                   <label class="form-label">Full Name</label>
-                  <input 
-                    type="text" 
-                    class="form-input" 
-                    name="fullName" 
-                    placeholder="Your Name" 
-                    required
-                  >
+                  <input
+                    type="text"
+                    class="form-input"
+                    name="fullName"
+                    placeholder="Your Name"
+                    required>
                 </div>
- 
+
                 <div class="form-group">
                   <label class="form-label">Email Address</label>
-                  <input 
-                    type="email" 
-                    class="form-input" 
-                    name="email" 
-                    placeholder="you@example.com" 
-                    required
-                  >
+                  <input
+                    type="email"
+                    class="form-input"
+                    name="email"
+                    placeholder="you@example.com"
+                    required>
                 </div>
- 
+
                 <div class="form-group">
                   <label class="form-label">Phone Number</label>
-                  <input 
-                    type="tel" 
-                    class="form-input" 
-                    name="phone" 
-                    placeholder="+91 (555) 000-0000" 
-                    required
-                  >
+                  <input
+                    type="tel"
+                    class="form-input"
+                    name="phone"
+                    placeholder="+91 (555) 000-0000"
+                    required>
                 </div>
- 
+
                 <div class="form-group">
                   <label class="form-label">Message</label>
-                  <textarea 
-                    class="form-textarea" 
-                    name="message" 
-                    placeholder="Tell us about your requirements..." 
-                    required
-                  ></textarea>
+                  <textarea
+                    class="form-textarea"
+                    name="message"
+                    placeholder="Tell us about your requirements..."
+                    required></textarea>
                 </div>
- 
+
                 <button type="submit" class="form-button">Send Message</button>
               </form>
             </div>
           </div>
         </div>
       </div>
-         </div>
+    </div>
 
     <!-- Footer -->
 
@@ -958,7 +995,7 @@
 
               <li>
                 <span class="addr-icon">✉️</span>
-               info@zyven.com
+                info@zyven.com
               </li>
 
               <li>
@@ -1031,6 +1068,21 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script>
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".sidebarlink");
+
+
+
+toggle.addEventListener("click", () => {
+  menu.classList.add("active");
+});
+
+overlay.addEventListener("click", () => {
+  menu.classList.remove("active");
+});
+      </script>
 
     <!-- ============================================================
        MAIN SCRIPT

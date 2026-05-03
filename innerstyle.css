@@ -1176,7 +1176,7 @@
      animation: fadeInUp 0.8s var(--tr-slow);
    }
 
-   .section-header h2 {
+   /* .section-header h2 {
      font-family: var(--font-head);
      font-size: 44px;
      font-weight: 700;
@@ -1189,7 +1189,7 @@
      color: var(--color-text-mid);
      max-width: 600px;
      margin: 0 auto;
-   }
+   } */
 
    .services-grid {
      display: grid;
@@ -1613,19 +1613,19 @@
      margin-bottom: 20px;
    }
 
-   .section-header h2 {
+   /* .section-header h2 {
      font-size: 2.8rem;
      font-weight: 800;
      margin-bottom: 15px;
      color: var(--color-text-dark);
-   }
+   } */
 
-   .section-header p {
+   /* .section-header p {
      font-size: 1.1rem;
      color: var(--color-text-mid);
      max-width: 600px;
      margin: 0 auto;
-   }
+   } */
 
    .roles-grid {
      display: grid;
@@ -2784,11 +2784,11 @@
      border-radius: var(--radius-xl);
      padding: 15px;
      backdrop-filter: blur(12px);
-         display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    transition: transform var(--tr-base), color var(--tr-base);
-    cursor: pointer;
+     display: flex;
+     gap: 20px;
+     align-items: flex-start;
+     transition: transform var(--tr-base), color var(--tr-base);
+     cursor: pointer;
    }
 
    .info-label {
@@ -3113,6 +3113,21 @@
        bottom: -17px;
      }
 
+     .foundermessage-wrapper {
+       display: grid;
+       grid-template-columns: 1fr;
+
+     }
+     .card-left {
+       grid-column: span 12;
+
+     }
+
+     .card-right {
+       grid-column: span 12;
+
+     }
+
    }
 
    @media(max-width:900px) {
@@ -3120,6 +3135,10 @@
        text-align: center;
        margin-bottom: 15px;
      }
+        .section-header {
+           margin-bottom: 15px;
+}
+    
    }
 
    @media(max-width:767px) {
@@ -3132,6 +3151,7 @@
      .hero-headline {
        font-size: clamp(20px, 5vw, 45px);
      }
+ 
    }
 
 
@@ -3170,11 +3190,7 @@
        display: none;
      }
 
-     .float-badge {
-       position: static;
-       margin-top: 16px;
-       display: inline-flex;
-     }
+
 
      .works-cta-btns {
        flex-direction: column;
@@ -3197,6 +3213,10 @@
        padding: 48px 20px;
      }
 
+     .founder-message {
+       padding: 48px 20px;
+     }
+
      .howwe-section {
        padding: 48px 20px;
      }
@@ -3205,30 +3225,28 @@
        padding: 48px 20px;
      }
 
-     /* .mv-section{
-          padding: 48px 20px;
-    } */
-
+         .services-section {
+        padding: 48px 20px;
+    }
+ 
 
      .mv-corner-stat {
-       bottom: 0px;
+       top: 0px;
+       bottom: auto;
        right: 0px;
        padding: 14px 15px;
        z-index: 5;
+       height: auto;
      }
 
      .mv-illus-icon {
        font-size: 60px;
        margin-bottom: -3px;
-
-
      }
 
      .mv-illus-body {
        font-size: 13px;
-
        max-width: 100%;
-
        line-height: 1.45;
      }
    }
@@ -3243,7 +3261,14 @@
 
      .mv-corner-stat .lbl {
        font-size: 8px;
+     }
 
+     .stat {
+       grid-column: span 5;
+     }
 
+     .hero .container {
+
+       gap: 15px;
      }
    }
